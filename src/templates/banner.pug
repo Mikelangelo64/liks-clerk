@@ -1,0 +1,35 @@
+section.banner.section(
+  class=`${banner.specialClass && banner.specialClass !== '' ? banner.specialClass : ''}`
+)
+  ._container.banner__container.section__container
+    .banner__wrapper
+      .banner__main
+        h1.banner__title!= banner.title
+
+        p.banner__subtitle!= banner.subtitle
+
+        .banner__button__container
+          button.banner__button.button-filled.popup-open(
+            data-popup='_popup-form'
+          )
+            span Order
+
+          button.banner__button.button-hollow.popup-open(
+            data-popup='_popup-form'
+          )
+            span Reviews
+
+      .banner-media
+        .banner-media__item.l-size
+          .banner-media__img
+            img(src=require('@/assets/img/banner-media.png'), alt='banner')
+
+        .banner-media__item.s-size
+          p.banner-media__value 7
+
+          p.banner-media__description Years on the market
+
+        .banner-media__item.m-size
+          p.banner-media__value 5700+
+
+          p.banner-media__description Backlinks per month

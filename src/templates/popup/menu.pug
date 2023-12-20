@@ -1,0 +1,13 @@
+.modal-menu__header
+  button.popup__close
+    img(src=require('@/assets/img/popup-close-green.svg'), alt='close')
+
+.modal-menu__main
+  include @/templates/layout/menu-content.pug
+
+.modal-menu__footer
+  a.modal-menu__button.button-filled(href='#')
+    span Log in
+
+  a.modal-menu__button.button-hollow(href='#')
+    span Sign up

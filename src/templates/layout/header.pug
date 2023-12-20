@@ -1,0 +1,144 @@
+-
+  const menuList = [
+    {
+      name: 'About us',
+      href: '#',
+      goto: '',
+    },
+    {
+      name: 'Services',
+      href: '#',
+      goto: '',
+      submenu: [
+        {
+          name: 'Forum backlinks',
+          label: '@/assets/img/services/service-1.svg',
+          href: '#',
+          goto: 'false',
+          description: 'Placing backlinks in niche related threads on forums with DR>20, traffic>1k',
+        },
+        {
+          name: 'Q&A backlinks',
+          label: '@/assets/img/services/service-2.svg',
+          href: '#',
+          goto: 'false',
+          description: 'Placing backlinks in niche related questions on popular Q&A: Quora and Reddit',
+        },
+        {
+          name: 'Guest post backlinks',
+          label: '@/assets/img/services/service-3.svg',
+          href: '#',
+          goto: 'false',
+          description: 'Placing backlinks in niche related,  indexed and existing articles on real websites',     
+        },
+      ],
+    },
+    {
+      name: 'Reviews',
+      href: '#',
+      goto: '',
+    },
+    {
+      name: 'Seo Vocabulary',
+      href: '#',
+      goto: '',
+    },
+    {
+      isLanguage: 'true',
+      name: 'EN',
+      href: '#',
+      goto: '',
+      submenu: [
+        {
+          name: 'EN',
+          href: '#',
+          label: '@/assets/img/language-usa.svg',
+          isCurentLanguage: 'true',
+          goto: 'false',
+        },
+
+        {
+          name: 'UA',
+          href: '#',
+          label: '@/assets/img/language-ua.svg',
+          goto: 'false',
+        },
+      ],
+    },
+  ];
+
+header.header
+  ._container.header__container
+    .header__wrapper
+      .header__item.header__logo__container
+        a.custom-logo-link.header__logo(href='#') 
+          img.custom-logo(
+            src=require('@/assets/img/logo.svg'),
+            alt='logo',
+            draggable='false'
+          )
+
+      nav.header__item.header__menu
+        ul.menu-list
+          each item in menuList
+            li.menu-list__item(
+              class=`${item.submenu && item.submenu.length !== 0 ? 'additional' : ''}`,
+              data-submenu=`${item.submenu && item.submenu.length !== 0 ? 'true' : 'false'}`
+            )
+              if item.isLanguage && item.isLanguage === 'true'
+                p.menu__link #{ item.name }
+              else
+                a.menu__link(href=`${item.href}`) #{ item.name }
+
+              if item.submenu && item.submenu.length !== 0
+                button.menu-submenu-open
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z" fill="currentColor"/>
+                  </svg>
+
+                .menu-submenu
+                  ul.menu-submenu-list(
+                    class=`${item.isLanguage && item.isLanguage === 'true' ? 'language' : ''}`
+                  )
+                    each subItem in item.submenu
+                      li
+                        if subItem.isCurentLanguage && subItem.isCurentLanguage === 'true'
+                          p.menu-submenu__link.lang-item-current
+                            span.menu-submenu__label
+                              img(
+                                src=require(`${subItem.label}`),
+                                alt=`${subItem.name}`
+                              )
+
+                            span.menu-submenu__content
+                              span.menu-submenu__title= subItem.name
+
+                              span.menu-submenu__description= subItem.description
+
+                        else
+                          a.menu-submenu__link(
+                            href=`${subItem.href}`,
+                            class=`${item.isLanguage && item.isLanguage === 'true' ? 'language' : ''}`
+                          ) 
+                            span.menu-submenu__label
+                              img(
+                                src=require(`${subItem.label}`),
+                                alt=`${subItem.name}`
+                              )
+
+                            span.menu-submenu__content
+                              span.menu-submenu__title= subItem.name
+
+                              span.menu-submenu__description= subItem.description
+
+      .header__button__container
+        button.header__button.button-hollow
+          span Log in
+
+        button.menu-burger.popup-open(
+          data-popup='_popup-menu',
+          title='open menu'
+        )
+          span
+
+  include @/layout/popup.pug

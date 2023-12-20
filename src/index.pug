@@ -1,0 +1,30 @@
+-
+  const banner = {
+    media: {
+      type: 'image',
+      path: '@/assets/img/banner-media.jpg'
+    },
+    title: 'Backlinks for boosting website',
+    subtitle: 'Backlinks are important for the search ranking. Our aim is providing the best linkbuilding services for your business',
+  };
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk
+
+    link(rel='stylesheet', href=require('@/styles/styles.scss'))
+
+  body
+    //- include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    include @/templates/showcase.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('./index.ts')) 
