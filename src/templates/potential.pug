@@ -1,0 +1,45 @@
+-
+  const potentialList = [
+    {
+      title: 'Online learning website Brighterly',
+      description: '1 guest post price same with 10-15 links from the forums. Following this way you can increase the number of referring domains in your budget',
+    },
+    {
+      title: 'Backlinks diversification',
+      description: 'A variety of link types is an important step in safe linkbuilding for a website. It will be 100% Google safe and friendly',
+    },
+    {
+      title: 'Links in the target location',
+      description: 'There’re forums in every part of the world, you can get ref.domains, for example, for a project from Brazil or any other country',
+    },
+    {
+      title: 'Impact on site metrics',
+      description: 'Forum backlinks can impact on website metrics such as domain/url rating, domain/page authority, trust flow, citation flow, and others',
+    },
+    {
+      title: 'Behavioral factors',
+      description: 'User clicks on placed backlinks on forums can significantly improve the behavioral factors of the site',
+    },
+    {
+      title: 'Visibility of keywords',
+      description: 'Anchor forum backlinks improve the visibility of keywords in SERP results',
+    },
+  ];
+
+section.section.potential.dark
+  ._container
+    .potential__wrapper
+      .potential__header.section-header
+        h2.section-header__title Unlocking SEO Potential
+
+        p.section-header__subtitle with Forum Backlinks
+
+      .potential__main
+        .potential-slider.swiper.slider
+          .swiper-wrapper.potential-slider__wrapper
+            each item in potentialList
+              .swiper-slide
+                .potential-slider__item
+                  p.potential-slider__title= item.title
+
+                  p.potential-slider__description= item.description
