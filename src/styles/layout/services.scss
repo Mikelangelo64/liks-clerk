@@ -1,0 +1,140 @@
+.services {
+  
+  //.services__wrapper 
+  &__wrapper {
+    width: 100%;
+
+    > * + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(64);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(52);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(40);
+      }
+    }
+  }
+  
+  //.services__header 
+  // &__header {
+  // }
+  
+  //.services__main 
+  &__main {
+    width: 100%; 
+
+    > * + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(48);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(32);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(16);
+      }
+    }
+  }
+  
+  //.services-slider 
+  &-slider {
+    width: 100%;
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    //.services-slider__wrapper 
+    &__wrapper {
+      @include viewport-phone {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: px-to-rem(22);
+      }
+    }
+
+    //.services-slider__item 
+    &__item {
+      width: 100%;
+      height: 100%;
+
+      border: 2px solid var(--color-grey-500);
+      border-radius: px-to-rem(24);
+      padding: px-to-rem(24) px-to-rem(12);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-align: center;
+
+      @include viewport-phone {
+        max-width: px-to-rem(344);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      > * + * {
+        margin-top: px-to-rem(16);
+      }
+    }
+    
+    //.services-slider__title 
+    &__title {
+      @include text-heading-4;
+    }
+    
+    //.services-slider__description 
+    &__description {
+      font-weight: 500;
+      line-height: 150%;
+      font-size: px-to-rem(16);
+      color: var(--color-grey-600);
+    }
+
+    //.services-slider__button__container 
+    &__button__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: px-to-rem(40);
+    }
+    
+    //.services-slider__button 
+    &__button {
+      @include viewport-phone {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+    
+    //.services-slider-controls 
+    &-controls {
+      @include viewport-phone {
+        display: none;
+      }
+    }
+    
+    //.services-slider-pagination 
+    // &-pagination {
+    // }
+
+    // &-prev,
+    // &-next {
+    // }
+    
+    //.services-slider-prev 
+    // &-prev {
+    // }
+    
+    //.services-slider-next 
+    // &-next {
+    // }
+  }
+}
