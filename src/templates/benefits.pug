@@ -1,0 +1,74 @@
+-
+  const benefitsList = [
+    {
+      title: 'On-time delivery',
+      description: `
+        <p>
+          The main goal is to deliver the project to the customer on time according to requirements. If there’re any difficulties, we’ll immediately find a solution with a customer and deliver ready work.
+        </p>
+      `,
+    },
+    {
+      title: 'Niche related',
+      description: `
+        <p>
+          Provided only niche-related placements on forums without automated spam. Only manual work which made by real people.
+        </p>
+      `,
+    },
+    {
+      title: 'Project analysis',
+      description: `
+        <p>
+          Before starting placing links, we analyze the project for free. After that offer the best conditions according to the client’s requirements.
+        </p>
+      `,
+    },
+    {
+      title: 'Brand awareness and credibility',
+      description: `
+        <p>
+          Forum backlinks improve and spread your brand, and build site trust as they serve as third-party signals of domain authority.
+        </p>
+      `,
+    },
+    {
+      title: 'Forums with metrics',
+      description: `
+        <p>
+          All forums have real traffic, with additional metrics, usually, we choose DR, DA>20, spam score<5%, and traffic>1k.
+        </p>
+      `,
+    },
+    {
+      title: 'Well-structured reports',
+      description: `
+        <p>
+          Projects are delivered in structured and understandable reports, where you can track the progress of the project and add your comments and edits.
+        </p>
+      `,
+    },
+  ];
+
+section.section.benefits
+  ._container
+    .benefits__wrapper
+      .benefits__header.section-header
+        h2.section-header__title Why us?
+
+        p.section-header__subtitle We offer niche-specific backlinks for content trust and website quality. No spam or irrelevant links
+
+      ul.benefits-list.accordion(data-is-label-click='false')
+        each item in benefitsList
+          li.accordion__item.benefits-list__item
+            button.accordion__summary.benefits-list__header
+              span.benefits-list__title= item.title
+
+              span.benefits-list__label.accordion__label
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z" fill="currentColor" fill-opacity="0.85"/>
+                </svg>
+
+            .accordion__details
+              .accordion__description.benefits-list__description
+                .benefits-list__typography.typography!= item.description

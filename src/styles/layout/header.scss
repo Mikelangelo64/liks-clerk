@@ -17,7 +17,7 @@
 
   padding: var(--padding-header-top) 0 var(--padding-header-bottom);
 
-  // background-color: red;
+  background-color: var(--color-grey);
   
   @include transition(opacity 0.4s);
   color: var(--color-black);

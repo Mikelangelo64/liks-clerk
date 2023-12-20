@@ -4,7 +4,7 @@ nav.menu
       li.menu-list__item(
         class=`${item.submenu && item.submenu.length !== 0 ? 'accordion__item' : ''}`
       )
-        .menu-list__item__header
+        .menu-list__item__header.accordion__summary
           if item.isLanguage && item.isLanguage === 'true'
             p.menu__link #{ item.name }
           else
