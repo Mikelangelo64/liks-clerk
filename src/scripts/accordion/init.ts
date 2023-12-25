@@ -1,6 +1,11 @@
 import { Timeline } from 'vevet';
+import vevet from '../config/vevet';
 
-const itemHandler = (container: HTMLElement, isLabelClick: boolean) => {
+const itemHandler = (
+  container: HTMLElement,
+  isLabelClick: boolean,
+  isOpenOnHover: boolean
+) => {
   const elements = container.querySelectorAll<HTMLElement>('.accordion__item');
 
   if (elements.length === 0) {
@@ -37,15 +42,27 @@ const itemHandler = (container: HTMLElement, isLabelClick: boolean) => {
       body.style.opacity = `${easing}`;
     });
 
-    arrow.addEventListener('click', () => {
-      element.classList.toggle('_active');
-
-      if (timeline.progress > 0) {
-        timeline.reverse();
-      } else {
+    if (!vevet.isMobile && isOpenOnHover) {
+      element.addEventListener('mouseenter', () => {
+        element.classList.add('_active');
         timeline.play();
-      }
-    });
+      });
+
+      element.addEventListener('mouseleave', () => {
+        element.classList.remove('_active');
+        timeline.reverse();
+      });
+    } else {
+      arrow.addEventListener('click', () => {
+        element.classList.toggle('_active');
+
+        if (timeline.progress > 0) {
+          timeline.reverse();
+        } else {
+          timeline.play();
+        }
+      });
+    }
   });
 };
 
@@ -58,7 +75,8 @@ const accordionInit = () => {
 
   containerArray.forEach((container) => {
     const isLabelClick = container.dataset.isLabelClick === 'true';
-    itemHandler(container, isLabelClick);
+    const isOpenOnHover = container.dataset.isOpenOnHover === 'true';
+    itemHandler(container, isLabelClick, isOpenOnHover);
   });
 };
 
