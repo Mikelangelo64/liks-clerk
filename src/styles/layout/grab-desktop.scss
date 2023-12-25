@@ -7,7 +7,7 @@
   @include viewport-phone {
     --gradient-width: #{px-to-rem(20)};
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       --gradient-width: var(--wrap);
     }
   }

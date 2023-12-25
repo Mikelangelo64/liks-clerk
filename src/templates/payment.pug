@@ -1,0 +1,49 @@
+-
+  const paymentList = [
+    {
+      media: '@/assets/img/payment/payment-1.svg',
+      title: 'Non-cash payments',
+    },
+    {
+      media: '@/assets/img/payment/payment-2.svg',
+      title: 'Credit Card',
+    },
+    {
+      media: '@/assets/img/payment/payment-3.svg',
+      title: 'PayPal',
+    },
+    {
+      media: '@/assets/img/payment/payment-4.png',
+      title: 'Payoneer',
+    },
+    {
+      media: '@/assets/img/payment/payment-5.svg',
+      title: 'Cryptocurrencies',
+    },
+  ];
+
+section.section.payment
+  ._container
+    .payment__wrapper
+      .payment__header.section-header
+        h2.section-header__title Our Work Showcase
+
+      //- .payment__main
+      .payment-list.grab-desktop
+        ul.payment-list__inner.grab-desktop__inner
+          each item in paymentList
+            li
+              .payment-list__item
+                .payment-list__media
+                  img(src=require(`${item.media}`), alt=`${item.title}`)
+
+                p.payment-list__title= item.title
+        //- .payment-slider.swiper.slider
+        //-   .swiper-wrapper
+        //-     each item in paymentList
+        //-       .swiper-slide
+        //-         .payment-slider__item
+        //-           .payment-slider__media
+        //-             img(src=require(`${item.media}`), alt=`${item.title}`)
+
+        //-           p.showcase-slider__title= item.title
