@@ -1,0 +1,214 @@
+-
+  const clientsPreviewArray = [
+    {
+      isActive: 'true',
+      data: '1',
+      name: 'frenchboy666',
+      location: 'United Kingdom',
+      title: 'Great attentions to details',
+      raiting: 5,
+      typography: `
+        <p>
+          Great attentions to details, fast delivery, fast answer. Not the first time I buy from him. Not the last time ! Top notch work. Thanks !
+        </p>
+      `,
+      avatar: {
+        type: 'image',
+        image: '@/assets/img/review/avatar-1.png'
+      },
+      date: {
+        data: '2023-10-05T00:00:00+00:00',
+        title: 'Oct 05, 2023',
+      },
+    },
+    {
+      isActive: 'false',
+      data: '2',
+      name: 'qwiseo',
+      location: 'Ukraine',
+      title: 'What struck me was the high professionalism of the team. ',
+      raiting: 4,
+      typography: `
+        <p>
+          From the moment I started working with them, they surrounded me with attention and provided detailed advice on all aspects of the campaign. They were extremely flexible and adapted to my needs, which was important to me. I can't stress enough the responsiveness of the team. Issues are resolved quickly, reports are provided in a timely manner, and their communication is top notch
+        </p>
+      `,
+      avatar: {
+        type: 'letter',
+        letter: 'Q'
+      },
+      date: {
+        data: '2023-10-05T00:00:00+00:00',
+        title: 'Oct 05, 2023',
+      },
+    },
+    {
+      isActive: 'false',
+      data: '3',
+      name: 'Evgeny Tarasov',
+      location: 'Ukraine',
+      title: 'Working with Link Mass',
+      raiting: 5,
+      typography: `
+        <p>
+          We began to cooperate, everything is very clear, fast and organized. All of our questions were answered. They helped us in every little detail. We even did a little more than we planned.We will continue to cooperate. I recommend.
+        </p>
+      `,
+      avatar: {
+        type: 'letter',
+        letter: 'E'
+      },
+      date: {
+        data: '2023-10-05T00:00:00+00:00',
+        title: 'Oct 05, 2023',
+      },
+    },
+  ];
+
+section.section.clients-preview
+  ._container
+    .clients-preview__wrapper
+      .clients-preview-header.section-header
+        .clients-preview-header__top
+          h2.section-header__title Our Work Showcase
+
+          a.clients-preview__button.desktop.button-hollow(
+            href='#',
+            target='_blank'
+          )
+            span See all reviews
+
+        .clients-preview-header-summarize
+          .clients-preview-header-summarize__image
+            img(
+              src=require('@/assets/img/review/summarize.png'),
+              alt='clients-review'
+            ) 
+
+          p.clients-preview-header-summarize__description We`ve got more than 830 reviews in Fiverr, Trustpilot, BlackHatWorld and Clutch.co
+
+      .clients-preview__main.desktop.fade-section
+        ul.fade-section__list.clients-preview-navigation
+          each item in clientsPreviewArray
+            li
+              button.fade-section__button.clients-preview-navigation__button.clients-preview-info(
+                class=`${item.isActive === 'true' ? 'active' : ''}`,
+                data-item=`${item.data}`
+              )
+                span.clients-preview-info-avatar
+                  span.clients-preview-info-avatar__container
+                    case item.avatar.type 
+                      when 'image' 
+                        img.clients-preview-info-avatar__image(
+                          src=require(`${item.avatar.image}`),
+                          alt=`${item.title}`
+                        )
+
+                      when 'letter'
+                        span.clients-preview-info-avatar__letter= item.avatar.letter
+
+                span.clients-preview-info__content
+                  span.clients-preview-info__name= item.name
+
+                  span.clients-preview-info-location
+                    span.clients-preview-info-location__label
+                      img(
+                        src=require('@/assets/img/review/location.svg'),
+                        alt='location'
+                      )
+
+                    span.clients-preview-info-location__text= item.location
+
+                  time.clients-preview-info__date(datetime=`${item.date.data}`)= item.date.title
+
+        .clients-preview-content
+          .fade-section-content
+            each item, index in clientsPreviewArray
+              .fade-section-content__item(
+                class=`${item.isActive !== 'true' ? 'unactive' : ''}`,
+                data-item=`${item.data}`
+              )
+                .clients-preview-comment
+                  .clients-preview-comment__title= item.title
+
+                  .clients-preview-comment-raiting
+                    - for(let i=0; i<5; i++)
+                      .clients-preview-comment-raiting__item(
+                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                      ) 
+                        if i + 1 <= item.raiting
+                          img(
+                            src=require('@/assets/img/review/star.svg'),
+                            alt='star'
+                          )
+                        else
+                          img(
+                            src=require('@/assets/img/review/star-empty.svg'),
+                            alt='star'
+                          )
+
+                  .clients-preview-comment__typography.typography!= item.typography
+
+      .clients-preview__main.phone
+        ul.clients-preview-content.accordion(
+          data-is-label-click='false',
+          data-is-open-on-hover='false'
+        )
+          each item, index in clientsPreviewArray
+            li.accordion__item.clients-preview-content__item
+              button.accordion__summary.clients-preview-info
+                span.clients-preview-info-avatar
+                  .clients-preview-info-avatar__container
+                    case item.avatar.type 
+                      when 'image' 
+                        img.clients-preview-info-avatar__image(
+                          src=require(`${item.avatar.image}`),
+                          alt=`${item.title}`
+                        )
+
+                      when 'letter'
+                        span.clients-preview-info-avatar__letter= item.avatar.letter
+
+                span.clients-preview-info__content
+                  span.clients-preview-info__name= item.name
+
+                  span.clients-preview-info-location
+                    span.clients-preview-info-location__label
+                      img(
+                        src=require('@/assets/img/review/location.svg'),
+                        alt='location'
+                      )
+
+                    span.clients-preview-info-location__text= item.location
+
+                  time.clients-preview-info__date(datetime=`${item.date.data}`)= item.date.title
+
+              .accordion__details
+                .accordion__description.clients-preview-content__description
+                  .clients-preview-comment
+                    .clients-preview-comment__title= item.title
+
+                    .clients-preview-comment-raiting
+                      - for(let i=0; i<5; i++)
+                        .clients-preview-comment-raiting__item(
+                          class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                        ) 
+                          if i + 1 <= item.raiting
+                            img(
+                              src=require('@/assets/img/review/star.svg'),
+                              alt='star'
+                            )
+                          else
+                            img(
+                              src=require('@/assets/img/review/star-empty.svg'),
+                              alt='star'
+                            )
+
+                    .clients-preview-comment__typography.typography!= item.typography
+
+      .clients-preview__footer
+        a.clients-preview__button.phone.button-hollow(
+          href='#',
+          target='_blank'
+        )
+          span See all reviews

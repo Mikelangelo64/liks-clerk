@@ -14,6 +14,241 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header class="header">
+      <div class="_container header__container">
+        <div class="header__wrapper">
+          <div class="header__item header__logo__container"><a class="custom-logo-link header__logo" href="#"> <img
+                class="custom-logo" src="assets/img/logo.svg" alt="logo" draggable="false"></a></div>
+          <nav class="header__item header__menu">
+            <ul class="menu-list">
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">About us</a></li>
+              <li class="menu-list__item additional" data-submenu="true"><a class="menu__link"
+                  href="#">Services</a><button class="menu-submenu-open"><svg width="10" height="10" viewBox="0 0 10 10"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list">
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Forum backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related threads on forums with
+                            DR&gt;20, traffic&gt;1k</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related questions on popular
+                            Q&amp;A: Quora and Reddit</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                            backlinks</span><span class="menu-submenu__description">Placing backlinks in niche related,
+                            indexed and existing articles on real websites</span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Reviews</a></li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Seo Vocabulary</a></li>
+              <li class="menu-list__item additional" data-submenu="true">
+                <p class="menu__link">EN</p><button class="menu-submenu-open"><svg width="10" height="10"
+                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list language">
+                    <li>
+                      <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                            src="assets/img/language-usa.svg" alt="EN"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">EN</span><span class="menu-submenu__description"></span></span>
+                      </p>
+                    </li>
+                    <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/language-ua.svg" alt="UA"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">UA</span><span
+                            class="menu-submenu__description"></span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__button__container"><button class="header__button button-hollow"><span>Log
+                in</span></button><button class="menu-burger popup-open" data-popup="_popup-menu"
+              title="open menu"><span></span></button></div>
+        </div>
+      </div>
+      <div class="popup popup-video banner__popup " data-popupname="_popup-banner" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-video__media"><video class="video lazy-video" disablePictureInPicture preload="metadata"
+                  playsinline controls>
+                  <source data-src="assets/video/banner-popup.mp4" type="video/mp4">
+                </video></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-menu menu__popup " data-popupname="_popup-menu" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="modal-menu__header"><button class="popup__close"><img src="assets/img/popup-close-green.svg"
+                    alt="close"></button></div>
+              <div class="modal-menu__main">
+                <nav class="menu">
+                  <ul class="menu-list accordion" data-is-label-click="true">
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">About
+                          us</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link"
+                          href="#">Services</a><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button></div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description">
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Forum
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related threads on forums with DR&gt;20, traffic&gt;1k</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related questions on popular Q&amp;A: Quora and Reddit</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related, indexed and existing articles on real websites</span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Reviews</a>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Seo
+                          Vocabulary</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary">
+                        <p class="menu__link">EN</p><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button>
+                      </div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description language">
+                          <li>
+                            <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                                  src="assets/img/language-usa.svg" alt="EN"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">EN</span><span
+                                  class="menu-submenu__description"></span></span></p>
+                          </li>
+                          <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/language-ua.svg" alt="UA"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">UA</span><span
+                                  class="menu-submenu__description"></span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modal-menu__footer"><a class="modal-menu__button button-filled" href="#"><span>Log
+                    in</span></a><a class="modal-menu__button button-hollow" href="#"><span>Sign up</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback thanks__popup " data-popupname="_popup-thanks" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Thank you!</p>
+                </div>
+                <p class="popup-feedback__subtitle">Your application has been accepted. <br />Expect a call soon.</p>
+                <button class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback error__popup " data-popupname="_popup-error" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Oops</p>
+                </div>
+                <p class="popup-feedback__subtitle">Something wrong. Try later.</p><button
+                  class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-form form__popup fullscreen-phone" data-popupname="_popup-form" aria-modal="true"
+        role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
+                alt="close"><img class="mobile" src="assets/img/popup-close.svg" alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-action">
+                <p class="popup-action__title">Please fill out the form and we will contact you shortly.</p>
+                <div class="popup-action__main">
+                  <form class="form popup-action__form" id="form-popup" action="post">
+                    <div><label for="popup-name"> <input id="popup-name" type="text" name="name"
+                          placeholder="Your name"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-email"> <input id="popup-email" type="email" name="email"
+                          placeholder="Your email"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-telephone"> <input id="popup-telephone" type="tel" name="telephone"
+                          placeholder="Your phone number"><span class="wpcf7-not-valid-tip">Wrong format</span></label>
+                    </div>
+                    <div><label for="popup-request"> <textarea id="popup-request" name="request"
+                          placeholder="Message text"></textarea><span class="wpcf7-not-valid-tip">Wrong
+                          format</span></label></div>
+                    <p><button type="submit"> <span>Send</span></button></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <section class="banner section">
       <div class="_container banner__container section__container">
         <div class="banner__wrapper">
@@ -1125,6 +1360,261 @@
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="section clients-preview">
+      <div class="_container">
+        <div class="clients-preview__wrapper">
+          <div class="clients-preview-header section-header">
+            <div class="clients-preview-header__top">
+              <h2 class="section-header__title">Our Work Showcase</h2><a
+                class="clients-preview__button desktop button-hollow" href="#" target="_blank"><span>See all
+                  reviews</span></a>
+            </div>
+            <div class="clients-preview-header-summarize">
+              <div class="clients-preview-header-summarize__image"><img src="assets/img/review/summarize.png"
+                  alt="clients-review"></div>
+              <p class="clients-preview-header-summarize__description">We`ve got more than 830 reviews in Fiverr,
+                Trustpilot, BlackHatWorld and Clutch.co</p>
+            </div>
+          </div>
+          <div class="clients-preview__main desktop fade-section">
+            <ul class="fade-section__list clients-preview-navigation">
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info active"
+                  data-item="1"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><img class="clients-preview-info-avatar__image"
+                        src="assets/img/review/avatar-1.png" alt="Great attentions to details"></span></span><span
+                    class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">frenchboy666</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">United Kingdom</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info"
+                  data-item="2"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">Q</span></span></span><span
+                    class="clients-preview-info__content"><span class="clients-preview-info__name">qwiseo</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info"
+                  data-item="3"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">E</span></span></span><span
+                    class="clients-preview-info__content"><span class="clients-preview-info__name">Evgeny
+                      Tarasov</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+            </ul>
+            <div class="clients-preview-content">
+              <div class="fade-section-content">
+                <div class="fade-section-content__item" data-item="1">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">Great attentions to details</div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        Great attentions to details, fast delivery, fast answer. Not the first time I buy from him. Not
+                        the last time ! Top notch work. Thanks !
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="2">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">What struck me was the high professionalism of the team.
+                    </div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item empty"> <img
+                          src="assets/img/review/star-empty.svg" alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        From the moment I started working with them, they surrounded me with attention and provided
+                        detailed advice on all aspects of the campaign. They were extremely flexible and adapted to my
+                        needs, which was important to me. I can't stress enough the responsiveness of the team. Issues
+                        are resolved quickly, reports are provided in a timely manner, and their communication is top
+                        notch
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="3">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">Working with Link Mass</div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        We began to cooperate, everything is very clear, fast and organized. All of our questions were
+                        answered. They helped us in every little detail. We even did a little more than we planned.We
+                        will continue to cooperate. I recommend.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clients-preview__main phone">
+            <ul class="clients-preview-content accordion" data-is-label-click="false" data-is-open-on-hover="false">
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><img class="clients-preview-info-avatar__image"
+                        src="assets/img/review/avatar-1.png" alt="Great attentions to details"></div>
+                  </span><span class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">frenchboy666</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">United Kingdom</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">Great attentions to details</div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          Great attentions to details, fast delivery, fast answer. Not the first time I buy from him.
+                          Not the last time ! Top notch work. Thanks !
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">Q</span></div>
+                  </span><span class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">qwiseo</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">What struck me was the high professionalism of the
+                        team. </div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item empty"> <img
+                            src="assets/img/review/star-empty.svg" alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          From the moment I started working with them, they surrounded me with attention and provided
+                          detailed advice on all aspects of the campaign. They were extremely flexible and adapted to my
+                          needs, which was important to me. I can't stress enough the responsiveness of the team. Issues
+                          are resolved quickly, reports are provided in a timely manner, and their communication is top
+                          notch
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">E</span></div>
+                  </span><span class="clients-preview-info__content"><span class="clients-preview-info__name">Evgeny
+                      Tarasov</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">Working with Link Mass</div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          We began to cooperate, everything is very clear, fast and organized. All of our questions were
+                          answered. They helped us in every little detail. We even did a little more than we planned.We
+                          will continue to cooperate. I recommend.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clients-preview__footer"><a class="clients-preview__button phone button-hollow" href="#"
+              target="_blank"><span>See all reviews</span></a></div>
         </div>
       </div>
     </section>

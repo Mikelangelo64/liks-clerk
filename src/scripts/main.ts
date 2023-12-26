@@ -1,5 +1,6 @@
 import accordionInit from './accordion/init';
 import anchorsInit from './anchor/init';
+import fadeContentInit from './fadeContent/init';
 import grabDesktopInit from './grabDesktop/init';
 import headerEvents from './headerEvents/init';
 import isViewedHandler, { isVideoViewedHandler } from './isViewedHandler/init';
@@ -17,6 +18,7 @@ export const init = () => {
 
   grabDesktopInit();
   headerEvents();
+  fadeContentInit();
   // console.log(scrollSectionState);
 
   const popups = initPopups();

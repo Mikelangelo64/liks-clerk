@@ -9,6 +9,12 @@
     color: var(--color-black);
   }
   
+  &.clients-preview-comment__typography {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-grey-600);
+  }
+  
   &.shop-product__typography {
     line-height: 178%;
   }

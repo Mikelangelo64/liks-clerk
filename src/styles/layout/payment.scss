@@ -45,7 +45,12 @@
 
     //.payment-list__inner 
     &__inner {
+      --shadow-height: #{px-to-rem(8)};
+
+      // padding-top: var(--shadow-height);
+      padding-bottom: calc(var(--shadow-height) * 2);
       align-items: unset;
+
 
       > * + * {
         margin-left: px-to-rem(24);
@@ -61,11 +66,20 @@
       align-items: center;
       
       width: px-to-rem(236);
+      border: 1px solid var(--color-white);
       border-radius: px-to-rem(24);
       padding: px-to-rem(24) px-to-rem(12);
 
+      @include transition((border 0.4s, box-shadow 0.4s));
       text-align: center;
       background-color: var(--color-white);
+
+      @include hover-focus-visible {
+        @include non-mobile-device {
+          border-color: var(--color-green);
+          box-shadow: 0 8px var(--shadow-height) 0 rgba(var(--color-grey-500--rgb), 0.25);
+        }
+      }
 
       > * + * {
         margin-top: px-to-rem(12);
