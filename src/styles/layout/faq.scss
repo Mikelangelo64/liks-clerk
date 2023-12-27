@@ -22,7 +22,15 @@
   //.faq__header 
   // &__header {
   // }
-  
+
+  //.faq__main
+  &__main {
+    width: 100%;
+    max-width: px-to-rem(1062);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   //.faq-list 
   &-list {
     > * + * {
