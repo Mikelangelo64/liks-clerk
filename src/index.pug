@@ -8,6 +8,52 @@
     subtitle: 'Backlinks are important for the search ranking. Our aim is providing the best linkbuilding services for your business',
   };
 
+  remarkList = [
+    {
+      link: {
+        href: '#',
+        title: 'Learn more',
+      },
+
+      title: 'Check out our beginer`s guide',
+      typography: `
+        <p>
+          We encourage you to read our beginner's guide to increase your awareness of backlinks
+        </p>
+      `,
+
+      list: [
+        {
+          title: 'Introduction',
+          subtitle: 'Introduction to backlings world',
+        },
+        {
+          title: 'The basics',
+          subtitle: 'Explaning basic terms and concepts of backlinks',
+        },
+        {
+          title: 'Importance',
+          subtitle: 'Explaning why backlinks are significant',
+        },
+      ],
+    },
+    {
+      link: {
+        href: '#',
+        title: 'Contact us',
+      },
+
+      title: 'Still have any questions?',
+      typography: `
+        <p>
+          If you have any questions or need further assistance, feel free to reach out to our team. We're here to help you <a href="#", target="_blank">navigate the world of backlinks</a> and <a href="#", target="_blank">improve your website's online presence</a>
+        </p>
+      `,
+
+      list: [],
+    },
+  ];
+
 doctype html
 html(lang='en')
   head
@@ -30,7 +76,9 @@ html(lang='en')
 
     include @/templates/services.pug
 
-    include @/templates/guide.pug
+    each remark, index in remarkList
+      if index === 0
+        include @/templates/remark.pug
 
     include @/templates/get-started.pug
 
@@ -39,6 +87,10 @@ html(lang='en')
     include @/templates/clients-preview.pug
 
     include @/templates/faq.pug
+
+    each remark, index in remarkList
+      if index === 1
+        include @/templates/remark.pug
 
     //- include @/layout/footer.pug
 

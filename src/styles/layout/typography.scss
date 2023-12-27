@@ -5,6 +5,26 @@
 
   color: var(--color-white);
   
+  &.remark-header__description {
+    color: var(--color-grey-200);
+      
+    @include viewport-desktop {
+      font-weight: 600;
+      line-height: 133%;
+      font-size: px-to-rem(24);
+    }
+    @include viewport-tablet {
+      font-weight: 600;
+      line-height: 133%;
+      font-size: px-to-rem(20);
+    }
+    @include viewport-phone {
+      font-weight: 500;
+      line-height: 150%;
+      font-size: px-to-rem(16);
+    }
+  }
+  
   &.get-started-list__typography {
     color: var(--color-black);
   }
@@ -73,12 +93,13 @@
   a {
     display: inline-block;
     color: var(--color-green);
-    text-underline-offset: px-to-rem(4);
+    text-decoration: none;
     text-decoration-thickness: 0.5px;
-
+    text-underline-offset: px-to-rem(4);
+    
     @include hover-focus-visible {
       @include non-mobile-device {
-        text-decoration: none;
+        text-decoration: underline;
       }
     } 
   }

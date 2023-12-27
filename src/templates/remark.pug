@@ -1,0 +1,40 @@
+-
+  //- const guideList = [
+  //-   {
+  //-     title: 'Introduction',
+  //-     subtitle: 'Introduction to backlings world',
+  //-   },
+  //-   {
+  //-     title: 'The basics',
+  //-     subtitle: 'Explaning basic terms and concepts of backlinks',
+  //-   },
+  //-   {
+  //-     title: 'Importance',
+  //-     subtitle: 'Explaning why backlinks are significant',
+  //-   },
+  //- ];
+
+section.section.remark
+  ._container
+    .remark__wrapper
+      .remark-header
+        .remark-header__top
+          .remark-header__label
+            img(src=require('@/assets/img/arrow-quote.svg'), alt='quote')
+
+          a.remark-header__button.button-hollow(href=`${remark.link.href}`)
+            span= remark.link.title
+
+        p.remark-header__title= remark.title
+
+        .remark-header__description.typography!= remark.typography
+
+      if remark.list && remark.list.length !== 0
+        ul.remark-list
+          each item, index in remark.list
+            li.remark-list__item
+              .remark-list__count!= `${index + 1 < 10 ? '0' : ''}${index + 1}`
+
+              p.remark-list__title= item.title
+
+              p.remark-list__subtitle= item.subtitle

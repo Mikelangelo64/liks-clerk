@@ -1,6 +1,6 @@
-.guide {
+.remark {
   
-  //.guide__wrapper 
+  //.remark__wrapper 
   &__wrapper {
     width: 100%;
 
@@ -9,7 +9,7 @@
     }
   }
   
-  //.guide-header 
+  //.remark-header 
   &-header {
     position: relative;
     z-index: 0;
@@ -46,7 +46,7 @@
       transform: translate(-50%, -50%) scale(0.6);
       opacity: 0;
 
-      @at-root .guide-header:hover::before {
+      @at-root .remark-header:hover::before {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
       }
@@ -61,7 +61,7 @@
       }
     }
 
-    //.guide-header__top 
+    //.remark-header__top 
     &__top {
       width: 100%;
 
@@ -74,7 +74,7 @@
       }
     }
     
-    //.guide-header__label 
+    //.remark-header__label 
     &__label {
       flex-shrink: 0;
 
@@ -93,7 +93,7 @@
       }
     }
     
-    //.guide-header__button 
+    //.remark-header__button 
     &__button {
       flex-shrink: 0;
       width: 100%;
@@ -112,7 +112,7 @@
       }
     }
     
-    //.guide-header__title 
+    //.remark-header__title 
     &__title {
       @include text-heading-3;
 
@@ -124,7 +124,7 @@
       }
     }
     
-    //.guide-header__description 
+    //.remark-header__description 
     &__description {
       color: var(--color-grey-200);
       
@@ -146,7 +146,7 @@
     }
   }
   
-  //.guide-list 
+  //.remark-list 
   &-list {
     display: grid;
     gap: px-to-rem(24);
@@ -163,7 +163,7 @@
       display: none;
     }
 
-    //.guide-list__item 
+    //.remark-list__item 
     &__item {
       border-radius: px-to-rem(40);
       padding: px-to-rem(48) px-to-rem(40);
@@ -182,7 +182,7 @@
       }
     }
     
-    //.guide-list__count 
+    //.remark-list__count 
     &__count {
       display: flex;
       align-items: center;
@@ -199,13 +199,13 @@
       font-size: px-to-rem(24);
     }
     
-    //.guide-list__title 
+    //.remark-list__title 
     &__title {
       @include text-heading-3;
       margin-top: px-to-rem(24);
     }
     
-    //.guide-list__subtitle 
+    //.remark-list__subtitle 
     &__subtitle {
       color: var(--color-grey-200);
       
