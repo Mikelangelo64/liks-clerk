@@ -4,15 +4,30 @@ import vevet from '../config/vevet';
 const itemHandler = (
   container: HTMLElement,
   isLabelClick: boolean,
-  isOpenOnHover: boolean
+  isOpenOnHover: boolean,
+  prefix: string | undefined
 ) => {
-  const elements = container.querySelectorAll<HTMLElement>('.accordion__item');
+  let arrowClass = `.accordion__summary${prefix ? '-' + prefix : ''}`;
+
+  if (isLabelClick) {
+    arrowClass = `.accordion__label${prefix ? '-' + prefix : ''}`;
+  }
+
+  const elementClass = `.accordion__item${prefix ? '-' + prefix : ''}`;
+  const deatailsClass = `.accordion__details${prefix ? '-' + prefix : ''}`;
+  const descriptionClass = `.accordion__description${
+    prefix ? '-' + prefix : ''
+  }`;
+
+  const elements = container.querySelectorAll<HTMLElement>(`${elementClass}`);
 
   if (elements.length === 0) {
     return;
   }
 
-  let arrowClass = '.accordion__summary';
+  // console.log(container, arrowClass);
+
+  // let arrowClass = '.accordion__summary';
 
   if (isLabelClick) {
     arrowClass = '.accordion__label';
@@ -20,15 +35,13 @@ const itemHandler = (
 
   elements.forEach((element) => {
     const arrow = element.querySelector<HTMLButtonElement>(`${arrowClass}`);
-    const body = element.querySelector<HTMLElement>('.accordion__details');
+    const body = element.querySelector<HTMLElement>(`${deatailsClass}`);
 
     if (!arrow || !body) {
       return;
     }
 
-    const bodyInner = body.querySelector<HTMLElement>(
-      '.accordion__description'
-    );
+    const bodyInner = body.querySelector<HTMLElement>(`${descriptionClass}`);
     if (!bodyInner) {
       return;
     }
@@ -57,8 +70,16 @@ const itemHandler = (
         element.classList.toggle('_active');
 
         if (timeline.progress > 0) {
+          if (prefix) {
+            arrow.innerHTML = `<span>Load more</span>`;
+          }
+
           timeline.reverse();
         } else {
+          if (prefix) {
+            arrow.innerHTML = `<span>Hide</span>`;
+          }
+
           timeline.play();
         }
       });
@@ -76,7 +97,8 @@ const accordionInit = () => {
   containerArray.forEach((container) => {
     const isLabelClick = container.dataset.isLabelClick === 'true';
     const isOpenOnHover = container.dataset.isOpenOnHover === 'true';
-    itemHandler(container, isLabelClick, isOpenOnHover);
+    const prefix = container.dataset.prefix;
+    itemHandler(container, isLabelClick, isOpenOnHover, prefix);
   });
 };
 

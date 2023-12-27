@@ -82,7 +82,7 @@
       @include transition(transform 0.3s);
       transform: translate(-50%, -50%) rotate(90deg);
 
-      @at-root .accordion__item._active .accordion__label::after {
+      @at-root .accordion__item._active > .accordion__summary .accordion__label::after {
         transform: translate(-50%, -50%);
       }
     }
@@ -125,6 +125,26 @@
 
       svg {
         max-width: px-to-rem(16);
+      }
+    }
+
+    @at-root .faq-list.accordion & {
+      @include transition((transform 0.4s, color 0.3s));
+
+      @include hover-focus-visible {
+        @include non-mobile-device {
+          color: var(--color-green-100);
+        }
+      } 
+
+      @at-root .faq-list.accordion .accordion__item._active .accordion__label {
+        transform: rotate(135deg);
+      }
+
+      &::after {  
+        @at-root .faq-list.accordion .accordion__item._active .accordion__label::after {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 import initFadeSection from './initSection';
 
 const fadeContentInit = () => {
-  const sectionArr = document.querySelectorAll('.fade-section');
+  const sectionArr = document.querySelectorAll<HTMLElement>('.fade-section');
 
   if (sectionArr.length === 0) {
     return;

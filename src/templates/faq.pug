@@ -1,0 +1,113 @@
+-
+  const faqList = [
+    {
+      title: 'What do I need to provide once I order?',
+      isRecommended: 'true',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+    {
+      title: 'Can you really deliver withing the specified timeline?',
+      isRecommended: 'true',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+    {
+      title: 'Are these backlinks safe for my website?',
+      isRecommended: 'false',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+    {
+      title: 'Are this backlinks really permanent?',
+      isRecommended: 'false',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+    {
+      title: 'What services do you use to check backlinks quality?',
+      isRecommended: 'false',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+    {
+      title: 'Do you work with all niches?',
+      isRecommended: 'false',
+      description: `
+        <p>
+          You need to provide: - URLs to your site which you want to build links - Keywords which we can use for anchors or just in text words - Short description of your company or requirements or expectations
+        </p>
+      `,
+    },
+  ];
+
+section.section.faq
+  ._container
+    .faq__wrapper
+      .faq__header.section-header
+        h2.section-header__title Frequently asked questions
+
+        p.section-header__subtitle Check our Q&A section to find answers on frequently asked questions
+
+      .faq__main
+        ul.faq-list.accordion(data-is-label-click='false')
+          each item, index in faqList
+            if index < 3
+              li.accordion__item.faq-list__item
+                button.accordion__summary.faq-list__header
+                  span.faq-list__title= item.title
+
+                  if item.isRecommended && item.isRecommended === 'true'
+                    span.faq-list__recommended Recommended
+
+                  span.faq-list__label.accordion__label
+                    //- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    //-   <path d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z" fill="currentColor" fill-opacity="0.85"/>
+                    //- </svg>
+
+                .accordion__details
+                  .accordion__description.faq-list__description
+                    .faq-list__typography.typography!= item.description
+
+        .faq-more.accordion(data-is-label-click='false', data-prefix='p')
+          .faq-more__item.accordion__item.accordion__item-p
+            .accordion__details.accordion__details-p.faq-more__details
+              ul.faq-list.accordion__description.accordion__description-p.faq-more__description.accordion(
+                data-is-label-click='false'
+              )
+                each item, index in faqList
+                  if index >= 3
+                    li.accordion__item.faq-list__item
+                      button.accordion__summary.faq-list__header
+                        span.faq-list__title= item.title
+
+                        if item.isRecommended && item.isRecommended === 'true'
+                          span.faq-list__recommended Recommended
+
+                        span.faq-list__label.accordion__label
+                          //- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          //-   <path d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z" fill="currentColor" fill-opacity="0.85"/>
+                          //- </svg>
+
+                      .accordion__details
+                        .accordion__description.faq-list__description
+                          .faq-list__typography.typography!= item.description
+
+            .faq-more__footer
+              button.faq-more__button.accordion__summary.accordion__summary-p
+                span Load more
