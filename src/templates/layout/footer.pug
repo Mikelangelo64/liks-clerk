@@ -1,40 +1,287 @@
 -
-  const footerSocials = [
+  const footerMenu = [
     {
-      isTargetBlank: 'true',
-      image: `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.999 7.37688C9.44495 7.37688 7.37595 9.44688 7.37595 11.9999C7.37595 14.5539 9.44495 16.6239 11.999 16.6239C14.551 16.6239 16.622 14.5539 16.622 11.9999C16.622 9.44688 14.551 7.37688 11.999 7.37688ZM11.999 15.0039C10.34 15.0039 8.99495 13.6589 8.99495 12.0009C8.99495 10.3419 10.34 8.99788 11.999 8.99788C13.658 8.99788 15.001 10.3419 15.001 12.0009C15.001 13.6589 13.658 15.0039 11.999 15.0039Z" fill="currentColor"/>
-          <path d="M16.806 8.28488C17.4013 8.28488 17.884 7.80225 17.884 7.20688C17.884 6.61152 17.4013 6.12888 16.806 6.12888C16.2106 6.12888 15.728 6.61152 15.728 7.20688C15.728 7.80225 16.2106 8.28488 16.806 8.28488Z" fill="currentColor"/>
-          <path d="M20.533 6.11088C20.064 4.90188 19.109 3.94588 17.9 3.47888C17.201 3.21588 16.462 3.07488 15.714 3.05888C14.751 3.01688 14.446 3.00488 12.004 3.00488C9.56195 3.00488 9.24895 3.00488 8.29395 3.05888C7.54795 3.07388 6.80895 3.21488 6.10995 3.47888C4.89995 3.94588 3.94495 4.90188 3.47695 6.11088C3.21395 6.81088 3.07295 7.54888 3.05795 8.29688C3.01495 9.25888 3.00195 9.56388 3.00195 12.0069C3.00195 14.4489 3.00195 14.7599 3.05795 15.7169C3.07295 16.4649 3.21395 17.2029 3.47695 17.9039C3.94595 19.1119 4.90095 20.0679 6.11095 20.5359C6.80695 20.8079 7.54595 20.9619 8.29595 20.9859C9.25895 21.0279 9.56395 21.0409 12.006 21.0409C14.448 21.0409 14.761 21.0409 15.716 20.9859C16.463 20.9709 17.202 20.8289 17.902 20.5669C19.111 20.0979 20.066 19.1429 20.535 17.9339C20.798 17.2339 20.939 16.4959 20.954 15.7479C20.997 14.7859 21.01 14.4809 21.01 12.0379C21.01 9.59488 21.01 9.28488 20.954 8.32788C20.941 7.56988 20.801 6.81888 20.533 6.11088ZM19.315 15.6429C19.308 16.2189 19.204 16.7899 19.004 17.3309C18.699 18.1179 18.078 18.7399 17.292 19.0419C16.757 19.2409 16.193 19.3449 15.622 19.3529C14.672 19.3969 14.404 19.4079 11.968 19.4079C9.52995 19.4079 9.28095 19.4079 8.31295 19.3529C7.74395 19.3459 7.17795 19.2409 6.64395 19.0419C5.85495 18.7409 5.22995 18.1189 4.92495 17.3309C4.72895 16.7969 4.62295 16.2319 4.61395 15.6619C4.57095 14.7119 4.56095 14.4439 4.56095 12.0079C4.56095 9.57088 4.56095 9.32188 4.61395 8.35288C4.62095 7.77688 4.72495 7.20688 4.92495 6.66588C5.22995 5.87688 5.85495 5.25588 6.64395 4.95388C7.17795 4.75588 7.74395 4.65088 8.31295 4.64288C9.26395 4.59988 9.53095 4.58788 11.968 4.58788C14.405 4.58788 14.655 4.58788 15.622 4.64288C16.193 4.64988 16.757 4.75488 17.292 4.95388C18.078 5.25688 18.699 5.87888 19.004 6.66588C19.2 7.19988 19.306 7.76488 19.315 8.33488C19.358 9.28588 19.369 9.55288 19.369 11.9899C19.369 14.4259 19.369 14.6879 19.326 15.6439H19.315V15.6429Z" fill="currentColor"/>
-        </svg>
-      `,
-      href: 'https://www.google.com/maps/place/ул.+Казацкая,+120%2F4,+Киев,+02000/@50.396979,30.4921365,18z/data=!4m9!1m2!2m1!1zMDMwMjIsINC80ZbRgdGC0L4g0JrQuNGX0LIsICDQstGD0LsuINCa0L7Qt9Cw0YbRjNC60LAsIDEyMC80LCDQutC-0YDQv9GD0YEg0JIsINC60ZbQvNC90LDRgtCwIDE1!3m5!1s0x40d4c8d034b088bb:0x7935e7458342673a!8m2!3d50.396979!4d30.4921365!16s%2Fg%2F1tczcdtc?authuser=0',
-      title: 'instagram'
+      title: 'Services',
+      isSocial: 'false',
+      list: [
+        {
+          title: 'Forum backlinks',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Q&A backlinks',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Guest post backlinks',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Another services',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+      ],
     },
     {
-      isTargetBlank: 'true',
-      image: `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.001 2.00195C6.47895 2.00195 2.00195 6.47895 2.00195 12.001C2.00195 16.991 5.65795 21.127 10.439 21.88V14.892H7.89895V12.001H10.439V9.79795C10.439 7.28995 11.932 5.90695 14.215 5.90695C15.309 5.90695 16.455 6.10195 16.455 6.10195V8.56095H15.191C13.951 8.56095 13.563 9.33295 13.563 10.124V11.999H16.334L15.891 14.89H13.563V21.878C18.344 21.129 22 16.992 22 12.001C22 6.47895 17.523 2.00195 12.001 2.00195Z" fill="currentColor"/>
-        </svg>
-      `,
-      href: 'tel:+380662105690',
-      title: 'facebook'
+      title: 'About us ',
+      isSocial: 'false',
+      list: [
+        {
+          title: 'Who are we?',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Reviews',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'FAQ',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Seo Vocabulary',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+      ],
     },
     {
-      isTargetBlank: 'true',
-      image: `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21.5928 7.20301C21.3628 6.34501 20.6878 5.66801 19.8308 5.43701C18.2648 5.00701 11.9998 5.00001 11.9998 5.00001C11.9998 5.00001 5.73584 4.99301 4.16884 5.40401C3.32884 5.63301 2.63484 6.32501 2.40284 7.18201C1.98984 8.74801 1.98584 11.996 1.98584 11.996C1.98584 11.996 1.98184 15.26 2.39184 16.81C2.62184 17.667 3.29684 18.344 4.15484 18.575C5.73684 19.005 11.9848 19.012 11.9848 19.012C11.9848 19.012 18.2498 19.019 19.8158 18.609C20.6718 18.379 21.3498 17.703 21.5828 16.846C21.9968 15.281 21.9998 12.034 21.9998 12.034C21.9998 12.034 22.0198 8.76901 21.5928 7.20301ZM9.99584 15.005L10.0008 9.00501L15.2078 12.01L9.99584 15.005Z" fill="currentColor"/>
-        </svg>
-      `,
-      href: 'mailto:info@discorb.com.ua',
-      title: 'youtube'
+      title: 'Contacts ',
+      isSocial: 'true',
+      list: [
+        {
+          title: 'Messenger',
+          label: `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.001 2C17.634 2 22.001 6.127 22.001 11.7C22.001 17.273 17.634 21.4 12.001 21.4C11.0231 21.4025 10.0494 21.2734 9.10598 21.016C8.92878 20.9673 8.74021 20.9811 8.57198 21.055L6.58698 21.931C6.46711 21.984 6.33606 22.0067 6.20535 21.9972C6.07464 21.9876 5.94828 21.9461 5.83738 21.8763C5.72647 21.8065 5.63442 21.7105 5.56931 21.5967C5.5042 21.483 5.46803 21.355 5.46398 21.224L5.40998 19.444C5.40625 19.3357 5.38047 19.2293 5.33422 19.1313C5.28796 19.0333 5.22221 18.9457 5.14098 18.874C3.19598 17.134 2.00098 14.616 2.00098 11.7C2.00098 6.127 6.36698 2 12.001 2ZM5.99598 14.537C5.71398 14.984 6.26398 15.488 6.68498 15.168L9.83998 12.774C9.9441 12.6954 10.071 12.6529 10.2015 12.6529C10.3319 12.6529 10.4589 12.6954 10.563 12.774L12.899 14.524C13.0648 14.6485 13.2546 14.7373 13.4564 14.7848C13.6583 14.8322 13.8678 14.8373 14.0717 14.7997C14.2756 14.7621 14.4695 14.6827 14.6411 14.5664C14.8128 14.4501 14.9585 14.2994 15.069 14.124L18.006 9.464C18.288 9.016 17.738 8.512 17.317 8.831L14.162 11.227C14.0578 11.3056 13.9309 11.3481 13.8005 11.3481C13.67 11.3481 13.5431 11.3056 13.439 11.227L11.102 9.477C10.9362 9.35265 10.7465 9.264 10.5447 9.21664C10.343 9.16927 10.1336 9.16422 9.92984 9.2018C9.72605 9.23938 9.53226 9.31878 9.36069 9.43499C9.18912 9.5512 9.04349 9.7017 8.93298 9.877L5.99598 14.537Z" fill="currentColor"/>
+            </svg>
+          `,
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Telegram',
+          label: `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.0069 10.4582 14.006 10.4252 13.9973 10.3938C13.9886 10.3624 13.9724 10.3337 13.95 10.31C13.89 10.26 13.81 10.28 13.74 10.29C13.65 10.31 12.25 11.24 9.52 13.08C9.12 13.35 8.76 13.49 8.44 13.48C8.08 13.47 7.4 13.28 6.89 13.11C6.26 12.91 5.77 12.8 5.81 12.45C5.83 12.27 6.08 12.09 6.55 11.9C9.47 10.63 11.41 9.79 12.38 9.39C15.16 8.23 15.73 8.03 16.11 8.03C16.19 8.03 16.38 8.05 16.5 8.15C16.6 8.23 16.63 8.34 16.64 8.42C16.63 8.48 16.65 8.66 16.64 8.8Z" fill="currentColor"/>
+            </svg>
+          `,
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'LinkedIn',
+          label: `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.7778 2C20.3671 2 20.9324 2.23413 21.3491 2.65087C21.7659 3.06762 22 3.63285 22 4.22222V19.7778C22 20.3671 21.7659 20.9324 21.3491 21.3491C20.9324 21.7659 20.3671 22 19.7778 22H4.22222C3.63285 22 3.06762 21.7659 2.65087 21.3491C2.23413 20.9324 2 20.3671 2 19.7778V4.22222C2 3.63285 2.23413 3.06762 2.65087 2.65087C3.06762 2.23413 3.63285 2 4.22222 2H19.7778ZM19.2222 19.2222V13.3333C19.2222 12.3727 18.8406 11.4513 18.1613 10.772C17.482 10.0927 16.5607 9.71111 15.6 9.71111C14.6556 9.71111 13.5556 10.2889 13.0222 11.1556V9.92222H9.92222V19.2222H13.0222V13.7444C13.0222 12.8889 13.7111 12.1889 14.5667 12.1889C14.9792 12.1889 15.3749 12.3528 15.6666 12.6445C15.9583 12.9362 16.1222 13.3319 16.1222 13.7444V19.2222H19.2222ZM6.31111 8.17778C6.80618 8.17778 7.28098 7.98111 7.63104 7.63104C7.98111 7.28098 8.17778 6.80618 8.17778 6.31111C8.17778 5.27778 7.34444 4.43333 6.31111 4.43333C5.81309 4.43333 5.33547 4.63117 4.98332 4.98332C4.63117 5.33547 4.43333 5.81309 4.43333 6.31111C4.43333 7.34444 5.27778 8.17778 6.31111 8.17778ZM7.85556 19.2222V9.92222H4.77778V19.2222H7.85556Z" fill="currentColor"/>
+            </svg>
+          `,
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Facebook',
+          label: `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12.0251C22 6.49123 17.52 2 12 2C6.48 2 2 6.49123 2 12.0251C2 16.8772 5.44 20.9173 10 21.8496V15.0326H8V12.0251H10V9.5188C10 7.58396 11.57 6.01003 13.5 6.01003H16V9.01754H14C13.45 9.01754 13 9.46867 13 10.0201V12.0251H16V15.0326H13V22C18.05 21.4987 22 17.2281 22 12.0251Z" fill="currentColor"/>
+            </svg>
+          `,
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Twitter',
+          label: `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM17.4713 8.05706C18.0057 7.97294 18.5215 7.79706 19 7.52941C18.6396 8.19471 18.1922 8.77588 17.6702 9.23471C17.6764 9.38 17.6764 9.51765 17.6764 9.66294C17.6764 13.9988 14.9857 19 10.0889 19C8.58509 19 7.18069 18.4571 6 17.5241C6.21128 17.5547 6.42256 17.57 6.63384 17.57C7.83566 17.5771 9.00369 17.0809 9.94598 16.1629C9.3901 16.1505 8.85136 15.9239 8.40551 15.5152C7.95965 15.1064 7.62911 14.536 7.46033 13.8841C7.85809 13.9806 8.26862 13.9623 8.65966 13.8306C7.44168 13.5324 6.52199 12.2018 6.52199 10.6112V10.5882C6.88241 10.8176 7.29254 10.9706 7.73375 10.9706C7.01291 10.3971 6.54685 9.38765 6.54685 8.24824C6.54685 7.65176 6.67734 7.08588 6.90727 6.60412C8.21845 8.58471 10.1883 9.89235 12.4006 10.03C12.3571 9.79294 12.3322 9.54059 12.3322 9.28059C12.3322 7.46824 13.5253 6 14.9857 6C15.7686 6 16.4584 6.38235 16.9493 7.04C17.5521 6.88706 18.1238 6.61941 18.6396 6.23706C18.4407 7.00941 18.0182 7.65176 17.4713 8.05706Z" fill="currentColor"/>
+            </svg>
+          `,
+          href: '#',
+          isTargetBlank: 'true',
+        },
+      ],
+    },
+    {
+      title: 'Help ',
+      isSocial: 'false',
+      list: [
+        {
+          title: 'Terms and Conditions',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Privacy Policy',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+        {
+          title: 'Cookies Policy',
+          label: '',
+          href: '#',
+          isTargetBlank: 'true',
+        },
+      ],
+    },
+  ];
+
+  const reviewFooterList = [
+    {
+      label: '@/assets/img/review/footerList/review-1.svg',
+      alt: 'fiverr',
+      raiting: 5,
+      reviewCount: '820',
+    },
+    {
+      label: '@/assets/img/review/footerList/review-2.svg',
+      alt: 'trustpilot',
+      raiting: 4,
+      reviewCount: '10',
+    },
+    {
+      label: '@/assets/img/review/footerList/review-3.svg',
+      alt: 'BlackHatWorld',
+      raiting: 5,
+      reviewCount: '10',
+    },
+    {
+      label: '@/assets/img/review/footerList/review-4.svg',
+      alt: 'Clutch.co',
+      raiting: 5,
+      reviewCount: '15',
     },
   ];
 
 footer.footer
   ._container
     .footer__wrapper
-      p.footer__copyright © 2023 Copyright 2023 Sandor Gal. All Rights Reserved.
+      .footer__main
+        .footer__content
+          a.custom-logo-link.footer__logo(href='#') 
+            img.custom-logo(
+              src=require('@/assets/img/logo-footer.svg'),
+              alt='logo',
+              draggable='false'
+            )
+
+          ul.footer-review.desktop
+            each item in reviewFooterList
+              li.footer-review__item
+                .footer-review__info
+                  .footer-review__subtitle Reviewed on
+
+                  .footer-review__label
+                    img(src=require(`${item.label}`), alt=`${item.alt}`)
+
+                .footer-review-raiting
+                  .footer-review-raiting-stars
+                    - for(let i=0; i<5; i++)
+                      .footer-review-raiting-stars__item(
+                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                      ) 
+                        if i + 1 <= item.raiting
+                          img(
+                            src=require('@/assets/img/review/star.svg'),
+                            alt='star'
+                          )
+                        else
+                          img(
+                            src=require('@/assets/img/review/star-empty.svg'),
+                            alt='star'
+                          )
+
+                  p.footer-review-raiting__description
+                    strong= item.reviewCount
+                    span reviews
+
+        nav.footer-menu
+          ul.footer-menu__list
+            each item in footerMenu
+              li.footer-menu__item
+                p.footer-menu__title= item.title
+
+                ul.footer-menu__sublist(
+                  class=`${item.isSocial === 'true' ? 'socials' : ''}`
+                )
+                  each link in item.list
+                    li
+                      if item.isSocial && item.isSocial === 'true'
+                        a.footer-menu-link(
+                          href=`${link.href}`,
+                          target=`${item.isTargetBlank === 'true' ? '_blank' : '_self'}`
+                        ) 
+                          span.footer-menu-link__label!= link.label
+
+                          span.footer-menu-link__text= link.title
+
+                      else
+                        a.footer-menu-link(
+                          href=`${link.href}`,
+                          target=`${item.isTargetBlank === 'true' ? '_blank' : '_self'}`
+                        ) 
+                          span.footer-menu-link__text= link.title
+
+      .footer__bottom
+        ul.footer-review.phone
+          each item in reviewFooterList
+            li.footer-review__item
+              .footer-review__info
+                .footer-review__subtitle Reviewed on
+
+                .footer-review__label
+                  img(src=require(`${item.label}`), alt=`${item.alt}`)
+
+              .footer-review-raiting
+                .footer-review-raiting-stars
+                  - for(let i=0; i<5; i++)
+                    .footer-review-raiting-stars__item(
+                      class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                    ) 
+                      if i + 1 <= item.raiting
+                        img(
+                          src=require('@/assets/img/review/star.svg'),
+                          alt='star'
+                        )
+                      else
+                        img(
+                          src=require('@/assets/img/review/star-empty.svg'),
+                          alt='star'
+                        )
+
+                p.footer-review-raiting__description
+                  strong= item.reviewCount
+                  span reviews
+
+        .footer-review__item.special
+          .footer-review__image
+            img(
+              src=require('@/assets/img/review/footerList/special.svg'),
+              alt='DMCA'
+            )
+
+          .footer-review__info
+            .footer-review__label
+              img(
+                src=require('@/assets/img/review/footerList/review-5.svg'),
+                alt='DMCA'
+              )
+
+      .footer-copyright
+        p.footer-copyright__inner Copyright © 2023 - Linksclerk | All Rights Reserved
