@@ -35,6 +35,16 @@
     color: var(--color-grey-600);
   }
   
+  &.contacts-comment__typography {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-black);
+
+    @include viewport-tablet-min {
+      font-size: px-to-rem(20);
+    }
+  }
+  
   &.faq-list__typography {
     font-weight: 500;
     line-height: 150%;
@@ -96,6 +106,10 @@
     text-decoration: none;
     text-decoration-thickness: 0.5px;
     text-underline-offset: px-to-rem(4);
+
+    @at-root .contacts .typography.contacts-comment__typography a {
+      color: var(--color-blue);
+    }
     
     @include hover-focus-visible {
       @include non-mobile-device {
@@ -115,7 +129,7 @@
 
     li {
       --marker-size: #{px-to-rem(6)};
-      --line-height: 1.1;
+      --line-height: 1.5;
       
       position: relative;
       z-index: 0;
@@ -155,10 +169,6 @@
 
     > * + * {
       margin-top: px-to-rem(12);
-
-      @at-root .typography.info-section__typography ul > * + * {
-        margin-top: px-to-rem(26);
-      }
     }
   }
 
@@ -184,6 +194,59 @@
 
       &::marker {
         color: currentColor;
+      }
+
+    }
+
+    @at-root .contacts .typography.contacts-comment__typography ol {
+      margin-left: 0;
+
+      @include viewport-tablet-min {
+        font-size: px-to-rem(16);
+      }
+
+      li {
+        list-style: none;
+        --marker-size: #{px-to-rem(24)};
+        --line-height: 1.5;
+
+        position: relative;
+        z-index: 0;
+        padding-left: calc(var(--marker-size) + px-to-rem(8));
+      
+        line-height: calc(var(--line-height) * 100%);
+  
+        &::marker {
+          display: none;
+          // content: "\a0"counter(list-item)"\a0";
+          // display: block;
+          // border-radius: 50%;
+          // color: var(--color-white);
+          // background-color: var(--color-black);
+        }
+
+        &::before {
+          content: "\a0"counter(list-item)"\a0";
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          align-items: center;
+          justify-content: center;
+
+          width: var(--marker-size);
+          height: var(--marker-size);
+          border-radius: 50%;
+
+          transform: translate(0, calc(0.5em * var(--line-height) - 50%));
+          color: var(--color-white);
+          background-color: var(--color-black);
+        }
+      }
+
+      > * + * {
+        margin-top: px-to-rem(20);
       }
     }
   }
@@ -287,6 +350,11 @@
 
   > * + * {
     margin-top: px-to-rem(20);
+    
+    @at-root .contacts .typography.contacts-comment__typography > * + * {
+      margin-top: px-to-rem(32);
+    }
+
   }
   
   > * + ul,

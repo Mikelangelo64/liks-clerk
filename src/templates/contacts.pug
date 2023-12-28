@@ -1,0 +1,175 @@
+-
+  const contactsArray = [
+    {
+      isActive: 'true',
+      data: '1',
+      name: 'Telegram Bot',
+      title: 'Telegram',
+      subtitle: 'Our Telegram Bot is ready for you',
+      isEmptyDescription: 'false',
+      label: '@/assets/img/contacts/telegram.svg',
+      typography: `
+        <p>
+          Your steps:
+        </p>
+
+        <ol>
+          <li>
+            Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get to the Bot
+          </li>
+
+          <li>
+            After <a href="#" target="_blank">/start</a>, the bot needs you to describe the requirements, topic, or geography of the project
+          </li>
+
+          <li>
+            We will respond to your request within 10 minutes!
+          </li>
+        </ol>
+
+        <p>
+          P.S. Without a response from you, we will not be able to answer!
+        </p>
+      `,
+    },
+    {
+      isActive: 'false',
+      data: '2',
+      name: 'Skype',
+      title: 'Skype',
+      isEmptyDescription: 'false',
+      subtitle: 'Contact us in Skype',
+      label: '@/assets/img/contacts/skype.svg',
+      typography: `
+        <p>
+          Your steps:
+        </p>
+
+        <ol>
+          <li>
+            Click on the link <a href="https://www.skype.com/en/" target="_blank">https://www.skype.com/en/</a> or on the button to message us
+          </li>
+
+          <li>
+            Then we need you to describe the requirements, topic, or geography of the project
+          </li>
+
+          <li>
+            We will respond to your request within 10 minutes!
+          </li>
+        </ol>
+
+        <p>
+          P.S. Without a response from you, we will not be able to answer!
+        </p>
+      `,
+    },
+    {
+      isActive: 'false',
+      data: '3',
+      name: 'Log in',
+      title: 'Log in',
+      isEmptyDescription: 'true',
+      subtitle: 'Log in to your account to get full access to the functionality',
+      label: '@/assets/img/contacts/login.svg',
+
+      typography: `
+        <p>
+          Your steps:
+        </p>
+
+        <ol>
+          <li>
+            Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get to the Bot
+          </li>
+
+          <li>
+            After <a href="#" target="_blank">/start</a>, the bot needs you to describe the requirements, topic, or geography of the project
+          </li>
+
+          <li>
+            We will respond to your request within 10 minutes!
+          </li>
+        </ol>
+
+        <p>
+          P.S. Without a response from you, we will not be able to answer!
+        </p>
+      `,
+    },
+  ];
+
+section.section.contacts
+  ._container
+    .contacts__wrapper
+      .contacts__header.section-header
+        h2.section-header__title Get in touch
+
+        p.section-header__subtitle Do you have any questions or need a discount? - Drop us a line or register and put your project to work.
+
+      .contacts__main.desktop.fade-section
+        ul.fade-section__list.contacts-navigation
+          each item in contactsArray
+            li
+              button.fade-section__button.contacts-navigation__button.contacts-info(
+                class=`${item.isActive === 'true' ? 'active' : ''}`,
+                data-item=`${item.data}`
+              )
+                span.contacts-info__label
+                  img(src=require(`${item.label}`), alt=`${item.title}`)
+
+                span.contacts-info__content
+                  span.contacts-info__name= item.name
+
+                  span.contacts-info__subtitle= item.subtitle
+
+        .contacts-content
+          .fade-section-content
+            each item, index in contactsArray
+              .fade-section-content__item(
+                class=`${item.isActive !== 'true' ? 'unactive' : ''}`,
+                data-item=`${item.data}`
+              )
+                if item.isEmptyDescription && item.isEmptyDescription !== 'true'
+                  .contacts-comment
+                    .contacts-comment-title
+                      .contacts-comment-title__lexicon How to contact us on
+
+                      .contacts-comment-title__main= item.title
+
+                    .contacts-comment__typography.typography!= item.typography
+
+                    .contacts-comment__footer
+                      a.button-filled.contacts-comment__button(href='#')
+                        span Contact us
+
+      .contacts__main.phone
+        ul.contacts-content.accordion(
+          data-is-label-click='false',
+          data-is-open-on-hover='false'
+        )
+          each item, index in contactsArray
+            li.accordion__item.contacts-content__item
+              button.accordion__summary.contacts-info
+                span.contacts-info__label
+                  img(src=require(`${item.label}`), alt=`${item.title}`)
+
+                span.contacts-info__content
+                  span.contacts-info__name= item.name
+
+                  span.contacts-info__subtitle= item.subtitle
+
+              .accordion__details
+                .accordion__description.contacts-content__description
+                  if item.isEmptyDescription && item.isEmptyDescription !== 'true'
+                    .contacts-comment
+                      .contacts-comment-title
+                        .contacts-comment-title__lexicon How to contact us on
+
+                        .contacts-comment-title__main= item.title
+
+                      .contacts-comment__typography.typography!= item.typography
+
+                      .contacts-comment__footer
+                        a.button-filled.contacts-comment__button(href='#')
+                          span Contact us
