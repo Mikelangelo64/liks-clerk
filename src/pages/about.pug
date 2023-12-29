@@ -68,13 +68,15 @@ html(lang='en')
     link(rel='stylesheet', href=require('@/styles/pages/about.scss'))
 
   body
-    //- include @/layout/header.pug
+    include @/layout/header.pug
 
     include @/templates/banner.pug
 
     each remark, index in remarkList
       if index === 0
         include @/templates/remark.pug
+
+    include @/templates/separate.pug
 
     include @/templates/benefits.pug
 

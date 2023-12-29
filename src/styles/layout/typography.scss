@@ -29,6 +29,12 @@
     color: var(--color-black);
   }
   
+  &.separate__typography {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-black);
+  }
+  
   &.clients-preview-comment__typography {
     font-weight: 500;
     line-height: 150%;

@@ -1,0 +1,71 @@
+-
+  const separate = {
+    specialList: {
+      title: 'Our expertise includes:',
+      list: [
+        'placing links',
+        'analyzing backlinks profiles',
+        ' building linkbuilding strategies',
+      ],
+    },
+    typographyList: [
+      `
+        <p>
+          We are LinksClerk, a small but growing link building company. Our team of 9 linkbuilders is ready to meet your backlinking needs. The team leader checks and controls the work. Her main goal is to achieve the highest possible result.
+        </p>
+      `,
+      `
+        <p>
+          We can easily adapt to all niches and place backlinks in different locations. Our team serves customers all over the world.
+        </p>
+  
+        <p>
+          Hope you enjoy the quality of our backlinks as much as we enjoy completing different projects and giving you real value.
+        </p>
+      `,
+    ],
+  };
+
+section.separate.section
+  ._container
+    .separate__wrapper
+      .separate__main
+        .separate__header.section-header
+          h2.section-header__title Inside LinksClerk
+
+        .separate__content
+          each typography, index in separate.typographyList
+            if index === 0
+              .separate__typography.typography!= typography
+
+          .separate-list
+            p.separate-list__title= separate.specialList.title
+
+            ul.separate-list__ul
+              each item in separate.specialList.list
+                li.separate-list__item= item
+
+          each typography, index in separate.typographyList
+            if index !== 0
+              .separate__typography.typography!= typography
+
+      .separate-media
+        button.separate-media__content.popup-open(data-popup='_popup-separate')
+          span.separate-media__content__container
+            span.separate-media__button
+              <svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="106" height="106" rx="53" stroke="currentColor" stroke-width="2"/>
+                <path d="M36.5 24.5V84.5L82.5 54.0238L36.5 24.5Z" fill="currentColor" stroke="currentColor"/>
+              </svg>
+
+            span.separate-media__image
+              img(
+                src=require('@/assets/img/separate/media.jpg'),
+                alt='video',
+                loading='lazy'
+              )
+
+        .separate-media__text
+          p.separate-media__title LinksClerk: your digital growth partner
+
+          p.separate-media__description Discover the dynamic world of LinksClerk and see how our team is transforming digital services through strategic link building
