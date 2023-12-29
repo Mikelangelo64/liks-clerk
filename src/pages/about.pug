@@ -1,0 +1,103 @@
+-
+  const banner = {
+    specialClass: 'about',
+    title: "Your Brand's Future, Our Expertise",
+    subtitle: 'Meet LinksClerk: We are a dedicated team of 9 link building experts who aim to improve your online presence. Our team leader guarantees top-notch quality and maximum results for every project',
+    list: [
+      {
+        title: '7',
+        description: 'Years on the market',
+      },
+      {
+        title: '5700+',
+        description: 'Backlinks per month',
+      },
+      {
+        title: '100+',
+        description: 'Projects per month',
+      },
+      {
+        title: '10',
+        description: 'Team members',
+      },
+    ],
+  };
+
+  remarkList = [
+    {
+      link: {
+        href: '#',
+        title: 'Learn more',
+      },
+
+      title: 'Check out our beginer`s guide',
+      typography: `
+        <p>
+          We encourage you to read our beginner's guide to increase your awareness of backlinks
+        </p>
+      `,
+
+      list: [
+        {
+          title: 'Introduction',
+          subtitle: 'Introduction to backlings world',
+        },
+        {
+          title: 'The basics',
+          subtitle: 'Explaning basic terms and concepts of backlinks',
+        },
+        {
+          title: 'Importance',
+          subtitle: 'Explaning why backlinks are significant',
+        },
+      ],
+    },
+    {
+      link: {
+        href: '#',
+        title: 'Contact us',
+      },
+
+      title: 'Still have any questions?',
+      typography: `
+        <p>
+          If you have any questions or need further assistance, feel free to reach out to our team. We're here to help you <a href="#", target="_blank">navigate the world of backlinks</a> and <a href="#", target="_blank">improve your website's online presence</a>
+        </p>
+      `,
+
+      list: [],
+    },
+  ];
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - About
+
+    link(rel='stylesheet', href=require('@/styles/pages/about.scss'))
+
+  body
+    //- include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    include @/templates/benefits.pug
+
+    each remark, index in remarkList
+      if index === 0
+        include @/templates/remark.pug
+
+    include @/templates/clients-preview.pug
+
+    each remark, index in remarkList
+      if index === 1
+        include @/templates/remark.pug
+
+    include @/templates/contacts.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 

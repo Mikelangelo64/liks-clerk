@@ -19,17 +19,26 @@ section.banner.section(
           )
             span Reviews
 
-      .banner-media
-        .banner-media__item.l-size
-          .banner-media__img
-            img(src=require('@/assets/img/banner-media.png'), alt='banner')
+      if banner.media
+        .banner-media
+          .banner-media__item.l-size
+            .banner-media__img
+              img(src=require('@/assets/img/banner-media.png'), alt='banner')
 
-        .banner-media__item.s-size
-          p.banner-media__value 7
+          .banner-media__item.s-size
+            p.banner-media__value 7
 
-          p.banner-media__description Years on the market
+            p.banner-media__description Years on the market
 
-        .banner-media__item.m-size
-          p.banner-media__value 5700+
+          .banner-media__item.m-size
+            p.banner-media__value 5700+
 
-          p.banner-media__description Backlinks per month
+            p.banner-media__description Backlinks per month
+
+      if banner.list
+        ul.banner-list
+          each item in banner.list
+            li.banner-list__item
+              p.banner-list__title= item.title
+
+              p.banner-list__description= item.description
