@@ -110,6 +110,20 @@
       &::before {
         background-color: var(--color-white);
       }
+
+      @at-root .remark .remark-header__button.static {
+        cursor: default;
+
+        @include hover-focus-visible {
+          @include non-mobile-device {
+            color: var(--color-white);
+          }
+        }
+
+        &::before {
+          display: none;
+        }
+      }
     }
     
     //.remark-header__title 
@@ -121,6 +135,14 @@
       }
       @include viewport-phone {
         margin-top: px-to-rem(24);
+      }
+
+      @at-root .remark.slogan & {
+        font-weight: 500;
+
+        @include viewport-tablet-min {
+          font-style: italic;
+        }
       }
     }
     

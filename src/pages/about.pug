@@ -25,32 +25,21 @@
 
   remarkList = [
     {
+      specialClass: 'slogan',
       link: {
         href: '#',
-        title: 'Learn more',
+        isSlogan: 'true',
+        title: 'Slogan',
       },
 
-      title: 'Check out our beginer`s guide',
+      title: '"We know that the best feedback from a client is when he returns."',
       typography: `
         <p>
-          We encourage you to read our beginner's guide to increase your awareness of backlinks
+          This is the main slogan of our company
         </p>
       `,
 
-      list: [
-        {
-          title: 'Introduction',
-          subtitle: 'Introduction to backlings world',
-        },
-        {
-          title: 'The basics',
-          subtitle: 'Explaning basic terms and concepts of backlinks',
-        },
-        {
-          title: 'Importance',
-          subtitle: 'Explaning why backlinks are significant',
-        },
-      ],
+      list: [],
     },
     {
       link: {
@@ -83,11 +72,11 @@ html(lang='en')
 
     include @/templates/banner.pug
 
-    include @/templates/benefits.pug
-
     each remark, index in remarkList
       if index === 0
         include @/templates/remark.pug
+
+    include @/templates/benefits.pug
 
     include @/templates/clients-preview.pug
 

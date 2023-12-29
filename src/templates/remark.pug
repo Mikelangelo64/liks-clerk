@@ -14,7 +14,9 @@
   //-   },
   //- ];
 
-section.section.remark
+section.section.remark(
+  class=`${remark.specialClass && remark.specialClass !== '' ? remark.specialClass : ''}`
+)
   ._container
     .remark__wrapper
       .remark-header
@@ -22,8 +24,12 @@ section.section.remark
           .remark-header__label
             img(src=require('@/assets/img/arrow-quote.svg'), alt='quote')
 
-          a.remark-header__button.button-hollow(href=`${remark.link.href}`)
-            span= remark.link.title
+          if remark.link.isSlogan && remark.link.isSlogan === 'true'
+            p.remark-header__button.static.button-hollow
+              span= remark.link.title
+          else
+            a.remark-header__button.button-hollow(href=`${remark.link.href}`)
+              span= remark.link.title
 
         p.remark-header__title= remark.title
 
