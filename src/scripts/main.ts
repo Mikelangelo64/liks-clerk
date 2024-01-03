@@ -4,6 +4,7 @@ import fadeContentInit from './fadeContent/init';
 import grabDesktopInit from './grabDesktop/init';
 import headerEvents from './headerEvents/init';
 import isViewedHandler, { isVideoViewedHandler } from './isViewedHandler/init';
+import marqueeInit from './marquee/init';
 import initPopups from './popup/init';
 import projectToggle from './projectToggle/init';
 import scrollBarInit from './scrollbar';
@@ -19,6 +20,7 @@ export const init = () => {
   grabDesktopInit();
   headerEvents();
   fadeContentInit();
+  marqueeInit();
   // console.log(scrollSectionState);
 
   const popups = initPopups();
