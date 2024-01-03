@@ -17,6 +17,95 @@ export interface IInitializedSlider {
   isDesktopOnly?: boolean;
 }
 
+const sliderTeamInit = (
+  sliders: Array<IInitializedSlider>,
+  isModifyArary?: boolean
+) => {
+  const sectionArray = document.querySelectorAll(
+    '.team'
+  ) as NodeListOf<HTMLElement>;
+
+  if (sectionArray.length === 0) {
+    return;
+  }
+
+  sectionArray.forEach((item, sliderIndex) => {
+    const containerArray = item.querySelectorAll<HTMLElement>('.team__main');
+
+    if (containerArray.length === 0) {
+      return;
+    }
+
+    containerArray.forEach((container, innerIndex) => {
+      const slider = makeSlider({
+        container: container,
+        className: 'team',
+
+        renderBullets(index, className) {
+          return `
+            <button class="${className}">
+            </button>
+          `;
+        },
+
+        config: {
+          allowTouchMove: true,
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 24,
+          // loop: true,
+
+          // autoplay: {
+          //   // delay: 2000,
+          //   disableOnInteraction: false
+          // }
+          breakpoints: {
+            650: {
+              slidesPerView: 2,
+              slidesPerGroup: 2
+            },
+            900: {
+              slidesPerView: 3,
+              slidesPerGroup: 3
+            },
+            1200: {
+              slidesPerView: 4,
+              slidesPerGroup: 4
+            }
+          }
+        }
+      });
+
+      if (slider) {
+        const name = `team-${sliderIndex}-${innerIndex}`;
+
+        if (!isModifyArary) {
+          const info: IInitializedSlider = {
+            name,
+            slider,
+            isDesktopOnly: false,
+            initFunc: sliderTeamInit
+          };
+
+          // еще не обновляется состояния дайнемик - потом допилить
+          sliders.push(info);
+          return;
+        }
+
+        sliders.forEach((sliderInfoProp) => {
+          const sliderInfo = sliderInfoProp;
+
+          if (sliderInfo.name !== name) {
+            return;
+          }
+
+          sliderInfo.slider = slider;
+        });
+      }
+    });
+  });
+};
+
 const sliderServicesInit = (
   sliders: Array<IInitializedSlider>,
   isModifyArary?: boolean
@@ -269,6 +358,8 @@ const slidersInit = () => {
   sliderPotentailInit(sliders);
 
   sliderServicesInit(sliders);
+
+  sliderTeamInit(sliders);
 
   sliders.forEach((sliderInfo) => {
     if (!sliderInfo.slider || !sliderInfo.initFunc) {

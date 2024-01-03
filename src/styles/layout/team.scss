@@ -1,0 +1,145 @@
+.team {
+  
+  //.team__wrapper 
+  &__wrapper {
+    width: 100%;
+
+    > * + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(64);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(52);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(40);
+      }
+    }
+  }
+  
+  //.team__header 
+  &__header {
+    text-align: center;
+  }
+  
+  //.team__main 
+  &__main {
+    @include viewport-tablet-min {
+      width: 100%; 
+    }
+
+    @include viewport-phone {
+      width: calc(100% + 2 * var(--wrap)); 
+      margin-left: calc(-1 * var(--wrap)); 
+    }
+
+    > * + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(48);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(32);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(16);
+      }
+    }
+  }
+  
+  //.team-slider 
+  &-slider {
+    width: 100%;
+
+    @include viewport-phone {
+      padding-left: var(--wrap);
+      padding-right: var(--wrap);
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+    
+    //.team-slider__item 
+    &__item {
+      width: 100%;
+
+      @include viewport-phone {
+        max-width: px-to-rem(302);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      > * + * {
+        margin-top: px-to-rem(12);
+      }
+    }
+    
+    //.team-slider__image 
+    &__image {
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: px-to-rem(24);
+        overflow: hidden;
+
+        transform: translateZ(0);
+        background-color: var(--color-grey-500);
+      }
+    }
+
+    //.team-slider__content 
+    &__content {
+      border-radius: px-to-rem(24);
+      padding: px-to-rem(4) px-to-rem(24);
+
+      text-align: center;
+      font-weight: 500;
+      line-height: 150%;
+      font-size: px-to-rem(16);
+      color: var(--color-grey-200);
+      background-color: var(--color-black);
+
+      > * + * {
+        margin-top: px-to-rem(2);
+      }
+    }
+    
+    //.team-slider__title 
+    &__title {
+      font-weight: 600;
+      line-height: 120%;
+      font-size: px-to-rem(20);
+      color: var(--color-white);
+    }
+    
+    //.team-slider__post 
+    // &__post {
+    // }
+    
+    //.team-slider-controls 
+    &-controls {
+      @include viewport-phone {
+        display: none;
+      }
+    }
+    
+    //.team-slider-pagination 
+    // &-pagination {
+    // }
+    
+    //.team-slider-prev 
+    // &-prev {
+    // }
+    
+    //.team-slider-next 
+    // &-next {
+    // }
+  }
+}
