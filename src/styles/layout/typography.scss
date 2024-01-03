@@ -5,7 +5,7 @@
 
   color: var(--color-white);
   
-  &.remark-header__description {
+  &.remark-main__description {
     color: var(--color-grey-200);
       
     @include viewport-desktop {

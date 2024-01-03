@@ -1,5 +1,8 @@
 .remark {
-  
+  // &.niches {
+  //   padding: 0;
+  // }
+
   //.remark__wrapper 
   &__wrapper {
     width: 100%;
@@ -9,8 +12,8 @@
     }
   }
   
-  //.remark-header 
-  &-header {
+  //.remark-main 
+  &-main {
     position: relative;
     z-index: 0;
 
@@ -45,8 +48,9 @@
       @include transition((opacity 0.4s, transform 0.4s));
       transform: translate(-50%, -50%) scale(0.6);
       opacity: 0;
+      pointer-events: none;
 
-      @at-root .remark-header:hover::before {
+      @at-root .remark-main:hover::before {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
       }
@@ -61,8 +65,8 @@
       }
     }
 
-    //.remark-header__top 
-    &__top {
+    //.remark-main-header 
+    &-header {
       width: 100%;
 
       display: flex;
@@ -72,9 +76,77 @@
       > * + * {
         margin-left: px-to-rem(24);
       }
+
+      @at-root .remark.mini & {
+        @include viewport-phone {
+          flex-direction: column;
+          justify-content: unset;
+          align-items: unset;
+        }
+
+        > * + * {
+          @include viewport-tablet-min {
+            margin-left: px-to-rem(48);
+          }
+
+          @include viewport-phone {
+            margin-left: unset;
+            margin-top: px-to-rem(24);
+          }
+        }
+      }
+
+      //.remark-main-header__title 
+      &__title {
+        line-height: 133%;
+        color: var(--color-white);
+        
+        @include viewport-desktop {
+          font-weight: 600;
+          font-size: px-to-rem(24);
+        }
+        
+        @include viewport-tablet {
+          font-weight: 600;
+          font-size: px-to-rem(20);
+        }
+        
+        @include viewport-phone {
+          font-weight: 700;
+          font-size: px-to-rem(18);
+        }
+
+        &.price {
+          display: flex;
+          align-items: flex-start;
+
+          > * + * {
+            margin-left: px-to-rem(8);
+          }
+        }
+
+        strong {
+          color: var(--color-green);
+
+          @include viewport-desktop {
+            font-weight: 600;
+            font-size: px-to-rem(48);
+          }
+
+          @include viewport-tablet {
+            font-weight: 600;
+            font-size: px-to-rem(42);
+          }
+
+          @include viewport-phone {
+            font-weight: 500;
+            font-size: px-to-rem(36);
+          }
+        }
+      }
     }
     
-    //.remark-header__label 
+    //.remark-main__label 
     &__label {
       flex-shrink: 0;
 
@@ -93,7 +165,7 @@
       }
     }
     
-    //.remark-header__button 
+    //.remark-main__button 
     &__button {
       flex-shrink: 0;
       width: 100%;
@@ -111,7 +183,26 @@
         background-color: var(--color-white);
       }
 
-      @at-root .remark .remark-header__button.static {
+      &.special {
+        color: var(--color-green);
+
+        // @include hover-focus-visible {
+        //   @include non-mobile-device {
+        //     color: var(--color-black);
+        //   }
+        // }
+        &::before {
+          background-color: var(--color-green);
+        }
+      }
+
+      &.desktop {
+        @include viewport-phone {
+          display: none;
+        }
+      }
+
+      @at-root .remark .remark-main__button.static {
         cursor: default;
 
         @include hover-focus-visible {
@@ -124,9 +215,16 @@
           display: none;
         }
       }
+
+      @at-root .remark.mini .remark-main__button {
+        @include viewport-phone {
+          flex-shrink: unset;
+          max-width: unset;
+        }
+      }
     }
     
-    //.remark-header__title 
+    //.remark-main__title 
     &__title {
       @include text-heading-3;
 
@@ -146,7 +244,7 @@
       }
     }
     
-    //.remark-header__description 
+    //.remark-main__description 
     &__description {
       color: var(--color-grey-200);
       
@@ -164,6 +262,13 @@
         font-weight: 500;
         line-height: 150%;
         font-size: px-to-rem(16);
+      }
+    }
+
+    //.remark-main__footer 
+    &__footer {
+      @include viewport-tablet-min {
+        display: none;
       }
     }
   }

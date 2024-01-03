@@ -1,0 +1,39 @@
+.niches {
+  > * {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(64);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(52);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(40);
+      }
+
+      &:last-child {
+        @include viewport-tablet-min {
+          margin-top: px-to-rem(40);
+        }
+        @include viewport-phone {
+          margin-top: px-to-rem(24);
+        }
+      }
+    }
+  }
+
+  //.niches__wrapper 
+  &__wrapper {
+    width: 100%;
+  }
+
+  //.niches__header 
+  &__header {
+    text-align: center;
+  }
+}

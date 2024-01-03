@@ -1,0 +1,152 @@
+-
+  const banner = {
+    specialClass: 'service',
+    title: "Forum Backlinks",
+    subtitle: 'Our service provides high-quality forum backlinks in your niche and target location. Our main goal is a suit your requirements and fulfills linkbuilding needs',
+  };
+
+  const remarkList = [
+    {
+      specialClass: 'niches',
+      button: {
+        href: '#',
+        type: 'text',
+        title: 'Niches',
+      },
+
+      title: 'We work with all niches',
+      typography: `
+        <p>
+          Whether you're in e-commerce, technology, health and wellness, or any other industry, our approach ensures that you get high-quality backlinks that drive high results
+        </p>
+      `,
+
+      list: [],
+    },
+    {
+      specialClass: 'mini',
+      button: {
+        type: 'link-green',
+        href: '#',
+        title: 'Contact us',
+      },
+
+      titleHeader: {
+        specialClass: '',
+        value: 'If your niche is specific, contact us to discuss the details',
+      },
+      //- title: 'If your niche is specific, contact us to discuss the details',
+      //- typography: `
+      //-   <p>
+      //-     Whether you're in e-commerce, technology, health and wellness, or any other industry, our approach ensures that you get high-quality backlinks that drive high results
+      //-   </p>
+      //- `,
+
+      list: [],
+    },
+    {
+      specialClass: 'mini',
+      button: {
+        type: 'link-green',
+        href: '#',
+        title: 'Sign up',
+      },
+
+      titleHeader: {
+        specialClass: '',
+        value: 'Register in your personal account to take advantage of all our services',
+      },
+      //- title: 'If your niche is specific, contact us to discuss the details',
+      //- typography: `
+      //-   <p>
+      //-     Whether you're in e-commerce, technology, health and wellness, or any other industry, our approach ensures that you get high-quality backlinks that drive high results
+      //-   </p>
+      //- `,
+
+      list: [],
+    },
+    {
+      specialClass: 'mini',
+      button: {
+        type: 'link-green',
+        href: '#',
+        title: 'Choose',
+        hasFooter: 'true',
+      },
+
+      titleHeader: {
+        specialClass: 'price',
+        value: '<strong>$5</strong> <span>/ link is a starting price. Your minimal order - 5 backlinks</span>',
+      },
+      //- title: 'If your niche is specific, contact us to discuss the details',
+      typography: `
+        <p>
+          Our pricing model offers flexibility. Opt for a suitable package or acquire a manual selection of backlinks tailored to your specific needs
+        </p>
+      `,
+
+      list: [],
+    },
+    {
+      button: {
+        href: '#',
+        type: 'link',
+        title: 'Contact us',
+      },
+
+      title: 'Still have any questions?',
+      typography: `
+        <p>
+          If you have any questions or need further assistance, feel free to reach out to our team. We're here to help you <a href="#", target="_blank">navigate the world of backlinks</a> and <a href="#", target="_blank">improve your website's online presence</a>
+        </p>
+      `,
+
+      list: [],
+    },
+  ];
+
+  const benefits = {
+    title: 'Why we are the best?',
+    isBenefitsCenter: 'true',
+  };
+
+  isClientsPreviewAdditional = 'true';
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - Service 1
+
+    link(rel='stylesheet', href=require('@/styles/pages/service-1.scss'))
+
+  body
+    include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    section.niches.section
+      ._container
+        .niches__wrapper
+          .niches__header.section-header
+            h2.section-header__title Niches we work with
+
+      each remark, index in remarkList
+        if index < 2
+          include @/templates/remark.pug
+
+    each remark, index in remarkList
+      if index === 2
+        include @/templates/remark.pug
+
+    each remark, index in remarkList
+      if index === 3
+        include @/templates/remark.pug
+
+    //- include @/templates/contacts.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 

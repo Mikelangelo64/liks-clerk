@@ -60,6 +60,15 @@
   &__main {
     width: 100%;
 
+    @at-root .banner.service & {
+      @include viewport-tablet-min {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
     > * + * {
       @include viewport-tablet-min {
         margin-top: px-to-rem(24);
@@ -93,6 +102,10 @@
     @at-root .banner.about & {
       max-width: unset;
     }
+
+    @at-root .banner.service & {
+      max-width: unset;
+    }
   }
 
   //.banner__button__container 
@@ -113,6 +126,16 @@
     @at-root .banner.about & {
       @include viewport-tablet-min {
         display: none;
+      }
+    }
+
+    @at-root .banner.service & {
+      @include viewport-tablet-min {
+        max-width: px-to-rem(410);
+        justify-content: center;
+
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -139,6 +162,13 @@
       max-width: px-to-rem(346);
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @at-root .banner.service & {
+      @include viewport-tablet-min {
+        min-width: max-content;
+        max-width: px-to-rem(192);
+      }
     }
   }
 

@@ -19,21 +19,65 @@ section.section.remark(
 )
   ._container
     .remark__wrapper
-      .remark-header
-        .remark-header__top
-          .remark-header__label
-            img(src=require('@/assets/img/arrow-quote.svg'), alt='quote')
+      .remark-main
+        .remark-main-header
+          if !remark.specialClass || remark.specialClass !== 'mini'
+            .remark-main__label
+              img(src=require('@/assets/img/arrow-quote.svg'), alt='quote')
 
-          if remark.link.isSlogan && remark.link.isSlogan === 'true'
-            p.remark-header__button.static.button-hollow
-              span= remark.link.title
-          else
-            a.remark-header__button.button-hollow(href=`${remark.link.href}`)
-              span= remark.link.title
+          if remark.titleHeader && remark.titleHeader !== ''
+            p.remark-main-header__title(
+              class=`${remark.titleHeader.specialClass && remark.titleHeader.specialClass !== '' ? remark.titleHeader.specialClass : ''}`
+            )!= remark.titleHeader.value
+          //- else
 
-        p.remark-header__title= remark.title
+          case remark.button.type 
+            when 'text'
+              p.remark-main__button.static.button-hollow(
+                class=`${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`
+              )
+                span= remark.button.title
 
-        .remark-header__description.typography!= remark.typography
+            when 'link-green'
+              a.remark-main__button.special.button-hollow(
+                href=`${remark.button.href}`,
+                class=`${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`
+              )
+                span= remark.button.title
+
+            when 'link'
+            default
+              a.remark-main__button.button-hollow(
+                href=`${remark.button.href}`,
+                class=`${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`
+              )
+                span= remark.button.title
+
+        if remark.title && remark.title !== ''
+          p.remark-main__title= remark.title
+
+        if remark.typography && remark.typography !== ''
+          .remark-main__description.typography!= remark.typography
+
+        if remark.button.hasFooter && remark.button.hasFooter === 'true'
+          .remark-main__footer
+            case remark.button.type 
+              when 'text'
+                p.remark-main__button.static.button-hollow
+                  span= remark.button.title
+
+              when 'link-green'
+                a.remark-main__button.special.button-hollow(
+                  href=`${remark.button.href}`
+                )
+                  span= remark.button.title
+
+              when 'link'
+              default
+                a.remark-main__button.button-hollow(
+                  href=`${remark.button.href}`
+                )
+                  span= remark.button.title
 
       if remark.list && remark.list.length !== 0
         ul.remark-list
