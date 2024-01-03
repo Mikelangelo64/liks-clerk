@@ -1,0 +1,64 @@
+-
+  const regionsList = [
+    {
+      title: 'America',
+      list: [
+        'USA',
+        'Canada',
+        'Brazil',
+        'Mexica',
+        'Greenland',
+        'Dominica',
+        'And all the others',
+      ],
+    },
+    {
+      title: 'Europe',
+      list: [
+        'Germany',
+        'UK',
+        'Poland',
+        'Spain',
+        'Italy',
+        'France',
+        'Sweden',
+        'And all the others',
+      ],
+    },
+    {
+      title: 'Asia',
+      list: [
+        'Thailand',
+        'China',
+        'Japan',
+        'Indonesia',
+        'Malaysia',
+        'Philippines',
+        'South Korea',
+        'And all the others',
+      ],
+    },
+  ];
+
+section.regions.section
+  ._container
+    .regions__wrapper
+      .regions__header.section-header
+        h2.section-header__title Accessible Regions
+
+      ul.regions-list
+        each item in regionsList
+          li
+            .regions-list__item
+              .regions-list__header
+                p.regions-list__title= item.title
+
+                .regions-list__label
+                  img(
+                    src=require('@/assets/img/regions.svg'),
+                    alt=`${item.title}`
+                  )
+
+              ul.regions-list-areas
+                each area in item.list
+                  li.regions-list-areas__item= area

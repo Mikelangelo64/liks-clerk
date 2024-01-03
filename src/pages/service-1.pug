@@ -136,6 +136,8 @@ html(lang='en')
         if index < 2
           include @/templates/remark.pug
 
+    include @/templates/regions.pug
+
     each remark, index in remarkList
       if index === 2
         include @/templates/remark.pug
