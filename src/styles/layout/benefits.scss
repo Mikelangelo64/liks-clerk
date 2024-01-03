@@ -21,8 +21,11 @@
 
   
   //.benefits__header 
-  // &__header {
-  // }
+  &__header {
+    &.center {
+      text-align: center;
+    }
+  }
 
   
   //.benefits-list 

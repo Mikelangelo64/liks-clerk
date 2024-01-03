@@ -53,8 +53,10 @@
 section.section.benefits
   ._container
     .benefits__wrapper
-      .benefits__header.section-header
-        h2.section-header__title Why us?
+      .benefits__header.section-header(
+        class=`${benefits.isBenefitsCenter && benefits.isBenefitsCenter === 'true' ? 'center' : ''}`
+      )
+        h2.section-header__title= benefits.title
 
         p.section-header__subtitle We offer niche-specific backlinks for content trust and website quality. No spam or irrelevant links
 

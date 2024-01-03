@@ -181,19 +181,19 @@ footer.footer
               draggable='false'
             )
 
-          ul.footer-review.desktop
+          ul.footer-review.review-company.desktop
             each item in reviewFooterList
-              li.footer-review__item
-                .footer-review__info
-                  .footer-review__subtitle Reviewed on
+              li.review-company__item
+                .review-company__info
+                  .review-company__subtitle Reviewed on
 
-                  .footer-review__label
+                  .review-company__label
                     img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-                .footer-review-raiting
-                  .footer-review-raiting-stars
+                .review-company-raiting
+                  .review-company-raiting-stars
                     - for(let i=0; i<5; i++)
-                      .footer-review-raiting-stars__item(
+                      .review-company-raiting-stars__item(
                         class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
                       ) 
                         if i + 1 <= item.raiting
@@ -207,7 +207,7 @@ footer.footer
                             alt='star'
                           )
 
-                  p.footer-review-raiting__description
+                  p.review-company-raiting__description
                     strong= item.reviewCount
                     span reviews
 
@@ -239,19 +239,19 @@ footer.footer
                           span.footer-menu-link__text= link.title
 
       .footer__bottom
-        ul.footer-review.phone
+        ul.footer-review.review-company.phone
           each item in reviewFooterList
-            li.footer-review__item
-              .footer-review__info
-                .footer-review__subtitle Reviewed on
+            li.review-company__item
+              .review-company__info
+                .review-company__subtitle Reviewed on
 
-                .footer-review__label
+                .review-company__label
                   img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-              .footer-review-raiting
-                .footer-review-raiting-stars
+              .review-company-raiting
+                .review-company-raiting-stars
                   - for(let i=0; i<5; i++)
-                    .footer-review-raiting-stars__item(
+                    .review-company-raiting-stars__item(
                       class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
                     ) 
                       if i + 1 <= item.raiting
@@ -265,19 +265,19 @@ footer.footer
                           alt='star'
                         )
 
-                p.footer-review-raiting__description
+                p.review-company-raiting__description
                   strong= item.reviewCount
                   span reviews
 
-        .footer-review__item.special
-          .footer-review__image
+        .review-company__item.special
+          .review-company__image
             img(
               src=require('@/assets/img/review/footerList/special.svg'),
               alt='DMCA'
             )
 
-          .footer-review__info
-            .footer-review__label
+          .review-company__info
+            .review-company__label
               img(
                 src=require('@/assets/img/review/footerList/review-5.svg'),
                 alt='DMCA'
