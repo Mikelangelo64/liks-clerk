@@ -82,6 +82,19 @@
     }
   }
 
+  &.roadmap-list__description {
+    word-break: break-word;
+
+    @include viewport-tablet-min {
+      font-weight: 700;
+      font-size: px-to-rem(18);
+    }
+
+    @include viewport-phone {
+      font-weight: 500;
+    }
+  }
+
   h1 {
     @include text-heading-1;
   }
