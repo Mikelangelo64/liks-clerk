@@ -14,6 +14,241 @@
     <link rel="stylesheet" href="service-1.css">
   </head>
   <body>
+    <header class="header">
+      <div class="_container header__container">
+        <div class="header__wrapper">
+          <div class="header__item header__logo__container"><a class="custom-logo-link header__logo" href="#"> <img
+                class="custom-logo" src="assets/img/logo.svg" alt="logo" draggable="false"></a></div>
+          <nav class="header__item header__menu">
+            <ul class="menu-list">
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">About us</a></li>
+              <li class="menu-list__item additional" data-submenu="true"><a class="menu__link"
+                  href="#">Services</a><button class="menu-submenu-open"><svg width="10" height="10" viewBox="0 0 10 10"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list">
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Forum backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related threads on forums with
+                            DR&gt;20, traffic&gt;1k</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related questions on popular
+                            Q&amp;A: Quora and Reddit</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                            backlinks</span><span class="menu-submenu__description">Placing backlinks in niche related,
+                            indexed and existing articles on real websites</span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Reviews</a></li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Seo Vocabulary</a></li>
+              <li class="menu-list__item additional" data-submenu="true">
+                <p class="menu__link">EN</p><button class="menu-submenu-open"><svg width="10" height="10"
+                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list language">
+                    <li>
+                      <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                            src="assets/img/language-usa.svg" alt="EN"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">EN</span><span class="menu-submenu__description"></span></span>
+                      </p>
+                    </li>
+                    <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/language-ua.svg" alt="UA"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">UA</span><span
+                            class="menu-submenu__description"></span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__button__container"><button class="header__button button-hollow"><span>Log
+                in</span></button><button class="menu-burger popup-open" data-popup="_popup-menu"
+              title="open menu"><span></span></button></div>
+        </div>
+      </div>
+      <div class="popup popup-video separate__popup " data-popupname="_popup-separate" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-video__media"><video class="video lazy-video" disablePictureInPicture preload="metadata"
+                  playsinline controls>
+                  <source data-src="assets/video/banner-popup.mp4" type="video/mp4">
+                </video></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-menu menu__popup " data-popupname="_popup-menu" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="modal-menu__header"><button class="popup__close"><img src="assets/img/popup-close-green.svg"
+                    alt="close"></button></div>
+              <div class="modal-menu__main">
+                <nav class="menu">
+                  <ul class="menu-list accordion" data-is-label-click="true">
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">About
+                          us</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link"
+                          href="#">Services</a><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button></div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description">
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Forum
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related threads on forums with DR&gt;20, traffic&gt;1k</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related questions on popular Q&amp;A: Quora and Reddit</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related, indexed and existing articles on real websites</span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Reviews</a>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Seo
+                          Vocabulary</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary">
+                        <p class="menu__link">EN</p><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button>
+                      </div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description language">
+                          <li>
+                            <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                                  src="assets/img/language-usa.svg" alt="EN"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">EN</span><span
+                                  class="menu-submenu__description"></span></span></p>
+                          </li>
+                          <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/language-ua.svg" alt="UA"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">UA</span><span
+                                  class="menu-submenu__description"></span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modal-menu__footer"><a class="modal-menu__button button-filled" href="#"><span>Log
+                    in</span></a><a class="modal-menu__button button-hollow" href="#"><span>Sign up</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback thanks__popup " data-popupname="_popup-thanks" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Thank you!</p>
+                </div>
+                <p class="popup-feedback__subtitle">Your application has been accepted. <br />Expect a call soon.</p>
+                <button class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback error__popup " data-popupname="_popup-error" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Oops</p>
+                </div>
+                <p class="popup-feedback__subtitle">Something wrong. Try later.</p><button
+                  class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-form form__popup fullscreen-phone" data-popupname="_popup-form" aria-modal="true"
+        role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
+                alt="close"><img class="mobile" src="assets/img/popup-close.svg" alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-action">
+                <p class="popup-action__title">Please fill out the form and we will contact you shortly.</p>
+                <div class="popup-action__main">
+                  <form class="form popup-action__form" id="form-popup" action="post">
+                    <div><label for="popup-name"> <input id="popup-name" type="text" name="name"
+                          placeholder="Your name"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-email"> <input id="popup-email" type="email" name="email"
+                          placeholder="Your email"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-telephone"> <input id="popup-telephone" type="tel" name="telephone"
+                          placeholder="Your phone number"><span class="wpcf7-not-valid-tip">Wrong format</span></label>
+                    </div>
+                    <div><label for="popup-request"> <textarea id="popup-request" name="request"
+                          placeholder="Message text"></textarea><span class="wpcf7-not-valid-tip">Wrong
+                          format</span></label></div>
+                    <p><button type="submit"> <span>Send</span></button></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <section class="banner section service">
       <div class="_container banner__container section__container">
         <div class="banner__wrapper">
@@ -716,6 +951,26 @@
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section remark">
+      <div class="_container">
+        <div class="remark__wrapper">
+          <div class="remark-main">
+            <div class="remark-main-header">
+              <div class="remark-main__label"><img src="assets/img/arrow-quote.svg" alt="quote"></div><a
+                class="remark-main__button button-hollow" href="#"><span>Contact us</span></a>
+            </div>
+            <p class="remark-main__title">Still have any questions?</p>
+            <div class="remark-main__description typography">
+              <p>
+                If you have any questions or need further assistance, feel free to reach out to our team. We're here to
+                help you <a href="#" , target="_blank">navigate the world of backlinks</a> and <a href="#" ,
+                  target="_blank">improve your website's online presence</a>
+              </p>
             </div>
           </div>
         </div>
