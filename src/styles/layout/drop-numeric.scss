@@ -1,0 +1,108 @@
+.drop-numeric {
+  display: grid;
+  gap: px-to-rem(24);
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include viewport-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include viewport-phone {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  //.drop-numeric__item 
+  // &__item {
+  // }
+    
+  //.drop-numeric-header 
+  &-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+
+    > * + * {
+      margin-top: px-to-rem(24);
+    }
+
+    //.drop-numeric-header__top 
+    &__top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > * + * {
+        margin-left: px-to-rem(20);
+      }
+    }
+  }
+
+  //.drop-numeric__counter 
+  &__counter {
+    flex-shrink: 0;
+    border: 2px solid var(--color-green);
+    border-radius: px-to-rem(50);
+    padding: px-to-rem(12) px-to-rem(16);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include transition((border 0.4s, background 0.4s, color 0.4s));
+
+    font-weight: 700;
+    line-height: 134%;
+    font-size: px-to-rem(24);
+
+    @at-root .drop-numeric-list__item._active & {
+      color: var(--color-green);
+      border-color: transparent;
+      background-color: var(--color-black);
+    }
+  }
+    
+  //.drop-numeric__title 
+  &__title {
+    line-height: 134%;
+
+    @include viewport-desktop {
+      font-weight: 600;
+      font-size: px-to-rem(24);
+    }
+
+    @include viewport-tablet {
+      font-weight: 600;
+      font-size: px-to-rem(22);
+    }
+
+    @include viewport-phone {
+      font-weight: 700;
+      font-size: px-to-rem(18);
+    }
+  }
+    
+  //.drop-numeric__label 
+  &__label {
+    @include non-mobile-device {
+      display: none;
+    }
+  }
+    
+  //.drop-numeric__description 
+  // &__description {
+  // }
+    
+  //.drop-numeric__typography 
+  &__typography {
+    font-weight: 500;
+    line-height: 150%;
+  }
+}

@@ -106,7 +106,7 @@
       }
     }
 
-    @at-root .get-started-list.accordion & {
+    @at-root .drop-numeric.accordion & {
       &::before,
       &::after {  
         display: none;
