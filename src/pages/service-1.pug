@@ -146,9 +146,19 @@ html(lang='en')
 
     include @/templates/quality.pug
 
-    each remark, index in remarkList
-      if index === 3
-        include @/templates/remark.pug
+    section.niches.section
+      ._container
+        .niches__wrapper
+          .niches__header.section-header
+            h2.section-header__title Crowd Backlinks Pricing Overview
+
+      each remark, index in remarkList
+        if index === 3
+          include @/templates/remark.pug
+
+      ._container
+        .niches__wrapper
+          include @/templates/determine.pug
 
     //- include @/templates/contacts.pug
 

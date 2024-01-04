@@ -1,0 +1,159 @@
+-
+  const determineList = [
+    {
+      title: 'Evaluate your project or task',
+      description: `
+        <ul>
+          <li>
+            Defining project objectives
+          </li>
+          <li>
+            Checking task requirements
+          </li>
+          <li>
+            Providing an individualized approach
+          </li>
+          <li>
+            Taking into consideration the unique needs of your project
+          </li>
+          <li>
+            Maximizing your online visibility and SEO performance
+          </li>
+        </ul>
+      `,
+    },
+    {
+      title: 'Analyze your niche and location',
+      description: `
+        <ul>
+          <li>
+            Identifying relevant forum threads
+          </li>
+          <li>
+            Ensuring content alignment with Target Audience
+          </li>
+          <li>
+            Considering location-specific forums
+          </li>
+          <li>
+            Enhancing effectiveness of backlinks
+          </li>
+          <li>
+            Reaching geographically relevant audience
+          </li>
+          <li>
+            Analytical process optimization
+          </li>
+          <li>
+            Strategic forum and topic Selection
+          </li>
+          <li>
+            Impactful online presence
+          </li>
+        </ul>
+      `,
+    },
+    {
+      title: 'Review other objectives',
+      description: `
+        <ul>
+          <li>
+            This includes assessing broader SEO metrics and other important objectives to ensure that the forum backlinks align with and contribute to the overall success of your project
+          </li>
+        </ul>
+      `,
+    },
+  ];
+
+  const determineAccordionList = [
+    {
+      title: 'Niche related threads',
+      description: `
+        <p>
+          By engaging in these specific threads, you ensure that the backlinks generated are contextually и fitting and resonate with the interests of your target audience. This approach not only enhances the relevance of the backlinks but also contributes to a more organic and effective link-building strategy within your niche.
+        </p>
+      `,
+    },
+    {
+      title: 'Proven domain metrics',
+      description: `
+        <p>
+          DR, DA> 20. Spam score <5% by Ahrefs, SimilarWeb
+        </p>
+      `,
+    },
+    {
+      title: 'Organic traffic',
+      description: `
+        <p>
+          500/month Ahrefs, SimilarWeb
+        </p>
+      `,
+    },
+    {
+      title: 'Absence of restrictions',
+      description: `
+        <p>
+          Checking forums for noindex and restrictions in robots.txt and meta robots and checking backlinks in the page code
+        </p>
+      `,
+    },
+    {
+      title: 'Guarantee from deleting',
+      description: `
+        <p>
+          30 days warranty from deleting
+        </p>
+      `,
+    },
+    {
+      title: 'Project supervision',
+      description: `
+        <p>
+          Each project monitored and reviewed by the team leader
+        </p>
+      `,
+    },
+  ];
+
+.determine
+  .determine__item
+    h3.determine__title How we determine pricing
+
+    ul.determine-list
+      each item, index in determineList
+        li.determine-list__item
+          .determine-list__header
+            .determine-list__counter!= `${index + 1 < 10 ? '0' : ''}${index + 1}`
+
+            h4.determine-list__title= item.title
+
+          .determine-list__typography.typography!= item.description
+
+  .determine__item
+    h3.determine__title Included in all plans
+
+    ul.determine-accordion.accordion(
+      data-is-label-click='false',
+      data-is-open-on-hover='true'
+    )
+      each item, index in determineAccordionList
+        li.accordion__item.determine-accordion__item
+          button.accordion__summary.determine-accordion-header
+            span.determine-accordion-header__top
+              span.determine-accordion__check
+                img(
+                  src=require('@/assets/img/checkbox.svg'),
+                  alt=`${item.title}`
+                )
+
+              span.determine-accordion__title= item.title
+
+            span.determine-accordion__label.accordion__label
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z" fill="currentColor" fill-opacity="0.85"/>
+              </svg>
+
+          .accordion__details
+            .accordion__description.determine-accordion__description
+              .determine-accordion__typography.typography!= item.description

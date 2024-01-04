@@ -113,6 +113,13 @@
       }
     }
 
+    @at-root .determine-accordion.accordion & {
+      &::before,
+      &::after {  
+        display: none;
+      }
+    }
+
     @at-root .menu-list.accordion & {
       flex-shrink: unset;
       max-width: unset;
