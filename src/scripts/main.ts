@@ -1,5 +1,6 @@
 import accordionInit from './accordion/init';
 import anchorsInit from './anchor/init';
+import barCardsInit from './barCards/init';
 import fadeContentInit from './fadeContent/init';
 import grabDesktopInit from './grabDesktop/init';
 import headerEvents from './headerEvents/init';
@@ -21,6 +22,7 @@ export const init = () => {
   headerEvents();
   fadeContentInit();
   marqueeInit();
+  barCardsInit();
   // console.log(scrollSectionState);
 
   const popups = initPopups();

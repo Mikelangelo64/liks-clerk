@@ -1,0 +1,52 @@
+-
+  const barCardsList = [
+    {
+      isActive: 'false',
+      title: 'Because we choose forums with traffic',
+      description: 'We prefer all forums only with traffic checked and proved by Ahrefs or SimilarWeb and according to the location of your website. Basically, you only get targeted backlinks',
+    },
+    {
+      isActive: 'true',
+      title: 'Because we choose niche related thread',
+      description: 'When you choose us, you’ll get backlinks in the niche relevant threads according to your business. Don’t worry if you have a specific project, we’ll offer you the most relevant which we can find',
+    },
+    {
+      isActive: 'false',
+      title: 'Because we provide a real warranty from deleting',
+      description: 'We don’t forget about deleted backlinks and always make free replacements during warranty time. Usually, if the backlink stays more than 30 days, it will stay for years',
+    },
+    {
+      isActive: 'false',
+      title: 'Because we know what is a high-quality placement',
+      description: 'We can understand even without an agreement with clients what they need in case of high-quality backlinks and offer real solutions for their sites',
+    },
+    {
+      isActive: 'false',
+      title: 'Because we can be flexible',
+      description: 'If you need we can agree with you on each step of the completing project, to make it superb',
+    },
+    {
+      isActive: 'false',
+      title: 'Because we can place backlinks in the target location',
+      description: 'We can place backlinks according to your site and business location, track it through Ahrefs and SimilarWeb or due to IP',
+    },
+  ];
+
+section.bar-cards-section.section
+  ._container
+    .bar-cards-section__wrapper
+      .bar-cards-section__header.section-header
+        h2.section-header__title Benefits
+
+      .bar-cards
+        ul.bar-cards__container
+          each item, index in barCardsList
+            li.bar-cards__item(class=`${item.isActive === 'true' ? 'active' : ''}`)
+              button.bar-cards__item__inner
+                span.bar-cards__content
+                  span.bar-cards__content__inner
+                    span.bar-cards__title= item.title
+
+                    span.bar-cards__description= item.description
+
+                span.bar-cards__counter!= `${index + 1}`
