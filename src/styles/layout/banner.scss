@@ -18,7 +18,7 @@
   }
   
   @include viewport-phone {
-    padding-top: calc(2 * #{px-to-rem(20)} + var(--started-header-height, #{px-to-rem(36)}));
+    padding-top: calc(2 * #{px-to-rem(30)} + var(--started-header-height, #{px-to-rem(36)}));
     // padding-top: var(--started-header-height, px-to-rem(76));
     // padding-top: px-to-rem(76);
   }

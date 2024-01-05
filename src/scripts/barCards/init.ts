@@ -3,6 +3,7 @@ import clickHandler from './clickHandler';
 import debounce from '../config/debounce';
 import { makeTimeline } from './makeTimeline';
 import { onPreparation } from './onPreparation';
+import vevet from '../config/vevet';
 
 export interface IDataWidth {
   minWidth: number;
@@ -10,7 +11,9 @@ export interface IDataWidth {
 }
 
 const barCardsInit = () => {
-  const containerArray = document.querySelectorAll<HTMLElement>('.bar-cards');
+  const containerArray = document.querySelectorAll<HTMLElement>(
+    '.bar-cards[data-bar-section="true"]'
+  );
 
   if (containerArray.length === 0) {
     return;
@@ -21,6 +24,10 @@ const barCardsInit = () => {
       minWidth: 0,
       maxWidth: 0
     };
+
+    let listenerArray: Array<() => void> = [];
+
+    let isLaunch = !vevet.viewport.isPhone;
 
     const minWidth = +getComputedStyle(container)
       .getPropertyValue('--minimal-width')
@@ -41,6 +48,10 @@ const barCardsInit = () => {
 
     // preparation loop
     itemArray.forEach((item, index, array) => {
+      if (vevet.viewport.isPhone) {
+        return;
+      }
+
       maxWidth = onPreparation(array, minWidth);
       dataWidth.maxWidth = maxWidth;
 
@@ -51,15 +62,72 @@ const barCardsInit = () => {
 
     // execute loop
     itemArray.forEach((item, index) => {
-      clickHandler(index, itemArray, timelineArray, container, dataWidth);
+      if (vevet.viewport.isPhone) {
+        return;
+      }
+
+      const listener = clickHandler(
+        index,
+        itemArray,
+        timelineArray,
+        container,
+        dataWidth
+      );
+
+      listenerArray.push(listener);
     });
 
     window.addEventListener(
       'resize',
       debounce({
         callback: () => {
-          maxWidth = onPreparation(itemArray, minWidth);
-          dataWidth.maxWidth = maxWidth;
+          if (!vevet.viewport.isPhone) {
+            maxWidth = onPreparation(itemArray, minWidth);
+            dataWidth.maxWidth = maxWidth;
+          } else {
+            isLaunch = false;
+
+            listenerArray.forEach((listener, index) => {
+              const button = itemArray[index].querySelector<HTMLButtonElement>(
+                '.bar-cards__item__inner'
+              );
+
+              if (!button) {
+                return;
+              }
+
+              button.removeEventListener('click', listener);
+            });
+
+            listenerArray = [];
+            // container.classList.add('mobile');
+
+            itemArray.forEach((itemProp) => {
+              const item = itemProp;
+              item.style.width = '';
+              item.style.height = '';
+            });
+
+            return;
+          }
+
+          if (!vevet.viewport.isPhone && !isLaunch) {
+            isLaunch = true;
+
+            container.classList.remove('mobile');
+
+            itemArray.forEach((item, index) => {
+              const listener = clickHandler(
+                index,
+                itemArray,
+                timelineArray,
+                container,
+                dataWidth
+              );
+
+              listenerArray.push(listener);
+            });
+          }
         }
       })
     );

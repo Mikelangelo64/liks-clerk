@@ -18,10 +18,10 @@ const clickHandler = (
     '.bar-cards__item__inner'
   );
   if (!button) {
-    return;
+    return () => {};
   }
 
-  button.addEventListener('click', () => {
+  const listenerHandler = () => {
     if (currentItem.classList.contains('active')) {
       return;
     }
@@ -59,7 +59,11 @@ const clickHandler = (
       currentItem.classList.add('active');
       timeline.play();
     }
-  });
+  };
+
+  button.addEventListener('click', listenerHandler);
+
+  return listenerHandler;
 };
 
 export default clickHandler;

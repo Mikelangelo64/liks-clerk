@@ -29,6 +29,12 @@
   --item-gap: #{px-to-rem(24)};
   width: 100%;
 
+  &.desktop {
+    @include viewport-phone {
+      display: none;
+    }
+  }
+
   &.progress {
     pointer-events: none;
   }
@@ -153,6 +159,119 @@
   }
   
   //.bar-cards__counter 
+  &__counter {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: px-to-rem(56);
+    border-radius: px-to-rem(24);
+    padding: px-to-rem(12);
+
+    font-size: px-to-rem(24);
+    line-height: 133%;
+    color: var(--color-black);
+    background-color: var(--color-white);
+  }
+}
+
+.bar-cards-mobile {
+  // width: 100%;
+  @include viewport-tablet-min {
+    display: none;
+  }
+
+  @include viewport-phone {
+    /* stylelint-disable-next-line */
+    -webkit-mask-image: unset;
+    mask-image: unset;
+  }
+
+  //.bar-cards-mobile__container 
+  &__container {
+    align-items: unset;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+
+    // @include transition(height 0.8s);
+    
+    > * + * {
+      margin-left: px-to-rem(16);
+    }
+  }
+  
+  //.bar-cards-mobile__item 
+  &__item {
+    flex-shrink: 0;
+    
+    width: 100%;
+    max-width: px-to-rem(292);
+    border: 3px solid var(--color-green);
+    border-radius: px-to-rem(40);
+    padding: px-to-rem(24) px-to-rem(14) px-to-rem(16);
+    min-height: px-to-rem(220);
+      
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
+  
+  //.bar-cards-mobile__item__inner
+  &__item__inner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    
+    > * + * {
+      margin-top: px-to-rem(24);
+    }
+  }
+  
+  //.bar-cards-mobile__content 
+  &__content {
+    flex: 1 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    color: var(--color-white);
+
+    //.bar-cards-mobile__content__inner 
+    &__inner {      
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      max-width: 100%;
+      // width: 100%;
+
+      > * + * {
+        margin-top: px-to-rem(24);
+      }
+    }
+  }
+  
+  //.bar-cards-mobile__title 
+  &__title {
+    font-weight: 600;
+    font-size: px-to-rem(24);
+  }
+  
+  //.bar-cards-mobile__description 
+  &__description {
+    font-weight: 500;
+    line-height: 150%;
+    font-size: px-to-rem(16);
+
+    color: var(--color-grey-200);
+  }
+  
+  //.bar-cards-mobile__counter 
   &__counter {
     align-self: flex-end;
     display: flex;

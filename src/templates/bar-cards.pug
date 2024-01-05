@@ -38,7 +38,7 @@ section.bar-cards-section.section
       .bar-cards-section__header.section-header
         h2.section-header__title Benefits
 
-      .bar-cards
+      .bar-cards.desktop(data-bar-section='true')
         ul.bar-cards__container
           each item, index in barCardsList
             li.bar-cards__item(class=`${item.isActive === 'true' ? 'active' : ''}`)
@@ -50,3 +50,16 @@ section.bar-cards-section.section
                     span.bar-cards__description= item.description
 
                 span.bar-cards__counter!= `${index + 1}`
+
+      .bar-cards-mobile.mobile.grab-desktop
+        ul.bar-cards-mobile__container.grab-desktop__inner
+          each item, index in barCardsList
+            li.bar-cards-mobile__item
+              .bar-cards-mobile__item__inner
+                .bar-cards-mobile__content
+                  .bar-cards-mobile__content__inner
+                    p.bar-cards-mobile__title= item.title
+
+                    p.bar-cards-mobile__description= item.description
+
+                p.bar-cards-mobile__counter!= `${index + 1}`
