@@ -99,15 +99,6 @@
 
   &.roadmap-list__description {
     word-break: break-word;
-
-    @include viewport-tablet-min {
-      font-weight: 700;
-      font-size: px-to-rem(18);
-    }
-
-    @include viewport-phone {
-      font-weight: 500;
-    }
   }
 
   h1 {
@@ -299,6 +290,24 @@
 
   strong {
     font-weight: 600;
+
+    @at-root .typography.roadmap-list__description strong {
+      font-weight: 700;
+      color: var(--color-green);
+    }
+  }
+
+  span {
+    @at-root .typography.roadmap-list__description span {
+      @include viewport-tablet-min {
+        font-weight: 700;
+        font-size: px-to-rem(18);
+      }
+  
+      @include viewport-phone {
+        font-weight: 500;
+      }
+    }
   }
 
   i {
