@@ -62,6 +62,100 @@
     },
   ];
 
+  const potential = {
+    isLight: 'true',
+    title: 'Why are Quora & Reddit links gets favorability?',
+    subtitle: '',
+    list: [
+      {
+        title: 'Metrics',
+        description: `
+          <p>
+            If you look at the metrics for Ahrefs,<br/>
+            Quora’s DR — 91, and traffic — 145 million. <br/>
+            Reddit’s DR — 95, and traffic — 259 million<br/>
+          </p>
+        `,
+      },
+      {
+        title: 'Quick solution',
+        description: `
+          <p>
+            It’s no secret that search engines love things that benefit users in SERP, so the questions quickly get into the index and users can find a solution sooner
+          </p>
+        `,
+      },
+      {
+        title: 'Languages',
+        description: `
+          <p>
+            Quora supports questions in more than 20 different languages, which is a great advantage for your local SEO.
+          </p>
+        `,
+      },
+      {
+        title: 'Referral traffic',
+        description: `
+          <p>
+            Writing the right answer can drive users to click through and the chances are high that you will get referral traffic
+          </p>
+        `,
+      },
+      {
+        title: 'Regular mentions with links',
+        description: `
+          <p>
+            Regular links from popular Q&A platforms will help improve your site’s behavioral factors through regular mentions with links.
+          </p>
+        `,
+      },
+      {
+        title: 'Anchor backlinks',
+        description: `
+          <p>
+            Anchor backlinks in responses will help improve keyword visibility and also influence potential search rankings.
+          </p>
+        `,
+      },
+    ],
+  };
+
+  const barCards = {
+    title: 'What makes collaborating with us worthwhile?',
+    list: [
+      {
+        isActive: 'false',
+        title: 'Extended Answers',
+        description: 'The average answer is 500+ symbols about your niche with an organically inscribed link',
+      },
+      {
+        isActive: 'false',
+        title: 'Old & boosted accounts',
+        description: 'Backlinks and answers placed only by old & boosted accounts from 10k views',
+      },
+      {
+        isActive: 'false',
+        title: 'Real niche-related questions',
+        description: 'We’ll find only real questions not created, which are related to your website niche',
+      },
+      {
+        isActive: 'true',
+        title: 'Top answer',
+        description: 'Our answers can be at the top of the questions previous. It can help you gain referral traffic',
+      },
+      {
+        isActive: 'false',
+        title: 'Totally involved in project',
+        description: 'Before writing answers we check your niche and are involved in your specific to write only valuable answers',
+      },
+      {
+        isActive: 'false',
+        title: 'Drip-feeding answers views',
+        description: 'More your answers stay in question more views it can gain during the months or years',
+      },
+    ],
+  };
+
   isClientsPreviewAdditional = 'true';
 
   const showcaseList = [
@@ -258,7 +352,7 @@ html(lang='en')
     link(rel='stylesheet', href=require('@/styles/pages/service-2.scss'))
 
   body
-    include @/layout/header.pug
+    //- include @/layout/header.pug
 
     include @/templates/banner.pug
 
@@ -271,7 +365,7 @@ html(lang='en')
         if index === 0
           include @/templates/remark.pug
 
-    //- include @/templates/potential.pug
+    include @/templates/potential.pug
 
     include @/templates/bar-cards.pug
 
