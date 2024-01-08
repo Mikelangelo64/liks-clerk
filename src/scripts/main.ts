@@ -1,6 +1,7 @@
 import accordionInit from './accordion/init';
 import anchorsInit from './anchor/init';
 import barCardsInit from './barCards/init';
+import counterInit from './calculateForm/counter/init';
 import fadeContentInit from './fadeContent/init';
 import grabDesktopInit from './grabDesktop/init';
 import headerEvents from './headerEvents/init';
@@ -11,6 +12,7 @@ import projectToggle from './projectToggle/init';
 import scrollBarInit from './scrollbar';
 import slidersInit from './sliders/init';
 import submenuToggle from './submenu/init';
+import initCalculateForm from './calculateForm/init';
 
 export const init = () => {
   scrollBarInit();
@@ -23,6 +25,8 @@ export const init = () => {
   fadeContentInit();
   marqueeInit();
   barCardsInit();
+  counterInit();
+  initCalculateForm();
   // console.log(scrollSectionState);
 
   const popups = initPopups();

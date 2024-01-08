@@ -1,0 +1,111 @@
+-
+  const calculateList = [
+    {
+      title: 'DR (Domain rating)',
+      description: 'The higher the number, the more authority the site has',
+      rangeBar: {
+        min: '10',
+        max: '100',
+        step: '10',
+        currentValue: '30',
+      },
+    },
+    {
+      title: 'Website Traffic',
+      description: 'Choose the guaranteed monthly traffic (by Ahrefs) of the publishing site',
+      rangeBar: {
+        min: '1000',
+        max: '10000',
+        step: '100',
+        currentValue: '1000',
+      },
+    },
+    {
+      title: 'Word Count',
+      description: 'Choose the word count for your guest post(s)',
+      rangeBar: {
+        min: '500',
+        max: '2000',
+        step: '100',
+        currentValue: '2000',
+      },
+    },
+  ];
+
+section.section.calculate
+  ._container
+    .calculate__wrapper
+      .calculate__header.section-header
+        h2.section-header__title Calculate the price
+
+        p.section-header__subtitle Take a look at this example
+
+      .calculate-form
+        .calculate-form__header
+          p.calculate-form__title Total:
+
+          p.calculate-form__value $120
+
+        .calculate-form__main
+          each item in calculateList
+            .calculate-form-item
+              p.calculate-form-item__title= item.title
+
+              p.calculate-form-item__descriptionitem.description
+
+              .calculate-form-range
+                .r-slider.calculate-form-range__input(
+                  data-min=`${item.rangeBar.min}`,
+                  data-max=`${item.rangeBar.max}`,
+                  data-step=`${item.rangeBar.step}`,
+                  data-start-index=`${Math.floor((+item.rangeBar.currentValue - +item.rangeBar.min) / +item.rangeBar.step)}`
+                )
+                //- label.calculate-form-range__label(for='range-1') 
+                //-   //- output.calculate-form-range__output(
+                //-   //-   name='output',
+                //-   //-   for='range-1'
+                //-   //- ) 30
+
+                //-   //- input#range-1.calculate-form-range__input(
+                //-   //-   type='range',
+                //-   //-   name='range',
+                //-   //-   min='0',
+                //-   //-   max='100',
+                //-   //-   value='30',
+                //-   //-   step='10'
+                //-   //- )
+
+                .calculate-form-range__content
+                  p.calculate-form-range__value(data-range='3') 3
+                  p.calculate-form-range__title DR
+
+          .calculate-form-item
+            p.calculate-form-item__title Link Quantity
+
+            //- p.calculate-form-item__description Link Quantity
+
+            .calculate-form-count.counter(data-value='1')
+              button.calculate-form-count__button.minus(aria-label='minus')
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.6158 22.9083H32.0711C32.6729 22.9083 33.1869 22.4763 33.1869 21.9601C33.1869 21.4439 32.6729 21.0225 32.0711 21.0225H13.6158C13.014 21.0225 12.5 21.4439 12.5 21.9601C12.5 22.4763 13.014 22.9083 13.6158 22.9083Z" fill="currentColor"/>
+                </svg>
+
+              input#counter.calculate-form-count__input(
+                type='number',
+                name='quantity',
+                min='1',
+                max='10',
+                value='1',
+                disabled
+              )
+
+              button.calculate-form-count__button.plus(aria-label='plus')
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 21.9939C12.5 22.5875 12.997 23.072 13.5788 23.072H21.4212V30.9097C21.4212 31.4912 21.9061 31.9878 22.5 31.9878C23.094 31.9878 23.591 31.4912 23.591 30.9097V23.072H31.4213C32.0031 23.072 32.5 22.5875 32.5 21.9939C32.5 21.4003 32.0031 20.9037 31.4213 20.9037H23.591V13.0781C23.591 12.4967 23.094 12 22.5 12C21.9061 12 21.4212 12.4967 21.4212 13.0781V20.9037H13.5788C12.997 20.9037 12.5 21.4003 12.5 21.9939Z" fill="currentColor"/>
+                </svg>
+
+        .calculate-form__bottom
+          a.calculate-form__button.button-filled(href='#')
+            span Continue
+
+        input#calculate-global.calculate-form-global-input(type='text')

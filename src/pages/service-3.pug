@@ -220,6 +220,8 @@
     ],
   };
 
+  isClientsPreviewAdditional = 'true';
+
 doctype html
 html(lang='en')
   head
@@ -230,7 +232,7 @@ html(lang='en')
     link(rel='stylesheet', href=require('@/styles/pages/service-3.scss'))
 
   body
-    //- include @/layout/header.pug
+    include @/layout/header.pug
 
     include @/templates/banner.pug
 
@@ -263,9 +265,13 @@ html(lang='en')
         if index === 3
           include @/templates/remark.pug
 
-    //- include @/templates/faq.pug
+    include @/templates/calculate.pug
 
-    //- include @/templates/contacts.pug
+    include @/templates/clients-preview.pug
+
+    include @/templates/faq.pug
+
+    include @/templates/contacts.pug
 
     include @/layout/footer.pug
 

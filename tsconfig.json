@@ -21,6 +21,6 @@
       "@/layout/*": ["./src/templates/layout/*"]
     }
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "src/scripts/calculateForm/rangeBar/rangeSlider.js"],
   "exclude": ["node_modules"]
 }

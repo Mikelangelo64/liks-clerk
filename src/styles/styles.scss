@@ -3,6 +3,7 @@
 @import 'swiper/css/autoplay';
 @import 'swiper/element/css/autoplay';
 //@import 'vevet/lib/styles/index';
+// @import './range-slider.min';
 
 @import './base';
 @import './fonts';
@@ -199,6 +200,7 @@ ol {
 @import './layout/determine';
 @import './layout/traffic';
 @import './layout/package';
+@import './layout/calculate';
 
 @import './layout/popup-action';
 @import './layout/typography';

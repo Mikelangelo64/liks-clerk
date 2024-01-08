@@ -14,6 +14,241 @@
     <link rel="stylesheet" href="service-3.css">
   </head>
   <body>
+    <header class="header">
+      <div class="_container header__container">
+        <div class="header__wrapper">
+          <div class="header__item header__logo__container"><a class="custom-logo-link header__logo" href="#"> <img
+                class="custom-logo" src="assets/img/logo.svg" alt="logo" draggable="false"></a></div>
+          <nav class="header__item header__menu">
+            <ul class="menu-list">
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">About us</a></li>
+              <li class="menu-list__item additional" data-submenu="true"><a class="menu__link"
+                  href="#">Services</a><button class="menu-submenu-open"><svg width="10" height="10" viewBox="0 0 10 10"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list">
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Forum backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related threads on forums with
+                            DR&gt;20, traffic&gt;1k</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A backlinks</span><span
+                            class="menu-submenu__description">Placing backlinks in niche related questions on popular
+                            Q&amp;A: Quora and Reddit</span></span></a></li>
+                    <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                          class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                            backlinks</span><span class="menu-submenu__description">Placing backlinks in niche related,
+                            indexed and existing articles on real websites</span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Reviews</a></li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#">Seo Vocabulary</a></li>
+              <li class="menu-list__item additional" data-submenu="true">
+                <p class="menu__link">EN</p><button class="menu-submenu-open"><svg width="10" height="10"
+                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.05361 2.93771L1.46436 3.52697L4.99989 7.0625L8.53542 3.52697L7.94617 2.93771L4.99989 5.88399L2.05361 2.93771Z"
+                      fill="currentColor" />
+                  </svg></button>
+                <div class="menu-submenu">
+                  <ul class="menu-submenu-list language">
+                    <li>
+                      <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                            src="assets/img/language-usa.svg" alt="EN"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">EN</span><span class="menu-submenu__description"></span></span>
+                      </p>
+                    </li>
+                    <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                            src="assets/img/language-ua.svg" alt="UA"></span><span class="menu-submenu__content"><span
+                            class="menu-submenu__title">UA</span><span
+                            class="menu-submenu__description"></span></span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__button__container"><button class="header__button button-hollow"><span>Log
+                in</span></button><button class="menu-burger popup-open" data-popup="_popup-menu"
+              title="open menu"><span></span></button></div>
+        </div>
+      </div>
+      <div class="popup popup-video separate__popup " data-popupname="_popup-separate" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-video__media"><video class="video lazy-video" disablePictureInPicture preload="metadata"
+                  playsinline controls>
+                  <source data-src="assets/video/banner-popup.mp4" type="video/mp4">
+                </video></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-menu menu__popup " data-popupname="_popup-menu" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="modal-menu__header"><button class="popup__close"><img src="assets/img/popup-close-green.svg"
+                    alt="close"></button></div>
+              <div class="modal-menu__main">
+                <nav class="menu">
+                  <ul class="menu-list accordion" data-is-label-click="true">
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">About
+                          us</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link"
+                          href="#">Services</a><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button></div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description">
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-1.svg" alt="Forum backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Forum
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related threads on forums with DR&gt;20, traffic&gt;1k</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-2.svg" alt="Q&amp;A backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Q&amp;A
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related questions on popular Q&amp;A: Quora and Reddit</span></span></a></li>
+                          <li><a class="menu-submenu__link" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/services/service-3.svg" alt="Guest post backlinks"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">Guest post
+                                  backlinks</span><span class="menu-submenu__description">Placing backlinks in niche
+                                  related, indexed and existing articles on real websites</span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Reviews</a>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header accordion__summary"><a class="menu__link" href="#">Seo
+                          Vocabulary</a></div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header accordion__summary">
+                        <p class="menu__link">EN</p><button class="accordion__label"><svg width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M8.10533 11.7034C8.27276 11.7034 8.44013 11.6365 8.55402 11.5092L13.737 6.19894C13.8509 6.0851 13.9178 5.93778 13.9178 5.77037C13.9178 5.42215 13.6566 5.1543 13.3085 5.1543C13.141 5.1543 12.987 5.22126 12.8732 5.32841L7.74372 10.5717H8.46025L3.33077 5.32841C3.22363 5.22126 3.06961 5.1543 2.89551 5.1543C2.54729 5.1543 2.28613 5.42215 2.28613 5.77037C2.28613 5.93778 2.3531 6.0851 2.46694 6.20564L7.64997 11.5092C7.77721 11.6365 7.93122 11.7034 8.10533 11.7034Z"
+                              fill="currentColor" fill-opacity="0.85" />
+                          </svg></button>
+                      </div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description language">
+                          <li>
+                            <p class="menu-submenu__link lang-item-current"><span class="menu-submenu__label"><img
+                                  src="assets/img/language-usa.svg" alt="EN"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">EN</span><span
+                                  class="menu-submenu__description"></span></span></p>
+                          </li>
+                          <li><a class="menu-submenu__link language" href="#"> <span class="menu-submenu__label"><img
+                                  src="assets/img/language-ua.svg" alt="UA"></span><span
+                                class="menu-submenu__content"><span class="menu-submenu__title">UA</span><span
+                                  class="menu-submenu__description"></span></span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modal-menu__footer"><a class="modal-menu__button button-filled" href="#"><span>Log
+                    in</span></a><a class="modal-menu__button button-hollow" href="#"><span>Sign up</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback thanks__popup " data-popupname="_popup-thanks" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Thank you!</p>
+                </div>
+                <p class="popup-feedback__subtitle">Your application has been accepted. <br />Expect a call soon.</p>
+                <button class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback error__popup " data-popupname="_popup-error" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Oops</p>
+                </div>
+                <p class="popup-feedback__subtitle">Something wrong. Try later.</p><button
+                  class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-form form__popup fullscreen-phone" data-popupname="_popup-form" aria-modal="true"
+        role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
+                alt="close"><img class="mobile" src="assets/img/popup-close.svg" alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-action">
+                <p class="popup-action__title">Please fill out the form and we will contact you shortly.</p>
+                <div class="popup-action__main">
+                  <form class="form popup-action__form" id="form-popup" action="post">
+                    <div><label for="popup-name"> <input id="popup-name" type="text" name="name"
+                          placeholder="Your name"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-email"> <input id="popup-email" type="email" name="email"
+                          placeholder="Your email"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+                    <div><label for="popup-telephone"> <input id="popup-telephone" type="tel" name="telephone"
+                          placeholder="Your phone number"><span class="wpcf7-not-valid-tip">Wrong format</span></label>
+                    </div>
+                    <div><label for="popup-request"> <textarea id="popup-request" name="request"
+                          placeholder="Message text"></textarea><span class="wpcf7-not-valid-tip">Wrong
+                          format</span></label></div>
+                    <p><button type="submit"> <span>Send</span></button></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <section class="banner section service">
       <div class="_container banner__container section__container">
         <div class="banner__wrapper">
@@ -335,6 +570,726 @@
         </div>
       </section>
     </div>
+    <section class="section calculate">
+      <div class="_container">
+        <div class="calculate__wrapper">
+          <div class="calculate__header section-header">
+            <h2 class="section-header__title">Calculate the price</h2>
+            <p class="section-header__subtitle">Take a look at this example</p>
+          </div>
+          <div class="calculate-form">
+            <div class="calculate-form__header">
+              <p class="calculate-form__title">Total:</p>
+              <p class="calculate-form__value">$120</p>
+            </div>
+            <div class="calculate-form__main">
+              <div class="calculate-form-item">
+                <p class="calculate-form-item__title">DR (Domain rating)</p>
+                <p class="calculate-form-item__descriptionitem description"></p>
+                <div class="calculate-form-range">
+                  <div class="r-slider calculate-form-range__input" data-min="10" data-max="100" data-step="10"
+                    data-start-index="2"></div>
+                  <div class="calculate-form-range__content">
+                    <p class="calculate-form-range__value" data-range="3">3</p>
+                    <p class="calculate-form-range__title">DR</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculate-form-item">
+                <p class="calculate-form-item__title">Website Traffic</p>
+                <p class="calculate-form-item__descriptionitem description"></p>
+                <div class="calculate-form-range">
+                  <div class="r-slider calculate-form-range__input" data-min="1000" data-max="10000" data-step="100"
+                    data-start-index="0"></div>
+                  <div class="calculate-form-range__content">
+                    <p class="calculate-form-range__value" data-range="3">3</p>
+                    <p class="calculate-form-range__title">DR</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculate-form-item">
+                <p class="calculate-form-item__title">Word Count</p>
+                <p class="calculate-form-item__descriptionitem description"></p>
+                <div class="calculate-form-range">
+                  <div class="r-slider calculate-form-range__input" data-min="500" data-max="2000" data-step="100"
+                    data-start-index="15"></div>
+                  <div class="calculate-form-range__content">
+                    <p class="calculate-form-range__value" data-range="3">3</p>
+                    <p class="calculate-form-range__title">DR</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculate-form-item">
+                <p class="calculate-form-item__title">Link Quantity</p>
+                <div class="calculate-form-count counter" data-value="1"><button
+                    class="calculate-form-count__button minus" aria-label="minus"><svg width="45" height="44"
+                      viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.6158 22.9083H32.0711C32.6729 22.9083 33.1869 22.4763 33.1869 21.9601C33.1869 21.4439 32.6729 21.0225 32.0711 21.0225H13.6158C13.014 21.0225 12.5 21.4439 12.5 21.9601C12.5 22.4763 13.014 22.9083 13.6158 22.9083Z"
+                        fill="currentColor" />
+                    </svg></button><input class="calculate-form-count__input" id="counter" type="number" name="quantity"
+                    min="1" max="10" value="1" disabled><button class="calculate-form-count__button plus"
+                    aria-label="plus"><svg width="45" height="44" viewBox="0 0 45 44" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.5 21.9939C12.5 22.5875 12.997 23.072 13.5788 23.072H21.4212V30.9097C21.4212 31.4912 21.9061 31.9878 22.5 31.9878C23.094 31.9878 23.591 31.4912 23.591 30.9097V23.072H31.4213C32.0031 23.072 32.5 22.5875 32.5 21.9939C32.5 21.4003 32.0031 20.9037 31.4213 20.9037H23.591V13.0781C23.591 12.4967 23.094 12 22.5 12C21.9061 12 21.4212 12.4967 21.4212 13.0781V20.9037H13.5788C12.997 20.9037 12.5 21.4003 12.5 21.9939Z"
+                        fill="currentColor" />
+                    </svg></button></div>
+              </div>
+            </div>
+            <div class="calculate-form__bottom"><a class="calculate-form__button button-filled"
+                href="#"><span>Continue</span></a></div><input class="calculate-form-global-input" id="calculate-global"
+              type="text">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section clients-preview">
+      <div class="_container">
+        <div class="clients-preview__wrapper">
+          <div class="clients-preview-header section-header">
+            <div class="clients-preview-header__top">
+              <h2 class="section-header__title">Our Work Showcase</h2><a
+                class="clients-preview__button desktop button-hollow" href="#" target="_blank"><span>See all
+                  reviews</span></a>
+            </div>
+            <div class="clients-preview-header-summarize">
+              <div class="clients-preview-header-summarize__image"><img src="assets/img/review/summarize.png"
+                  alt="clients-review"></div>
+              <p class="clients-preview-header-summarize__description">We`ve got more than 830 reviews in Fiverr,
+                Trustpilot, BlackHatWorld and Clutch.co</p>
+            </div>
+          </div>
+          <ul class="clients-preview-additional review-company">
+            <li class="review-company__item">
+              <div class="review-company__info">
+                <div class="review-company__subtitle">Reviewed on</div>
+                <div class="review-company__label"><img src="assets/img/review/additional/review-1.svg" alt="fiverr">
+                </div>
+              </div>
+              <div class="review-company-raiting">
+                <div class="review-company-raiting-stars">
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                </div>
+                <p class="review-company-raiting__description"><strong>820</strong><span>reviews</span></p>
+              </div>
+            </li>
+            <li class="review-company__item">
+              <div class="review-company__info">
+                <div class="review-company__subtitle">Reviewed on</div>
+                <div class="review-company__label"><img src="assets/img/review/additional/review-2.svg"
+                    alt="trustpilot"></div>
+              </div>
+              <div class="review-company-raiting">
+                <div class="review-company-raiting-stars">
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item empty"> <img src="assets/img/review/star-empty.svg"
+                      alt="star"></div>
+                </div>
+                <p class="review-company-raiting__description"><strong>10</strong><span>reviews</span></p>
+              </div>
+            </li>
+            <li class="review-company__item">
+              <div class="review-company__info">
+                <div class="review-company__subtitle">Reviewed on</div>
+                <div class="review-company__label"><img src="assets/img/review/additional/review-3.svg"
+                    alt="BlackHatWorld"></div>
+              </div>
+              <div class="review-company-raiting">
+                <div class="review-company-raiting-stars">
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                </div>
+                <p class="review-company-raiting__description"><strong>10</strong><span>reviews</span></p>
+              </div>
+            </li>
+            <li class="review-company__item">
+              <div class="review-company__info">
+                <div class="review-company__subtitle">Reviewed on</div>
+                <div class="review-company__label"><img src="assets/img/review/additional/review-4.svg" alt="Clutch.co">
+                </div>
+              </div>
+              <div class="review-company-raiting">
+                <div class="review-company-raiting-stars">
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                  <div class="review-company-raiting-stars__item filled"> <img src="assets/img/review/star.svg"
+                      alt="star"></div>
+                </div>
+                <p class="review-company-raiting__description"><strong>15</strong><span>reviews</span></p>
+              </div>
+            </li>
+          </ul>
+          <div class="clients-preview__main desktop fade-section">
+            <ul class="fade-section__list clients-preview-navigation">
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info active"
+                  data-item="1"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><img class="clients-preview-info-avatar__image"
+                        src="assets/img/review/avatar-1.png" alt="Great attentions to details"></span></span><span
+                    class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">frenchboy666</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">United Kingdom</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info"
+                  data-item="2"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">Q</span></span></span><span
+                    class="clients-preview-info__content"><span class="clients-preview-info__name">qwiseo</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+              <li><button class="fade-section__button clients-preview-navigation__button clients-preview-info"
+                  data-item="3"><span class="clients-preview-info-avatar"><span
+                      class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">E</span></span></span><span
+                    class="clients-preview-info__content"><span class="clients-preview-info__name">Evgeny
+                      Tarasov</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button></li>
+            </ul>
+            <div class="clients-preview-content">
+              <div class="fade-section-content">
+                <div class="fade-section-content__item" data-item="1">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">Great attentions to details</div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        Great attentions to details, fast delivery, fast answer. Not the first time I buy from him. Not
+                        the last time ! Top notch work. Thanks !
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="2">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">What struck me was the high professionalism of the team.
+                    </div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item empty"> <img
+                          src="assets/img/review/star-empty.svg" alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        From the moment I started working with them, they surrounded me with attention and provided
+                        detailed advice on all aspects of the campaign. They were extremely flexible and adapted to my
+                        needs, which was important to me. I can't stress enough the responsiveness of the team. Issues
+                        are resolved quickly, reports are provided in a timely manner, and their communication is top
+                        notch
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="3">
+                  <div class="clients-preview-comment">
+                    <div class="clients-preview-comment__title">Working with Link Mass</div>
+                    <div class="clients-preview-comment-raiting">
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                      <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                          alt="star"></div>
+                    </div>
+                    <div class="clients-preview-comment__typography typography">
+                      <p>
+                        We began to cooperate, everything is very clear, fast and organized. All of our questions were
+                        answered. They helped us in every little detail. We even did a little more than we planned.We
+                        will continue to cooperate. I recommend.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clients-preview__main phone">
+            <ul class="clients-preview-content accordion" data-is-label-click="false" data-is-open-on-hover="false">
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><img class="clients-preview-info-avatar__image"
+                        src="assets/img/review/avatar-1.png" alt="Great attentions to details"></div>
+                  </span><span class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">frenchboy666</span><span
+                      class="clients-preview-info-location"><span class="clients-preview-info-location__label"><img
+                          src="assets/img/review/location.svg" alt="location"></span><span
+                        class="clients-preview-info-location__text">United Kingdom</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">Great attentions to details</div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          Great attentions to details, fast delivery, fast answer. Not the first time I buy from him.
+                          Not the last time ! Top notch work. Thanks !
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">Q</span></div>
+                  </span><span class="clients-preview-info__content"><span
+                      class="clients-preview-info__name">qwiseo</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">What struck me was the high professionalism of the
+                        team. </div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item empty"> <img
+                            src="assets/img/review/star-empty.svg" alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          From the moment I started working with them, they surrounded me with attention and provided
+                          detailed advice on all aspects of the campaign. They were extremely flexible and adapted to my
+                          needs, which was important to me. I can't stress enough the responsiveness of the team. Issues
+                          are resolved quickly, reports are provided in a timely manner, and their communication is top
+                          notch
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item clients-preview-content__item"><button
+                  class="accordion__summary clients-preview-info"><span class="clients-preview-info-avatar">
+                    <div class="clients-preview-info-avatar__container"><span
+                        class="clients-preview-info-avatar__letter">E</span></div>
+                  </span><span class="clients-preview-info__content"><span class="clients-preview-info__name">Evgeny
+                      Tarasov</span><span class="clients-preview-info-location"><span
+                        class="clients-preview-info-location__label"><img src="assets/img/review/location.svg"
+                          alt="location"></span><span
+                        class="clients-preview-info-location__text">Ukraine</span></span><time
+                      class="clients-preview-info__date" datetime="2023-10-05T00:00:00+00:00">Oct 05,
+                      2023</time></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description clients-preview-content__description">
+                    <div class="clients-preview-comment">
+                      <div class="clients-preview-comment__title">Working with Link Mass</div>
+                      <div class="clients-preview-comment-raiting">
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                        <div class="clients-preview-comment-raiting__item filled"> <img src="assets/img/review/star.svg"
+                            alt="star"></div>
+                      </div>
+                      <div class="clients-preview-comment__typography typography">
+                        <p>
+                          We began to cooperate, everything is very clear, fast and organized. All of our questions were
+                          answered. They helped us in every little detail. We even did a little more than we planned.We
+                          will continue to cooperate. I recommend.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clients-preview__footer"><a class="clients-preview__button phone button-hollow" href="#"
+              target="_blank"><span>See all reviews</span></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq">
+      <div class="_container">
+        <div class="faq__wrapper">
+          <div class="faq__header section-header">
+            <h2 class="section-header__title">Frequently asked questions</h2>
+            <p class="section-header__subtitle">Check our Q&A section to find answers on frequently asked questions</p>
+          </div>
+          <div class="faq__main">
+            <ul class="faq-list accordion" data-is-label-click="false">
+              <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                    class="faq-list__title">What do I need to provide once I order?</span><span
+                    class="faq-list__recommended">Recommended</span><span
+                    class="faq-list__label accordion__label"></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description faq-list__description">
+                    <div class="faq-list__typography typography">
+                      <p>
+                        You need to provide: - URLs to your site which you want to build links - Keywords which we can
+                        use for anchors or just in text words - Short description of your company or requirements or
+                        expectations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                    class="faq-list__title">Can you really deliver withing the specified timeline?</span><span
+                    class="faq-list__recommended">Recommended</span><span
+                    class="faq-list__label accordion__label"></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description faq-list__description">
+                    <div class="faq-list__typography typography">
+                      <p>
+                        You need to provide: - URLs to your site which you want to build links - Keywords which we can
+                        use for anchors or just in text words - Short description of your company or requirements or
+                        expectations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                    class="faq-list__title">Are these backlinks safe for my website?</span><span
+                    class="faq-list__label accordion__label"></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description faq-list__description">
+                    <div class="faq-list__typography typography">
+                      <p>
+                        You need to provide: - URLs to your site which you want to build links - Keywords which we can
+                        use for anchors or just in text words - Short description of your company or requirements or
+                        expectations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="faq-more accordion" data-is-label-click="false" data-prefix="p">
+              <div class="faq-more__item accordion__item accordion__item-p">
+                <div class="accordion__details accordion__details-p faq-more__details">
+                  <ul class="faq-list accordion__description accordion__description-p faq-more__description accordion"
+                    data-is-label-click="false">
+                    <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                          class="faq-list__title">Are this backlinks really permanent?</span><span
+                          class="faq-list__label accordion__label"></span></button>
+                      <div class="accordion__details">
+                        <div class="accordion__description faq-list__description">
+                          <div class="faq-list__typography typography">
+                            <p>
+                              You need to provide: - URLs to your site which you want to build links - Keywords which we
+                              can use for anchors or just in text words - Short description of your company or
+                              requirements or expectations
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                          class="faq-list__title">What services do you use to check backlinks quality?</span><span
+                          class="faq-list__label accordion__label"></span></button>
+                      <div class="accordion__details">
+                        <div class="accordion__description faq-list__description">
+                          <div class="faq-list__typography typography">
+                            <p>
+                              You need to provide: - URLs to your site which you want to build links - Keywords which we
+                              can use for anchors or just in text words - Short description of your company or
+                              requirements or expectations
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item faq-list__item"><button class="accordion__summary faq-list__header"><span
+                          class="faq-list__title">Do you work with all niches?</span><span
+                          class="faq-list__label accordion__label"></span></button>
+                      <div class="accordion__details">
+                        <div class="accordion__description faq-list__description">
+                          <div class="faq-list__typography typography">
+                            <p>
+                              You need to provide: - URLs to your site which you want to build links - Keywords which we
+                              can use for anchors or just in text words - Short description of your company or
+                              requirements or expectations
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="faq-more__footer"><button
+                    class="faq-more__button accordion__summary accordion__summary-p"><span>Load more</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section contacts">
+      <div class="_container">
+        <div class="contacts__wrapper">
+          <div class="contacts__header section-header">
+            <h2 class="section-header__title">Get in touch</h2>
+            <p class="section-header__subtitle">Do you have any questions or need a discount? - Drop us a line or
+              register and put your project to work.</p>
+          </div>
+          <div class="contacts__main desktop fade-section">
+            <ul class="fade-section__list contacts-navigation">
+              <li><button class="fade-section__button contacts-navigation__button contacts-info active"
+                  data-item="1"><span class="contacts-info__label"><img src="assets/img/contacts/telegram.svg"
+                      alt="Telegram"></span><span class="contacts-info__content"><span
+                      class="contacts-info__name">Telegram Bot</span><span class="contacts-info__subtitle">Our Telegram
+                      Bot is ready for you</span></span></button></li>
+              <li><button class="fade-section__button contacts-navigation__button contacts-info" data-item="2"><span
+                    class="contacts-info__label"><img src="assets/img/contacts/skype.svg" alt="Skype"></span><span
+                    class="contacts-info__content"><span class="contacts-info__name">Skype</span><span
+                      class="contacts-info__subtitle">Contact us in Skype</span></span></button></li>
+              <li><button class="fade-section__button contacts-navigation__button contacts-info" data-item="3"><span
+                    class="contacts-info__label"><img src="assets/img/contacts/login.svg" alt="Log in"></span><span
+                    class="contacts-info__content"><span class="contacts-info__name">Log in</span><span
+                      class="contacts-info__subtitle">Log in to your account to get full access to the
+                      functionality</span></span></button></li>
+            </ul>
+            <div class="contacts-content">
+              <div class="fade-section-content">
+                <div class="fade-section-content__item" data-item="1">
+                  <div class="contacts-comment">
+                    <div class="contacts-comment-title">
+                      <div class="contacts-comment-title__lexicon">How to contact us on</div>
+                      <div class="contacts-comment-title__main">Telegram</div>
+                    </div>
+                    <div class="contacts-comment__typography typography">
+                      <p>
+                        Your steps:
+                      </p>
+                      <ol>
+                        <li>
+                          Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get to
+                          the Bot
+                        </li>
+                        <li>
+                          After <a href="#" target="_blank">/start</a>, the bot needs you to describe the requirements,
+                          topic, or geography of the project
+                        </li>
+                        <li>
+                          We will respond to your request within 10 minutes!
+                        </li>
+                      </ol>
+                      <p>
+                        P.S. Without a response from you, we will not be able to answer!
+                      </p>
+                    </div>
+                    <div class="contacts-comment__footer"><a class="button-filled contacts-comment__button"
+                        href="#"><span>Contact us</span></a></div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="2">
+                  <div class="contacts-comment">
+                    <div class="contacts-comment-title">
+                      <div class="contacts-comment-title__lexicon">How to contact us on</div>
+                      <div class="contacts-comment-title__main">Skype</div>
+                    </div>
+                    <div class="contacts-comment__typography typography">
+                      <p>
+                        Your steps:
+                      </p>
+                      <ol>
+                        <li>
+                          Click on the link <a href="https://www.skype.com/en/"
+                            target="_blank">https://www.skype.com/en/</a> or on the button to message us
+                        </li>
+                        <li>
+                          Then we need you to describe the requirements, topic, or geography of the project
+                        </li>
+                        <li>
+                          We will respond to your request within 10 minutes!
+                        </li>
+                      </ol>
+                      <p>
+                        P.S. Without a response from you, we will not be able to answer!
+                      </p>
+                    </div>
+                    <div class="contacts-comment__footer"><a class="button-filled contacts-comment__button"
+                        href="#"><span>Contact us</span></a></div>
+                  </div>
+                </div>
+                <div class="fade-section-content__item unactive" data-item="3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__main phone">
+            <ul class="contacts-content accordion" data-is-label-click="false" data-is-open-on-hover="false">
+              <li class="accordion__item contacts-content__item"><button class="accordion__summary contacts-info"><span
+                    class="contacts-info__label"><img src="assets/img/contacts/telegram.svg" alt="Telegram"></span><span
+                    class="contacts-info__content"><span class="contacts-info__name">Telegram Bot</span><span
+                      class="contacts-info__subtitle">Our Telegram Bot is ready for you</span></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description contacts-content__description">
+                    <div class="contacts-comment">
+                      <div class="contacts-comment-title">
+                        <div class="contacts-comment-title__lexicon">How to contact us on</div>
+                        <div class="contacts-comment-title__main">Telegram</div>
+                      </div>
+                      <div class="contacts-comment__typography typography">
+                        <p>
+                          Your steps:
+                        </p>
+                        <ol>
+                          <li>
+                            Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get
+                            to the Bot
+                          </li>
+                          <li>
+                            After <a href="#" target="_blank">/start</a>, the bot needs you to describe the
+                            requirements, topic, or geography of the project
+                          </li>
+                          <li>
+                            We will respond to your request within 10 minutes!
+                          </li>
+                        </ol>
+                        <p>
+                          P.S. Without a response from you, we will not be able to answer!
+                        </p>
+                      </div>
+                      <div class="contacts-comment__footer"><a class="button-filled contacts-comment__button"
+                          href="#"><span>Contact us</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item contacts-content__item"><button class="accordion__summary contacts-info"><span
+                    class="contacts-info__label"><img src="assets/img/contacts/skype.svg" alt="Skype"></span><span
+                    class="contacts-info__content"><span class="contacts-info__name">Skype</span><span
+                      class="contacts-info__subtitle">Contact us in Skype</span></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description contacts-content__description">
+                    <div class="contacts-comment">
+                      <div class="contacts-comment-title">
+                        <div class="contacts-comment-title__lexicon">How to contact us on</div>
+                        <div class="contacts-comment-title__main">Skype</div>
+                      </div>
+                      <div class="contacts-comment__typography typography">
+                        <p>
+                          Your steps:
+                        </p>
+                        <ol>
+                          <li>
+                            Click on the link <a href="https://www.skype.com/en/"
+                              target="_blank">https://www.skype.com/en/</a> or on the button to message us
+                          </li>
+                          <li>
+                            Then we need you to describe the requirements, topic, or geography of the project
+                          </li>
+                          <li>
+                            We will respond to your request within 10 minutes!
+                          </li>
+                        </ol>
+                        <p>
+                          P.S. Without a response from you, we will not be able to answer!
+                        </p>
+                      </div>
+                      <div class="contacts-comment__footer"><a class="button-filled contacts-comment__button"
+                          href="#"><span>Contact us</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion__item contacts-content__item"><button class="accordion__summary contacts-info"><span
+                    class="contacts-info__label"><img src="assets/img/contacts/login.svg" alt="Log in"></span><span
+                    class="contacts-info__content"><span class="contacts-info__name">Log in</span><span
+                      class="contacts-info__subtitle">Log in to your account to get full access to the
+                      functionality</span></span></button>
+                <div class="accordion__details">
+                  <div class="accordion__description contacts-content__description"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="_container">
         <div class="footer__wrapper">

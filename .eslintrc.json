@@ -63,5 +63,5 @@
     ]
   },
 
-  "ignorePatterns": ["**/public/*", "webpack.config.js"]
+  "ignorePatterns": ["**/public/*", "webpack.config.js", "rangeSlider.js"]
 }

@@ -130,8 +130,8 @@
         background-color: rgba(var(--color-white--rgb), 0.2);
 
         backdrop-filter: blur(8px);
-        // /* stylelint-disable-next-line */
-        // -webkit-backdrop-filter: blur(8px);
+        /* stylelint-disable-next-line */
+        -webkit-backdrop-filter: blur(8px);
 
         @at-root .showcase-slider-media:hover & {
           opacity: 1;
