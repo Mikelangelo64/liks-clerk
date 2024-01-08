@@ -1,0 +1,49 @@
+-
+  const trafficList = [
+    {
+      media: '@/assets/img/traffic/traffic-1.svg',
+      title: 'Traffic Increase',
+      percent: '100',
+      from: '12k',
+      to: '24k',
+    },
+    {
+      media: '@/assets/img/traffic/traffic-2.svg',
+      title: 'Traffic Increase',
+      percent: '169',
+      from: '1.3k',
+      to: '3.5k',
+    },
+    {
+      media: '@/assets/img/traffic/traffic-3.svg',
+      title: 'Traffic Increase',
+      percent: '966',
+      from: '600',
+      to: '6.4k',
+    },
+    {
+      media: '@/assets/img/traffic/traffic-4.svg',
+      title: 'Traffic Increase',
+      percent: '21',
+      from: '9k',
+      to: '10.9k',
+    },
+  ];
+
+.traffic-list.grab-desktop
+  ul.traffic-list__inner.grab-desktop__inner
+    each item in trafficList
+      li
+        .traffic-list__item
+          .traffic-list__main
+            p.traffic-list__title= item.title
+
+            p.traffic-list__percent
+              span +
+              span= item.percent
+              span %
+
+            p.traffic-list__description!= `From <span>${item.from}</span> to <span>${item.to}</span>`
+
+          .traffic-list-media
+            img(src=require(`${item.media}`), alt=`${item.title}`)

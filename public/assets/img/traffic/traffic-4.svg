@@ -1,0 +1,14 @@
+<svg width="93" height="94" viewBox="0 0 93 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.1" d="M46.8061 21.396L1 29.2884V49H93V1L46.8061 21.396Z" fill="#8FFF00"/>
+<rect x="93.0024" y="49" width="1" height="90" transform="rotate(90 93.0024 49)" fill="#7F7F7F"/>
+<rect x="93" y="35" width="1" height="89" transform="rotate(90 93 35)" fill="#7F7F7F"/>
+<rect x="93" y="17" width="1" height="90" transform="rotate(90 93 17)" fill="#7F7F7F"/>
+<rect x="93" y="1" width="1" height="90" transform="rotate(90 93 1)" fill="#7F7F7F"/>
+<path d="M3.28971 44.7795L46.5872 33.1009L89.3464 15.8272" stroke="#8FFF00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16" y="81" width="4" height="13" rx="2" fill="#8FFF00"/>
+<rect x="28" y="81" width="4" height="13" rx="2" fill="#8FFF00"/>
+<rect x="40" y="77" width="4" height="17" rx="2" fill="#8FFF00"/>
+<rect x="52" y="73" width="4" height="21" rx="2" fill="#8FFF00"/>
+<rect x="64" y="68" width="4" height="26" rx="2" fill="#8FFF00"/>
+<rect x="76" y="65" width="4" height="29" rx="2" fill="#8FFF00"/>
+</svg>

@@ -7,7 +7,7 @@
 
   const remarkList = [
     {
-      specialClass: 'niches',
+      specialClass: 'traffic',
       button: {
         href: '#',
         type: 'link',
@@ -262,9 +262,16 @@ html(lang='en')
 
     include @/templates/banner.pug
 
-    each remark, index in remarkList
-      if index === 0
-        include @/templates/remark.pug
+    section.traffic.section
+      ._container
+        .traffic__wrapper
+          include @/templates/traffic-list.pug
+
+      each remark, index in remarkList
+        if index === 0
+          include @/templates/remark.pug
+
+    //- include @/templates/potential.pug
 
     include @/templates/bar-cards.pug
 

@@ -3,6 +3,12 @@
   //   padding: 0;
   // }
 
+  &.remark  {
+    @include viewport-phone {
+      display: none;
+    }
+  }
+
   //.remark__wrapper 
   &__wrapper {
     width: 100%;

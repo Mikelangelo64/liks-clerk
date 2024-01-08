@@ -1,0 +1,150 @@
+.traffic {
+  > * {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    + * {
+      @include viewport-desktop {
+        margin-top: px-to-rem(64);
+      }
+
+      @include viewport-tablet {
+        margin-top: px-to-rem(52);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(40);
+      }
+
+      &:last-child {
+        @include viewport-tablet-min {
+          margin-top: px-to-rem(40);
+        }
+        @include viewport-phone {
+          margin-top: px-to-rem(24);
+        }
+      }
+    }
+  }
+
+  //.traffic__wrapper 
+  &__wrapper {
+    width: 100%;
+  }
+
+  //.traffic-list 
+  &-list {
+    @include viewport-tablet-min {
+      --gradient-width: #{px-to-rem(40)};
+    }
+    
+    @include viewport-phone {
+      --gradient-width: var(--wrap);
+    }
+
+    @include viewport-phone {
+      /* stylelint-disable-next-line */
+      -webkit-mask-image: unset;
+      mask-image: unset;
+    }
+
+    //.traffic-list__inner 
+    &__inner {
+      align-items: unset;
+
+      > * + * {
+        @include viewport-tablet-min {
+          margin-left: px-to-rem(22);
+        }
+
+        @include viewport-phone {
+          margin-left: px-to-rem(16);
+        }
+      }
+    }
+    
+    //.traffic-list__item 
+    &__item {
+      height: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      
+      width: px-to-rem(304);
+      border: 1px solid var(--color-green);
+      border-radius: px-to-rem(24);
+      padding: px-to-rem(20) px-to-rem(12);
+
+      color: var(--color-white);
+      background-color: var(--color-black);
+
+      @include viewport-phone {
+        @media (max-width: 350px) {
+          width: px-to-rem(284);
+        }
+      }
+
+      > * + * {
+        margin-left: px-to-rem(12);
+      }
+    }
+    
+    //.traffic-list__main 
+    &__main {
+      width: 100%;
+
+      line-height: 160%;
+      font-size: px-to-rem(20);
+
+      > * + * {
+        margin-top: px-to-rem(16);
+      }
+    }
+    
+    //.traffic-list__title 
+    &__title {
+      font-weight: 700;
+    }
+    
+    //.traffic-list__percent 
+    &__percent {
+      display: flex;
+      width: 100%;
+      max-width: max-content;
+      border-radius: px-to-rem(40);
+      padding: px-to-rem(8) px-to-rem(12);
+
+      font-weight: 500;
+      
+      color: var(--color-black);
+      background-image: linear-gradient(90deg, var(--color-green-100) 8%, var(--color-green) 100%);
+    }
+    
+    //.traffic-list__description 
+    &__description {
+      font-weight: 500;
+    }
+    
+    //.traffic-list-media 
+    &-media {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: px-to-rem(90);
+      display: flex;
+      align-items: flex-end;
+
+      @include viewport-phone {
+        @media (max-width: 350px) {
+          max-width: px-to-rem(70);
+        }
+      }
+
+      img,
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
