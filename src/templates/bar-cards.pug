@@ -32,11 +32,14 @@
   //-   },
   //- ];
 
-section.bar-cards-section.section
+section.bar-cards-section.section(
+  class=`${barCards.specialClass && barCards.specialClass !== '' ? barCards.specialClass : ''}`
+)
   ._container
     .bar-cards-section__wrapper
-      .bar-cards-section__header.section-header
-        h2.section-header__title= barCards.title
+      if barCards.title && barCards.title !== ''
+        .bar-cards-section__header.section-header
+          h2.section-header__title= barCards.title
 
       .bar-cards.desktop(data-bar-section='true')
         ul.bar-cards__container

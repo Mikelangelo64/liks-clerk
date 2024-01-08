@@ -16,12 +16,14 @@
         margin-top: px-to-rem(40);
       }
 
-      &:last-child {
-        @include viewport-tablet-min {
-          margin-top: px-to-rem(40);
-        }
-        @include viewport-phone {
-          margin-top: px-to-rem(24);
+      @at-root .niches.last-child-margin > * + * {
+        &:last-child {
+          @include viewport-tablet-min {
+            margin-top: px-to-rem(40);
+          }
+          @include viewport-phone {
+            margin-top: px-to-rem(24);
+          }
         }
       }
     }
@@ -35,5 +37,9 @@
   //.niches__header 
   &__header {
     text-align: center;
+
+    &.left {
+      text-align: left;
+    }
   }
 }

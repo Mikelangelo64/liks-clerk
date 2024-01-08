@@ -3,7 +3,7 @@
   //   padding: 0;
   // }
 
-  &.remark  {
+  &.traffic  {
     @include viewport-phone {
       display: none;
     }
@@ -102,6 +102,13 @@
         }
       }
 
+      //.remark-main-header__content 
+      &__content {
+        > * + * {
+          margin-top: px-to-rem(24);
+        }
+      }
+
       //.remark-main-header__title 
       &__title {
         line-height: 133%;
@@ -149,6 +156,11 @@
             font-size: px-to-rem(36);
           }
         }
+      }
+
+      //.remark-main-header__subtitle 
+      &__subtitle {
+        font-weight: 500;
       }
     }
     

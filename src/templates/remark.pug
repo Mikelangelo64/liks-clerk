@@ -25,10 +25,15 @@ section.section.remark(
             .remark-main__label
               img(src=require('@/assets/img/arrow-quote.svg'), alt='quote')
 
-          if remark.titleHeader && remark.titleHeader !== ''
-            p.remark-main-header__title(
-              class=`${remark.titleHeader.specialClass && remark.titleHeader.specialClass !== '' ? remark.titleHeader.specialClass : ''}`
-            )!= remark.titleHeader.value
+          if remark.titleHeader && remark.titleHeader !== '' || remark.subtitleHeader && remark.subtitleHeader !== ''
+            .remark-main-header__content
+              if remark.titleHeader && remark.titleHeader !== ''
+                p.remark-main-header__title(
+                  class=`${remark.titleHeader.specialClass && remark.titleHeader.specialClass !== '' ? remark.titleHeader.specialClass : ''}`
+                )!= remark.titleHeader.value
+
+              if remark.subtitleHeader && remark.subtitleHeader !== ''
+                p.remark-main-header__subtitle!= remark.subtitleHeader
           //- else
 
           case remark.button.type 

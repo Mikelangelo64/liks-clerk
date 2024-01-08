@@ -1,0 +1,161 @@
+-
+  const banner = {
+    specialClass: 'service',
+    title: "Guest post backlinks",
+    subtitle: 'Our team places guest posts or inserts links on niche-related resources and articles. Manual and individual selection of domains for your niche and content outsourcing to experienced writers',
+  };
+
+  const remarkList = [
+    {
+      specialClass: 'niches',
+      button: {
+        href: '#',
+        type: 'text',
+        title: 'Value',
+      },
+
+      title: 'Guest posting and niche edits services strengthen your website',
+      typography: `
+        <p>
+          <strong>Important</strong>: We don’t offer PBNs or landing pages. We guarantee placement on real sites with traffic and Domain Rating or Authority
+        </p>
+      `,
+
+      list: [],
+    },
+    {
+      specialClass: 'mini',
+      button: {
+        type: 'link-green',
+        href: '#',
+        title: 'Contact us',
+      },
+
+      titleHeader: {
+        specialClass: '',
+        value: 'Competitive prices',
+      },
+
+      subtitleHeader: 'Our team takes an additional fee in the form of a fixed % of the backlink budget, so prices will always be transparent and competitive. Also, we usually try to get some discount for placement from the website owner, sometimes it works and you can save some of your budgets!',
+      //- title: 'If your niche is specific, contact us to discuss the details',
+      //- typography: `
+      //-   <p>
+      //-     Whether you're in e-commerce, technology, health and wellness, or any other industry, our approach ensures that you get high-quality backlinks that drive high results
+      //-   </p>
+      //- `,
+
+      list: [],
+    },
+    {
+      button: {
+        href: '#',
+        type: 'link',
+        title: 'Learn more',
+      },
+
+      title: 'Check out more about Niche Edits and Guest Posts',
+      typography: `
+        <p>
+          We encourage you to learn more about Niche Edits and Guest Posts to keep up to date with our services
+        </p>
+      `,
+
+      list: [],
+    },
+     {
+      specialClass: 'mini',
+      button: {
+        type: 'link-green',
+        href: '#',
+        title: 'Choose',
+        hasFooter: 'true',
+      },
+
+      titleHeader: {
+        specialClass: 'price',
+        value: '<strong>2k+</strong> <span> platforms in our database for different budgets starting from $30</span>',
+      },
+      //- title: 'If your niche is specific, contact us to discuss the details',
+      //- typography: `
+      //-   <p>
+      //-     Our pricing model offers flexibility. Opt for a suitable package or acquire a manual selection of backlinks tailored to your specific needs
+      //-   </p>
+      //- `,
+
+      list: [],
+    },
+  ];
+
+  const barCards = {
+    specialClass: 'without-padding',
+    title: '',
+    list: [
+      {
+        isActive: 'true',
+        title: 'Individual searching',
+        description: 'Individual searching and selection accordingly to your niche and budget',
+      },
+      {
+        isActive: 'false',
+        title: 'Search Enhancement',
+        description: 'Increase search visibility and website metrics',
+      },
+      {
+        isActive: 'false',
+        title: 'Natural and Google safe backlinks',
+        description: 'Secure, natural, and google-friendly backlinks boosting your online presence',
+      },
+    ],
+  };
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - Service 3
+
+    link(rel='stylesheet', href=require('@/styles/pages/service-3.scss'))
+
+  body
+    //- include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    section.niches.section
+      ._container
+        .niches__wrapper
+          .niches__header.section-header
+            h2.section-header__title Guest Post and Niche edits Backlinks value
+
+      each remark, index in remarkList
+        if index < 2
+          include @/templates/remark.pug
+
+      include @/templates/bar-cards.pug
+
+    section.niches.section
+      ._container
+        .niches__wrapper
+          .niches__header.section-header.left
+            h2.section-header__title We offer both Niche Edits and Guest Posts
+
+      each remark, index in remarkList
+        if index === 2
+          include @/templates/remark.pug
+
+    .niches.section
+      include @/templates/roadmap.pug
+
+      each remark, index in remarkList
+        if index === 3
+          include @/templates/remark.pug
+
+    //- include @/templates/faq.pug
+
+    //- include @/templates/contacts.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 
