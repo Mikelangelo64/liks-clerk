@@ -4,7 +4,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PugPlugin = require('pug-plugin');
 
-const pageNames = ['about', 'service-1'];
+const pageNames = ['about', 'service-1', 'service-2'];
 
 const pages = pageNames.map((name) => {
   return {
