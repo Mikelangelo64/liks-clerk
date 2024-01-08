@@ -1,0 +1,173 @@
+-
+  const packageArray = [
+    {
+      isActive: 'true',
+      data: '1',
+      title: 'Quora',
+      list: [
+        {
+          title: 'Posting answers on Quora with active link',
+          link: {
+            href: '#',
+            title: 'Choose',
+          },
+          pricelist: [
+            {
+              isDedicated: 'false',
+              price: '70',
+              type: 'Basic',
+              commentsCount: '10',
+            },
+            {
+              isDedicated: 'true',
+              price: '135',
+              type: 'Popular',
+              commentsCount: '20',
+            },
+            {
+              isDedicated: 'false',
+              price: '260',
+              type: 'Business',
+              commentsCount: '30',
+            },
+          ],
+        },
+        {
+          title: 'Posting answers on Quora without a link',
+          link: {
+            href: '#',
+            title: 'Choose',
+          },
+          pricelist: [
+            {
+              isDedicated: 'false',
+              price: '40',
+              type: 'Basic',
+              commentsCount: '',
+            },
+            {
+              isDedicated: 'true',
+              price: '75',
+              type: 'Popular',
+              commentsCount: '20',
+            },
+            {
+              isDedicated: 'false',
+              price: '40',
+              type: 'Business',
+              commentsCount: '30',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      isActive: 'false',
+      data: '2',
+      title: 'Reddit',
+      list: [
+        {
+          title: 'Posting comments on Reddit in existing subreddits',
+          link: {
+            href: '#',
+            title: 'Choose',
+          },
+          pricelist: [
+            {
+              isDedicated: 'false',
+              price: '60',
+              type: 'Basic',
+              commentsCount: '10',
+            },
+            {
+              isDedicated: 'true',
+              price: '115',
+              type: 'Popular',
+              commentsCount: '20',
+            },
+            {
+              isDedicated: 'false',
+              price: '170',
+              type: 'Business',
+              commentsCount: '30',
+            },
+          ],
+        },
+        {
+          title: 'Posting comments on Reddit in existing subreddits without a link',
+          link: {
+            href: '#',
+            title: 'Choose',
+          },
+          pricelist: [
+            {
+              isDedicated: 'false',
+              price: '40',
+              type: 'Basic',
+              commentsCount: '',
+            },
+            {
+              isDedicated: 'true',
+              price: '75',
+              type: 'Popular',
+              commentsCount: '20',
+            },
+            {
+              isDedicated: 'false',
+              price: '110',
+              type: 'Business',
+              commentsCount: '30',
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+section.section.package
+  ._container
+    .package__wrapper
+      .package__header.section-header
+        h2.section-header__title Our Work Showcase
+
+      .package__main.fade-section
+        ul.fade-section__list.package-navigation
+          each item in packageArray
+            li
+              button.fade-section__button.package-navigation__button(
+                class=`${item.isActive === 'true' ? 'active' : ''}`,
+                data-item=`${item.data}`
+              )
+                span= item.title
+
+          .fade-section__line.package-navigation__line(aria-hidden='true')
+
+        .package-content
+          .fade-section-content
+            each item, index in packageArray
+              .fade-section-content__item(
+                class=`${item.isActive !== 'true' ? 'unactive' : ''}`,
+                data-item=`${item.data}`
+              )
+                .package-content__item
+                  ul.package-content-list
+                    each variant in item.list
+                      li.package-content-list__item
+                        p.package-content__title= variant.title
+
+                        ul.package-pricelist
+                          each package in variant.pricelist 
+                            li.package-pricelist__item(
+                              class=`${package.isDedicated === 'true' ? 'dedicated' : ''}`
+                            )
+                              p.package-pricelist__price!= `$<span>${package.price}</span>`
+
+                              .package-pricelist__content
+                                p.package-pricelist__type= package.type
+
+                                p.package-pricelist__comments!= `<span>${package.commentsCount}</span> comments`
+
+                        a.package-content__button.button-filled(
+                          href=`${variant.link.href}`
+                        )
+                          span= variant.link.title

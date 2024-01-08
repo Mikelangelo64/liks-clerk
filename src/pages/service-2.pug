@@ -33,7 +33,7 @@
 
       titleHeader: {
         specialClass: '',
-        value: 'Sign up',
+        value: 'Register in your personal account to take advantage of all our services',
       },
       //- title: 'If your niche is specific, contact us to discuss the details',
       //- typography: `
@@ -352,7 +352,7 @@ html(lang='en')
     link(rel='stylesheet', href=require('@/styles/pages/service-2.scss'))
 
   body
-    //- include @/layout/header.pug
+    include @/layout/header.pug
 
     include @/templates/banner.pug
 
@@ -374,6 +374,8 @@ html(lang='en')
     each remark, index in remarkList
       if index === 1
         include @/templates/remark.pug
+
+    include @/templates/package.pug
 
     each remark, index in remarkList
       if index === 2
