@@ -30,7 +30,13 @@
       type: 'form', 
       video: '',
       isFullscreenPhone: 'true'
-    }
+    },
+    { 
+      name: 'review', 
+      type: 'review', 
+      video: '',
+      isFullscreenPhone: 'true'
+    },
   ];
 
 each item in popupList
@@ -82,6 +88,9 @@ each item in popupList
 
             when 'form'
               include @/templates/popup/form-popup.pug
+
+            when 'review'
+              include @/templates/popup/review-popup.pug
 
             default
               include @/templates/popup/content-popup.pug

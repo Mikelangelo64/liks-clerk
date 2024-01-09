@@ -1,0 +1,14 @@
+.popup-action
+  p.popup-action__title Please fill out the form and we will contact you shortly.
+
+  .popup-action__main
+    form#review-popup.form.popup-action__form(action='post') 
+      div
+        label(for='popup-request') 
+          //- strong Your request
+          textarea#popup-request(name='request', placeholder='Message text')
+          span.wpcf7-not-valid-tip Wrong format
+
+      p
+        button(type='submit') 
+          span Send
