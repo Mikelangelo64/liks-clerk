@@ -4,6 +4,7 @@
       title: 'DR (Domain rating)',
       description: 'The higher the number, the more authority the site has',
       rangeBar: {
+        title: 'DR',
         min: '10',
         max: '100',
         step: '10',
@@ -14,6 +15,7 @@
       title: 'Website Traffic',
       description: 'Choose the guaranteed monthly traffic (by Ahrefs) of the publishing site',
       rangeBar: {
+        title: 'Per month',
         min: '1000',
         max: '10000',
         step: '100',
@@ -24,6 +26,7 @@
       title: 'Word Count',
       description: 'Choose the word count for your guest post(s)',
       rangeBar: {
+        title: 'Words',
         min: '500',
         max: '2000',
         step: '100',
@@ -77,7 +80,7 @@ section.section.calculate
 
                 .calculate-form-range__content
                   p.calculate-form-range__value(data-range='3') 3
-                  p.calculate-form-range__title DR
+                  p.calculate-form-range__title= item.rangeBar.title
 
           .calculate-form-item
             p.calculate-form-item__title Link Quantity
