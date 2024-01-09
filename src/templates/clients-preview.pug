@@ -92,18 +92,21 @@
     },
   ];
 
-section.section.clients-preview
+section.section.clients-preview(
+  class=`${clientsPreview.specialClass && clientsPreview.specialClass !== '' ? clientsPreview.specialClass : ''}`
+)
   ._container
     .clients-preview__wrapper
       .clients-preview-header.section-header
         .clients-preview-header__top
-          h2.section-header__title Our Work Showcase
+          h2.section-header__title= clientsPreview.title
 
-          a.clients-preview__button.desktop.button-hollow(
-            href='#',
-            target='_blank'
-          )
-            span See all reviews
+          if !clientsPreview.specialClass || clientsPreview.specialClass !== 'reviews-page'
+            a.clients-preview__button.desktop.button-hollow(
+              href='#',
+              target='_blank'
+            )
+              span See all reviews
 
         .clients-preview-header-summarize
           .clients-preview-header-summarize__image
@@ -112,40 +115,41 @@ section.section.clients-preview
               alt='clients-review'
             ) 
 
-          p.clients-preview-header-summarize__description We`ve got more than 830 reviews in Fiverr, Trustpilot, BlackHatWorld and Clutch.co
+          p.clients-preview-header-summarize__description= clientsPreview.description
 
-      if isClientsPreviewAdditional && isClientsPreviewAdditional === 'true'
-        ul.clients-preview-additional.review-company
-          each item in reviewAdditionalList
-            li.review-company__item
-              .review-company__info
-                .review-company__subtitle Reviewed on
+      if clientsPreview.isHasAdditional && clientsPreview.isHasAdditional === 'true'
+        .clients-preview-additional.grab-desktop
+          ul.clients-preview-additional__inner.review-company.grab-desktop__inner
+            each item in reviewAdditionalList
+              li.review-company__item
+                .review-company__info
+                  .review-company__subtitle Reviewed on
 
-                .review-company__label
-                  img(src=require(`${item.label}`), alt=`${item.alt}`)
+                  .review-company__label
+                    img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-              .review-company-raiting
-                .review-company-raiting-stars
-                  - for(let i=0; i<5; i++)
-                    .review-company-raiting-stars__item(
-                      class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                    ) 
-                      if i + 1 <= item.raiting
-                        img(
-                          src=require('@/assets/img/review/star.svg'),
-                          alt='star'
-                        )
-                      else
-                        img(
-                          src=require('@/assets/img/review/star-empty.svg'),
-                          alt='star'
-                        )
+                .review-company-raiting
+                  .review-company-raiting-stars
+                    - for(let i=0; i<5; i++)
+                      .review-company-raiting-stars__item(
+                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                      ) 
+                        if i + 1 <= item.raiting
+                          img(
+                            src=require('@/assets/img/review/star.svg'),
+                            alt='star'
+                          )
+                        else
+                          img(
+                            src=require('@/assets/img/review/star-empty.svg'),
+                            alt='star'
+                          )
 
-                p.review-company-raiting__description
-                  strong= item.reviewCount
-                  span reviews
+                  p.review-company-raiting__description
+                    strong= item.reviewCount
+                    span reviews
 
-      if !isClientsFadeSection || isClientsFadeSection === 'false'
+      if !clientsPreview.isHasFadeSection || clientsPreview.isHasFadeSection === 'true'
         .clients-preview__main.desktop.fade-section
           ul.fade-section__list.clients-preview-navigation
             each item in clientsPreviewArray
@@ -210,66 +214,68 @@ section.section.clients-preview
 
                     .clients-preview-comment__typography.typography!= item.typography
 
-      .clients-preview__main.phone
-        ul.clients-preview-content.accordion(
-          data-is-label-click='false',
-          data-is-open-on-hover='false'
-        )
-          each item, index in clientsPreviewArray
-            li.accordion__item.clients-preview-content__item
-              button.accordion__summary.clients-preview-info
-                span.clients-preview-info-avatar
-                  .clients-preview-info-avatar__container
-                    case item.avatar.type 
-                      when 'image' 
-                        img.clients-preview-info-avatar__image(
-                          src=require(`${item.avatar.image}`),
-                          alt=`${item.title}`
+        .clients-preview__main.phone
+          ul.clients-preview-content.accordion(
+            data-is-label-click='false',
+            data-is-open-on-hover='false'
+          )
+            each item, index in clientsPreviewArray
+              li.accordion__item.clients-preview-content__item
+                button.accordion__summary.clients-preview-info
+                  span.clients-preview-info-avatar
+                    .clients-preview-info-avatar__container
+                      case item.avatar.type 
+                        when 'image' 
+                          img.clients-preview-info-avatar__image(
+                            src=require(`${item.avatar.image}`),
+                            alt=`${item.title}`
+                          )
+
+                        when 'letter'
+                          span.clients-preview-info-avatar__letter= item.avatar.letter
+
+                  span.clients-preview-info__content
+                    span.clients-preview-info__name= item.name
+
+                    span.clients-preview-info-location
+                      span.clients-preview-info-location__label
+                        img(
+                          src=require('@/assets/img/review/location.svg'),
+                          alt='location'
                         )
 
-                      when 'letter'
-                        span.clients-preview-info-avatar__letter= item.avatar.letter
+                      span.clients-preview-info-location__text= item.location
 
-                span.clients-preview-info__content
-                  span.clients-preview-info__name= item.name
+                    time.clients-preview-info__date(
+                      datetime=`${item.date.data}`
+                    )= item.date.title
 
-                  span.clients-preview-info-location
-                    span.clients-preview-info-location__label
-                      img(
-                        src=require('@/assets/img/review/location.svg'),
-                        alt='location'
-                      )
+                .accordion__details
+                  .accordion__description.clients-preview-content__description
+                    .clients-preview-comment
+                      .clients-preview-comment__title= item.title
 
-                    span.clients-preview-info-location__text= item.location
+                      .clients-preview-comment-raiting
+                        - for(let i=0; i<5; i++)
+                          .clients-preview-comment-raiting__item(
+                            class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                          ) 
+                            if i + 1 <= item.raiting
+                              img(
+                                src=require('@/assets/img/review/star.svg'),
+                                alt='star'
+                              )
+                            else
+                              img(
+                                src=require('@/assets/img/review/star-empty.svg'),
+                                alt='star'
+                              )
 
-                  time.clients-preview-info__date(datetime=`${item.date.data}`)= item.date.title
+                      .clients-preview-comment__typography.typography!= item.typography
 
-              .accordion__details
-                .accordion__description.clients-preview-content__description
-                  .clients-preview-comment
-                    .clients-preview-comment__title= item.title
-
-                    .clients-preview-comment-raiting
-                      - for(let i=0; i<5; i++)
-                        .clients-preview-comment-raiting__item(
-                          class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                        ) 
-                          if i + 1 <= item.raiting
-                            img(
-                              src=require('@/assets/img/review/star.svg'),
-                              alt='star'
-                            )
-                          else
-                            img(
-                              src=require('@/assets/img/review/star-empty.svg'),
-                              alt='star'
-                            )
-
-                    .clients-preview-comment__typography.typography!= item.typography
-
-      .clients-preview__footer
-        a.clients-preview__button.phone.button-hollow(
-          href='#',
-          target='_blank'
-        )
-          span See all reviews
+        .clients-preview__footer
+          a.clients-preview__button.phone.button-hollow(
+            href='#',
+            target='_blank'
+          )
+            span See all reviews

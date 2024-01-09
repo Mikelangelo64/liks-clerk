@@ -6,7 +6,7 @@
     remarkList: [
       {
         specialClass: 'banner-remark',
-    
+
         button: {
           href: '#',
           type: 'link',
@@ -54,8 +54,13 @@
     isBenefitsCenter: 'true',
   };
 
-  isClientsPreviewAdditional = 'true';
-  isClientsFadeSection = 'true';
+  const clientsPreview = {
+    specialClass: 'reviews-page',
+    isHasAdditional: 'true',
+    isHasFadeSection: 'false',
+    title: 'We`ve got more than 830 reviews',
+    description: 'In different platforms: Fiverr, Trustpilot, BlackHatWorld and Clutch.co',
+  };
 
 doctype html
 html(lang='en')
@@ -67,7 +72,7 @@ html(lang='en')
     link(rel='stylesheet', href=require('@/styles/pages/reviews.scss'))
 
   body
-    include @/layout/header.pug
+    //- include @/layout/header.pug
 
     include @/templates/banner.pug
 

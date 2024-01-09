@@ -1,5 +1,9 @@
 .review-company {
   width: 100%;
+
+  @at-root .clients-preview-additional & {
+    width: max-content;
+  }
   
   //.review-company__item 
   &__item {
@@ -38,10 +42,17 @@
       margin-left: px-to-rem(8);
     }
 
-    @at-root .review-company.clients-preview-additional & {
+    @at-root .clients-preview-additional .review-company & {
       flex-direction: column;
       justify-content: unset;
       background-color: var(--color-black);
+
+      @include viewport-tablet-min {
+        width: px-to-rem(302);
+      }
+      @include viewport-phone {
+        width: px-to-rem(244);
+      }
 
       > * + * {
         margin-left: unset;
@@ -65,7 +76,7 @@
       max-width: px-to-rem(132);
     }
 
-    @at-root .review-company.clients-preview-additional & {
+    @at-root .clients-preview-additional .review-company & {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -199,12 +210,22 @@
   
   //.clients-preview-header 
   &-header {
+    @at-root .section.clients-preview.reviews-page & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     > * + * {
       margin-top: px-to-rem(24);
     }
 
     .section-header__title {
       @include viewport-phone {
+        text-align: center;
+      }
+
+      @at-root .section.clients-preview.reviews-page & {
         text-align: center;
       }
     }
@@ -223,6 +244,12 @@
         justify-content: center;
       }
 
+      @at-root .section.clients-preview.reviews-page & {
+        @include viewport-tablet-min {
+          justify-content: center;
+        }
+      }
+
       > * + * {
         margin-left: px-to-rem(24);
       }
@@ -237,6 +264,12 @@
       @include viewport-phone {
         flex-direction: column;
         text-align: center;
+      }
+
+      @at-root .section.clients-preview.reviews-page & {
+        @include viewport-tablet-min {
+          justify-content: center;
+        }
       }
 
       > * + * {
@@ -284,20 +317,35 @@
 
   //.clients-preview-additional 
   &-additional {
-    @include viewport-desktop {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: px-to-rem(24);
+    @include viewport-tablet-min {
+      --gradient-width: #{px-to-rem(40)};
     }
-
-    @include viewport-tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: px-to-rem(24);
+    
+    @include viewport-phone {
+      --gradient-width: var(--wrap);
     }
 
     @include viewport-phone {
       display: none;
+
+      /* stylelint-disable-next-line */
+      -webkit-mask-image: unset;
+      mask-image: unset;
+    }
+
+    @at-root .clients-preview.reviews-page & {
+      @include viewport-phone {
+        display: flex;
+      }
+    }
+
+    //.clients-preview-additional__inner 
+    &__inner {
+      align-items: unset;
+
+      > * + * {
+        margin-left: px-to-rem(24);
+      }
     }
   }
   
