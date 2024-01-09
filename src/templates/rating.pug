@@ -1,0 +1,42 @@
+-
+  const rating = {
+    total: '2',
+    arrayStar: [
+      '0', '2', '6', '17', '784',
+    ],
+  };
+
+section.section.rating(data-rating='0,2,6,17,784')
+  ._container
+    .rating__wrapper
+      .rating__header.section-header
+        h2.section-header__title Overall rating
+
+      .rating__main
+        .rating-total
+          ul.rating-total-stars
+            - for(let i=0; i<5; i++)
+              li.rating-total-stars__item(
+                class=`${i + 1 <= rating.total ? 'filled' : 'empty'}`
+              ) 
+                img.filled(
+                  src=require('@/assets/img/review/rating/star.svg'),
+                  alt='star'
+                )
+                img.empty(
+                  src=require('@/assets/img/review/rating/star-empty.svg'),
+                  alt='star'
+                )
+
+          p.rating-total__title 4.96
+
+        ul.rating-list
+          - for(let i=5; i>0; i--)
+            li.rating-list__item
+              p.rating-list__title!= `${i} ${i === 1 ? 'Star' : 'Stars'}`
+
+              .rating-list-bar
+                .rating-list-bar__inner
+                  .rating-list-bar__progress
+
+              p.rating-list__count!= `(<span>${rating.arrayStar[i - 1]}</span>)`

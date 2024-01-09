@@ -13,6 +13,7 @@ import scrollBarInit from './scrollbar';
 import slidersInit from './sliders/init';
 import submenuToggle from './submenu/init';
 import initCalculateForm from './calculateForm/init';
+import ratingInit from './rating/init';
 
 export const init = () => {
   scrollBarInit();
@@ -27,6 +28,7 @@ export const init = () => {
   barCardsInit();
   counterInit();
   initCalculateForm();
+  ratingInit();
   // console.log(scrollSectionState);
 
   const popups = initPopups();
