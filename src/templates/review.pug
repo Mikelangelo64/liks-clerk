@@ -1,0 +1,58 @@
+-
+  const reviewRating = 3;
+  const reviewTypography = `
+    <p>
+      Great attentions to details, fast delivery, fast answer. Not the first time I buy from him. Not the last time ! Top notch work. Thanks !
+    </p>
+  `;
+  const specialClassPAgination = 'review__pagination';
+
+section.section.review
+  ._container
+    .review__wrapper
+      .review__header.section-header
+        h2.section-header__title Reviews
+
+        button.review__button.button-filled.popup-open(
+          data-popup='_popup-feedback'
+        )
+          span Leave a review
+
+      .review__main
+        ul.review-list
+          - for(let i=0; i<5; i++)
+            li.review-list__item
+              .review-list__header
+                .review-list-info
+                  .review-list-info-avatar
+                    .review-list-info-avatar__container
+                      .review-list-info-avatar__letter F
+
+                  .review-list-info__content
+                    .review-list-info__name frenchboy666
+
+                    .review-list-raiting
+                      - for(let i=0; i<5; i++)
+                        .review-list-raiting__item(
+                          class=`${i + 1 <= reviewRating ? 'filled' : 'empty'}`
+                        ) 
+                          if i + 1 <= reviewRating
+                            img(
+                              src=require('@/assets/img/review/rating/star.svg'),
+                              alt='star'
+                            )
+                          else
+                            img(
+                              src=require('@/assets/img/review/rating/star-empty.svg'),
+                              alt='star'
+                            )
+
+                time.review-list__date.desktop(datetime='05-10-2023') Oct 05, 2023
+
+              .review-list__typography.typography!= reviewTypography
+
+              .review-list__footer
+                time.review-list__date(datetime='05-10-2023') Oct 05, 2023
+
+      .review__footer
+        include @/templates/layout/pagination.pug

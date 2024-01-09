@@ -43,6 +43,12 @@
     color: var(--color-grey-600);
   }
   
+  &.review-list__typography {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-grey-600);
+  }
+  
   &.contacts-comment__typography {
     font-weight: 500;
     line-height: 150%;
