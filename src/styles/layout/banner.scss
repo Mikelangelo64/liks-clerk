@@ -1,6 +1,22 @@
 @import '../base';
 
 .banner {
+  @include viewport-desktop {
+    --padding-top: #{px-to-rem(72)};
+  }
+  @include viewport-tablet {
+    --padding-top: #{px-to-rem(60)};
+  }
+  @include viewport-phone {
+    --padding-top: #{px-to-rem(80)};
+  }
+
+  &.main {
+    @include viewport-desktop {
+      --padding-top: #{px-to-rem(96)};
+    }
+  }
+
   position: relative;
   z-index: 0;
 
@@ -14,7 +30,7 @@
   //overflow: hidden;
   
   @include viewport-tablet-min {
-    padding-top: calc(#{px-to-rem(46)} + #{px-to-rem(20)} + var(--started-header-height, #{px-to-rem(34)}));
+    padding-top: calc(var(--padding-top) + #{px-to-rem(46)} + #{px-to-rem(20)} + var(--started-header-height, #{px-to-rem(34)}));
   }
   
   @include viewport-phone {
@@ -46,11 +62,23 @@
   
       > * + * {
         @include viewport-tablet-min {
+          margin-top: 0;
           margin-left: px-to-rem(24);
         }
   
         @include viewport-phone {
           margin-top: px-to-rem(80);
+        }
+      }
+    }
+
+    @at-root .banner.reviews & {
+      > * + * {
+        @include viewport-tablet-min {
+          margin-top: px-to-rem(64);
+        }
+        @include viewport-phone {
+          margin-top: px-to-rem(40);
         }
       }
     }
@@ -67,6 +95,13 @@
         align-items: center;
         text-align: center;
       }
+    }
+
+    @at-root .banner.reviews & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     > * + * {
@@ -127,6 +162,10 @@
       @include viewport-tablet-min {
         display: none;
       }
+    }
+
+    @at-root .banner.reviews & {
+      display: none;
     }
 
     @at-root .banner.service & {

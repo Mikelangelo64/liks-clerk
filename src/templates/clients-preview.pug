@@ -145,67 +145,70 @@ section.section.clients-preview
                   strong= item.reviewCount
                   span reviews
 
-      .clients-preview__main.desktop.fade-section
-        ul.fade-section__list.clients-preview-navigation
-          each item in clientsPreviewArray
-            li
-              button.fade-section__button.clients-preview-navigation__button.clients-preview-info(
-                class=`${item.isActive === 'true' ? 'active' : ''}`,
-                data-item=`${item.data}`
-              )
-                span.clients-preview-info-avatar
-                  span.clients-preview-info-avatar__container
-                    case item.avatar.type 
-                      when 'image' 
-                        img.clients-preview-info-avatar__image(
-                          src=require(`${item.avatar.image}`),
-                          alt=`${item.title}`
+      if !isClientsFadeSection || isClientsFadeSection === 'false'
+        .clients-preview__main.desktop.fade-section
+          ul.fade-section__list.clients-preview-navigation
+            each item in clientsPreviewArray
+              li
+                button.fade-section__button.clients-preview-navigation__button.clients-preview-info(
+                  class=`${item.isActive === 'true' ? 'active' : ''}`,
+                  data-item=`${item.data}`
+                )
+                  span.clients-preview-info-avatar
+                    span.clients-preview-info-avatar__container
+                      case item.avatar.type 
+                        when 'image' 
+                          img.clients-preview-info-avatar__image(
+                            src=require(`${item.avatar.image}`),
+                            alt=`${item.title}`
+                          )
+
+                        when 'letter'
+                          span.clients-preview-info-avatar__letter= item.avatar.letter
+
+                  span.clients-preview-info__content
+                    span.clients-preview-info__name= item.name
+
+                    span.clients-preview-info-location
+                      span.clients-preview-info-location__label
+                        img(
+                          src=require('@/assets/img/review/location.svg'),
+                          alt='location'
                         )
 
-                      when 'letter'
-                        span.clients-preview-info-avatar__letter= item.avatar.letter
+                      span.clients-preview-info-location__text= item.location
 
-                span.clients-preview-info__content
-                  span.clients-preview-info__name= item.name
+                    time.clients-preview-info__date(
+                      datetime=`${item.date.data}`
+                    )= item.date.title
 
-                  span.clients-preview-info-location
-                    span.clients-preview-info-location__label
-                      img(
-                        src=require('@/assets/img/review/location.svg'),
-                        alt='location'
-                      )
+          .clients-preview-content
+            .fade-section-content
+              each item, index in clientsPreviewArray
+                .fade-section-content__item(
+                  class=`${item.isActive !== 'true' ? 'unactive' : ''}`,
+                  data-item=`${item.data}`
+                )
+                  .clients-preview-comment
+                    .clients-preview-comment__title= item.title
 
-                    span.clients-preview-info-location__text= item.location
+                    .clients-preview-comment-raiting
+                      - for(let i=0; i<5; i++)
+                        .clients-preview-comment-raiting__item(
+                          class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                        ) 
+                          if i + 1 <= item.raiting
+                            img(
+                              src=require('@/assets/img/review/star.svg'),
+                              alt='star'
+                            )
+                          else
+                            img(
+                              src=require('@/assets/img/review/star-empty.svg'),
+                              alt='star'
+                            )
 
-                  time.clients-preview-info__date(datetime=`${item.date.data}`)= item.date.title
-
-        .clients-preview-content
-          .fade-section-content
-            each item, index in clientsPreviewArray
-              .fade-section-content__item(
-                class=`${item.isActive !== 'true' ? 'unactive' : ''}`,
-                data-item=`${item.data}`
-              )
-                .clients-preview-comment
-                  .clients-preview-comment__title= item.title
-
-                  .clients-preview-comment-raiting
-                    - for(let i=0; i<5; i++)
-                      .clients-preview-comment-raiting__item(
-                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                      ) 
-                        if i + 1 <= item.raiting
-                          img(
-                            src=require('@/assets/img/review/star.svg'),
-                            alt='star'
-                          )
-                        else
-                          img(
-                            src=require('@/assets/img/review/star-empty.svg'),
-                            alt='star'
-                          )
-
-                  .clients-preview-comment__typography.typography!= item.typography
+                    .clients-preview-comment__typography.typography!= item.typography
 
       .clients-preview__main.phone
         ul.clients-preview-content.accordion(

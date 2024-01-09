@@ -9,6 +9,14 @@
     }
   }
 
+  &.banner-remark  {
+    padding: 0;
+
+    ._container {
+      padding: 0;
+    }
+  }
+
   //.remark__wrapper 
   &__wrapper {
     width: 100%;
