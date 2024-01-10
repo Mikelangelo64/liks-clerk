@@ -1,16 +1,47 @@
 article.section.typography-article(class=`${classTypography ? classTypography : ''}`)
   ._container.typography-article__container
     .typography-article__wrapper
-      .typography
+      .typography.typography-article__content
         each item in typography 
           case item.type 
             when 'image'
               figure
-                img(
-                  src=require(`${item.data}`),
-                  alt='typography',
-                  loading='lazy'
-                )
+                if !isNaN(+item.imageCount)
+                  - for(let i=0; i < +item.imageCount; i++)
+                    img(
+                      src=require(`${item.data}`),
+                      alt='typography',
+                      loading='lazy'
+                    )
 
             when 'text'
               != item.data
+
+            when 'title'
+              h2.typography-article__title(class=`title-${item.titleIndex}`)= item.data
+
+            when 'separate'
+              .typography-article-separate
+                .typography-article-separate__media
+                  figure
+                    img(
+                      src=require(`${item.image}`),
+                      alt='typography',
+                      loading='lazy'
+                    )
+
+                .typography-article-separate__description!= item.description
+
+      .typography-article-aside
+        .typography-article-aside__container
+          p.typography-article-aside__title Content
+
+          ul.typography-article-aside-list
+            each item in typography
+              if item.type === 'title'
+                li
+                  a.typography-article-aside-list__item.anchor(
+                    href='#',
+                    data-goto=`.title-${item.titleIndex}`,
+                    data-typography='.typography-article'
+                  )= item.data

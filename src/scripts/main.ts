@@ -34,7 +34,7 @@ export const init = () => {
 
   const popups = initPopups();
 
-  anchorsInit(0, popups);
+  anchorsInit(140, popups);
 
   isViewedHandler('banner');
   isVideoViewedHandler('banner');

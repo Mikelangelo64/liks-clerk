@@ -33,6 +33,8 @@ const scrollHandler = (
     return;
   }
 
+  console.log(section, section.offsetTop - headerHeight);
+
   link.addEventListener('click', (evt) => {
     evt.preventDefault();
 
@@ -40,6 +42,38 @@ const scrollHandler = (
 
     window.scrollTo({
       top: section.offsetTop - headerHeight,
+      behavior: 'smooth'
+    });
+  });
+};
+
+export const scrollTypographyHandler = (
+  link: HTMLElement,
+  headerHeight: number,
+  popups: Popup[]
+) => {
+  const sectionName = link.dataset.goto;
+  const parentName = link.dataset.typography;
+
+  if (!sectionName || !parentName) {
+    return;
+  }
+
+  const section = document.querySelector<HTMLElement>(`${sectionName}`);
+  const parent = document.querySelector<HTMLElement>(`${parentName}`);
+  if (!section || !parent) {
+    return;
+  }
+
+  console.log(section, section.offsetTop - headerHeight);
+
+  link.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    closePopupsHandler(popups);
+
+    window.scrollTo({
+      top: section.offsetTop + parent.offsetTop - headerHeight,
       behavior: 'smooth'
     });
   });

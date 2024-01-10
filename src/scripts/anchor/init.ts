@@ -1,5 +1,5 @@
 import Popup from '../popup/popupClass';
-import scrollHandler from './scroll';
+import scrollHandler, { scrollTypographyHandler } from './scroll';
 
 const anchorsInit = (headerHeight: number, popups: Popup[]) => {
   const links = Array.from(
@@ -11,7 +11,11 @@ const anchorsInit = (headerHeight: number, popups: Popup[]) => {
   }
 
   links.forEach((link) => {
-    scrollHandler(link, headerHeight, popups);
+    if (link.dataset.typography) {
+      scrollTypographyHandler(link, headerHeight, popups);
+    } else {
+      scrollHandler(link, headerHeight, popups);
+    }
   });
 };
 

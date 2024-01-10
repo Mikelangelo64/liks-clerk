@@ -6,6 +6,117 @@
     remarkList: [],
   };
 
+  const typography = [
+    {
+      type: 'title',
+      titleIndex: '1',
+      data: 'When it comes to SEO and marketing in 2022',
+    },
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+    {
+      type: 'image',
+      imageCount: '1',
+      data: '@/assets/img/blog/article-content-1.jpg',
+    },
+
+    {
+      type: 'title',
+      titleIndex: '2',
+      data: 'What’s the role of Quora & Reddit for SEO and marketing?',
+    },
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+
+        <p>
+          Staying ahead of the curve is essential for any business that wants to succeed online, and Quora and Reddit are two platforms that can help.
+        </p>
+
+        <p>
+          Quora is a question-and-answer platform that allows users to ask questions on any topic, and receive answers from experts in that field. This makes it an excellent resource for research, as you can find out information on just about any topic imaginable. It’s also a great platform for marketing, as you can answer questions related to your business or industry, and build up your credibility as an expert.
+        </p>
+
+        <p>
+          Reddit is a social news platform that allows users to submit content, and vote on the submissions of others. This makes it a great platform for promoting content, as the most popular submissions will be seen by most people. It’s also a great platform for networking, as you can connect with other users who share your interests.
+        </p>
+
+        <p>
+          Is quora good for backlinks? Both Quora and Reddit can be extremely useful for SEO and marketing purposes, but it’s important to use them correctly.<br/> Spamming either platform (Quora Reddit) with promotional material will not only get you banned, but it will also damage your reputation.<br/> Instead, focus on providing helpful and informative answers to questions, and promoting interesting and relevant content. If you do this, you’ll be able to build up a following of loyal fans who will help to promote your business or website.
+        </p>
+
+        <p>
+          They both have high Domain Authority (DR) scores, meaning that Google trusts them and their content is generally high-quality.
+        </p>
+      `,
+    },
+
+    {
+      type: 'title',
+      titleIndex: '3',
+      data: 'When it comes to SEO and marketing in 2022',
+    },
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+    {
+      type: 'image',
+      imageCount: '2',
+      data: '@/assets/img/blog/article-content-1.jpg',
+    },
+
+    {
+      type: 'title',
+      titleIndex: '4',
+      data: 'When it comes to SEO and marketing in 2022',
+    },
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+    {
+      type: 'image',
+      imageCount: '3',
+      data: '@/assets/img/blog/article-content-1.jpg',
+    },
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+
+    {
+      type: 'separate',
+      image: '@/assets/img/blog/article-content-1.jpg',
+      description: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+  ];
+
 doctype html
 html(lang='en')
   head
@@ -19,6 +130,8 @@ html(lang='en')
     include @/layout/header.pug
 
     include @/templates/banner.pug
+
+    include @/templates/layout/typography.pug
 
     include @/templates/article-list.pug
 
