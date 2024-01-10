@@ -82,6 +82,17 @@
         }
       }
     }
+
+    @at-root .banner.blog-banner & {
+      > * + * {
+        @include viewport-tablet-min {
+          margin-top: px-to-rem(64);
+        }
+        @include viewport-phone {
+          margin-top: px-to-rem(40);
+        }
+      }
+    }
   }
 
   //.banner__main 
@@ -165,6 +176,10 @@
     }
 
     @at-root .banner.reviews & {
+      display: none;
+    }
+
+    @at-root .banner.blog-banner & {
       display: none;
     }
 

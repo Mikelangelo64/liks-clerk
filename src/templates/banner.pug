@@ -48,3 +48,6 @@ section.banner.section(
         each remark, index in banner.remarkList
           if index === 0
             include @/templates/remark.pug
+
+      if banner.specialClass && banner.specialClass === 'blog-banner'
+        include @/templates/article-banner.pug

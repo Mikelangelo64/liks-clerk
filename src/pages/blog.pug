@@ -1,0 +1,28 @@
+-
+  const banner = {
+    specialClass: 'blog-banner',
+    title: "For more helpful articles, check out our blog",
+    subtitle: '',
+    remarkList: [],
+  };
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - Blog
+
+    link(rel='stylesheet', href=require('@/styles/pages/blog.scss'))
+
+  body
+    include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    include @/templates/contacts.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 
