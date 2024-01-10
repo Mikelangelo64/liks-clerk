@@ -1,0 +1,28 @@
+-
+  const banner = {
+    specialClass: 'article-page-banner',
+    title: "Quora vs Reddit: What’s better for SEO and marketing in 2022",
+    subtitle: '',
+    remarkList: [],
+  };
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - Article
+
+    link(rel='stylesheet', href=require('@/styles/pages/article.scss'))
+
+  body
+    include @/layout/header.pug
+
+    include @/templates/banner.pug
+
+    include @/templates/article-list.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 

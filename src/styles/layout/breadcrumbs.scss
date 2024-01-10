@@ -1,0 +1,54 @@
+.breadcrumbs {
+  display: flex;
+
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 150%;
+  color: var(--color-grey-400);
+
+  @include viewport-phone {
+    display: none;
+  }
+  
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: unset;
+    color: var(--color-grey-400);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: currentColor;
+
+      @include transition(transform 0.4s);
+      transform-origin: 0;
+      transform: scale(0, 1);
+
+      @at-root .breadcrumbs a:hover::before {
+        @include non-mobile-device {
+          transform: scale(1);
+        }
+      }
+
+      @at-root .breadcrumbs a:focus-visible::before {
+        @include non-mobile-device {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  .breadcrumb_last {
+    word-spacing: normal;
+    color: var(--color-grey-600);
+  }
+}

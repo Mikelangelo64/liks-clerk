@@ -93,6 +93,17 @@
         }
       }
     }
+
+    @at-root .banner.article-page-banner & {
+      > * + * {
+        @include viewport-tablet-min {
+          margin-top: px-to-rem(64);
+        }
+        @include viewport-phone {
+          margin-top: px-to-rem(40);
+        }
+      }
+    }
   }
 
   //.banner__main 
@@ -180,6 +191,10 @@
     }
 
     @at-root .banner.blog-banner & {
+      display: none;
+    }
+
+    @at-root .banner.article-page-banner & {
       display: none;
     }
 
@@ -407,5 +422,100 @@
     // &__description {
 
     // }
+  }
+}
+
+.article-page-banner {
+  
+  //.article-page-banner__breadcrumbs 
+  // &__breadcrumbs {
+  // }
+
+  //.article-page-banner__header 
+  &__header {
+    margin-bottom: px-to-rem(16);
+
+    > * + * {
+      margin-top: px-to-rem(24);
+    }
+  }
+  
+  //.article-page-banner__info 
+  &__info {
+    display: flex;
+    width: 100%;
+
+    @include viewport-tablet-min {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include viewport-phone {
+      flex-direction: column;
+    }
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-left: px-to-rem(36);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(12);
+      }
+    }
+  }
+  
+  //.article-page-banner__readtime 
+  // &__readtime {
+  // }
+  
+  //.article-page-banner__date 
+  &__date {
+    font-weight: 500;
+    line-height: 150%;
+    font-size: px-to-rem(16);
+    color: var(--color-grey-500);
+  }
+
+  //.article-page-banner__author 
+  &__author {
+    display: block;
+    width: 100%;
+    max-width: max-content;
+    border-radius: px-to-rem(24);
+
+    font-weight: 700;
+    line-height: 150%;
+    font-size: px-to-rem(16);
+    color: var(--color-white);
+    background-color: var(--color-black);
+
+    @include viewport-tablet-min {
+      margin-top: px-to-rem(32);
+      padding: px-to-rem(12) px-to-rem(16);
+    }
+    @include viewport-phone {
+      margin-top: px-to-rem(16);
+      padding: px-to-rem(8);
+    }
+  }
+  
+  //.article-page-banner__media 
+  &__media {
+    width: 100%;
+    
+    img {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      transform: translateZ(0);
+      
+      @include viewport-tablet-min {
+        border-radius: px-to-rem(40);
+      }
+      @include viewport-phone {
+        border-radius: px-to-rem(24);
+      }
+    }
   }
 }
