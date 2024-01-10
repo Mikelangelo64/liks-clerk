@@ -1,10 +1,37 @@
 .popup-action {
   > * + * {
-    margin-top: px-to-rem(34);
+    @include viewport-tablet-min {
+      margin-top: px-to-rem(32);
+    }
+    @include viewport-phone {
+      margin-top: px-to-rem(16);
+    }
+  }
+
+  //.popup-action__header 
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .popup__close {
+      flex-shrink: 0;
+    }
+
+    > * + * {
+      margin-left: px-to-rem(36);
+    }
   }
 
   //.popup-action__title 
   &__title {
     @include text-heading-3;
+    text-align: left;
+  }
+
+  //.popup-action__button 
+  &__button {
+    width: 100%;
   }
 }

@@ -224,7 +224,7 @@
         <div class="popup__additional"></div>
         <div class="popup__scroll">
           <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
-                alt="close"><img class="mobile" src="assets/img/popup-close.svg" alt="close"></button>
+                alt="close"><img class="mobile" src="assets/img/popup-close-black.svg" alt="close"></button>
             <div class="popup__content">
               <div class="popup-action">
                 <p class="popup-action__title">Please fill out the form and we will contact you shortly.</p>
@@ -248,22 +248,37 @@
           </div>
         </div>
       </div>
-      <div class="popup popup-review review__popup fullscreen-phone" data-popupname="_popup-review" aria-modal="true"
-        role="dialog">
+      <div class="popup popup-review review__popup " data-popupname="_popup-review" aria-modal="true" role="dialog">
         <div class="popup__overlay"></div>
         <div class="popup__additional"></div>
         <div class="popup__scroll">
-          <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
-                alt="close"><img class="mobile" src="assets/img/popup-close.svg" alt="close"></button>
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
             <div class="popup__content">
               <div class="popup-action">
-                <p class="popup-action__title">Please fill out the form and we will contact you shortly.</p>
+                <div class="popup-action__header">
+                  <p class="popup-action__title">Write a review</p><button class="popup__close"><img
+                      src="assets/img/popup-close-black.svg" alt="close"></button>
+                </div>
                 <div class="popup-action__main">
                   <form class="form popup-action__form" id="review-popup" action="post">
-                    <div><label for="popup-request"> <textarea id="popup-request" name="request"
+                    <div>
+                      <div class="form-group"><label class="control-label"
+                          for="ec-rating-resource-1">Score:</label><input id="ec-rating-resource-1" type="hidden"
+                          name="rating" value="1">
+                        <div class="ec-rating ec-clearfix" data-storage-id="ec-rating-resource-1">
+                          <div class="ec-rating-stars"><span class="active" data-rating="1"
+                              data-description="1"></span><span data-rating="2" data-description="2"></span><span
+                              data-rating="3" data-description="3"></span><span data-rating="4"
+                              data-description="4"></span><span data-rating="5" data-description="5"></span></div>
+                        </div><span class="ec-error help-block" id="ec-rating-error-resource-1">Wrong format</span>
+                      </div>
+                    </div>
+                    <div><label for="popup-request"> <strong>Review</strong><textarea id="popup-request" name="request"
                           placeholder="Message text"></textarea><span class="wpcf7-not-valid-tip">Wrong
                           format</span></label></div>
-                    <p><button type="submit"> <span>Send</span></button></p>
+                    <p><button type="submit"> <span>Post</span></button><button
+                        class="popup-action__button button-hollow" type="button"><span>Cancel</span></button></p>
                   </form>
                 </div>
               </div>

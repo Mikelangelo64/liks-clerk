@@ -59,21 +59,23 @@
   
   //.popup__wrapper 
   &__wrapper {   
-    // border-radius: px-to-rem(20);
+    border-radius: px-to-rem(24);
+
     color: var(--color-black);
     background-color: var(--color-white);
     
     @include viewport-desktop {
-      padding: px-to-rem(60) px-to-rem(60);
+      padding: px-to-rem(40);
     }
     
     @include viewport-tablet {
-      padding: px-to-rem(40) px-to-rem(52);
+      padding: px-to-rem(40);
     }
     
-    // @include viewport-phone {
-    //   padding: px-to-rem(40) px-to-rem(76);
-    // }
+    @include viewport-phone {
+      margin: px-to-rem(44) auto;
+      padding: px-to-rem(16);
+    }
     
     @at-root .popup.popup-video & {
       margin: 0 auto;
@@ -81,15 +83,15 @@
       background-color: transparent;
     }
 
-    @at-root .popup.popup-form & {  
-      @include viewport-desktop {
-        padding: px-to-rem(54) px-to-rem(100);
-      }
+    // @at-root .popup.popup-form & {  
+    //   @include viewport-desktop {
+    //     padding: px-to-rem(54) px-to-rem(100);
+    //   }
       
-      @include viewport-tablet {
-        padding: px-to-rem(40) px-to-rem(76);
-      }
-    }
+    //   @include viewport-tablet {
+    //     padding: px-to-rem(40) px-to-rem(76);
+    //   }
+    // }
 
     @at-root .popup.popup-feedback & {  
       @include viewport-tablet-min {
@@ -120,8 +122,19 @@
   
   //.popup__close 
   &__close {
+    width: px-to-rem(44);
+    height: px-to-rem(44);
+
+    @include viewport-phone {
+      top: px-to-rem(-44);
+    }
+
     &.hidden {
       display: none;
+    }
+
+    @at-root .popup.popup-review & {
+      position: static;
     }
 
     @at-root .popup.popup-menu & {

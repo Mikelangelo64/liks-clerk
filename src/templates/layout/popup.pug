@@ -11,7 +11,8 @@
       video: '',
       title: '',
       subtitle: '',
-      isFullscreenPhone: 'false'
+      isFullscreenPhone: 'false',
+      hasCurstomClosePosition: 'true',
     }, 
     { 
       name: 'thanks', 
@@ -35,7 +36,8 @@
       name: 'review', 
       type: 'review', 
       video: '',
-      isFullscreenPhone: 'true'
+      hasCurstomClosePosition: 'true',
+      isFullscreenPhone: 'false'
     },
   ];
 
@@ -51,7 +53,9 @@ each item in popupList
 
     .popup__scroll
       .popup__wrapper
-        button.popup__close(class=`${item.type === 'menu' ? 'hidden' : ''}`)
+        button.popup__close(
+          class=`${item.hasCurstomClosePosition && item.hasCurstomClosePosition === 'true' ? 'hidden' : ''}`
+        )
           img(
             class=`${item.isFullscreenPhone === 'true' ? 'desktop' : ''}`,
             src=require('@/assets/img/popup-close.svg'),
@@ -60,7 +64,7 @@ each item in popupList
 
           if item.isFullscreenPhone === 'true'
             img.mobile(
-              src=require('@/assets/img/popup-close.svg'),
+              src=require('@/assets/img/popup-close-black.svg'),
               alt='close'
             )
 

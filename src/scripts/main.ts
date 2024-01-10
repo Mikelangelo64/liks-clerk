@@ -14,6 +14,7 @@ import slidersInit from './sliders/init';
 import submenuToggle from './submenu/init';
 import initCalculateForm from './calculateForm/init';
 import ratingInit from './rating/init';
+import setStars from './rating/setStars';
 
 export const init = () => {
   scrollBarInit();
@@ -37,6 +38,9 @@ export const init = () => {
 
   isViewedHandler('banner');
   isVideoViewedHandler('banner');
+
+  // hardcode stars review
+  setStars();
 
   const formArr = document.querySelectorAll('form');
   const hasError = false;
@@ -63,6 +67,11 @@ export const init = () => {
                 // if (input.type === 'tel') {
                 //   return;
                 // }
+
+                if (input.name === 'rating') {
+                  input.value = '5';
+                  return;
+                }
 
                 input.value = '';
               });

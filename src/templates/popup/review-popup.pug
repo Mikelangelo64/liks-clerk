@@ -1,14 +1,36 @@
 .popup-action
-  p.popup-action__title Please fill out the form and we will contact you shortly.
+  .popup-action__header
+    p.popup-action__title Write a review
+
+    button.popup__close
+      img(src=require('@/assets/img/popup-close-black.svg'), alt='close')
 
   .popup-action__main
     form#review-popup.form.popup-action__form(action='post') 
       div
+        .form-group
+          label.control-label(for='ec-rating-resource-1') Score:
+          input#ec-rating-resource-1(type='hidden', name='rating', value='1')
+
+          .ec-rating.ec-clearfix(data-storage-id='ec-rating-resource-1')
+            .ec-rating-stars
+              span.active(data-rating='1', data-description='1')
+              span(data-rating='2', data-description='2')
+              span(data-rating='3', data-description='3')
+              span(data-rating='4', data-description='4')
+              span(data-rating='5', data-description='5')
+
+          span#ec-rating-error-resource-1.ec-error.help-block Wrong format
+
+      div
         label(for='popup-request') 
-          //- strong Your request
+          strong Review
           textarea#popup-request(name='request', placeholder='Message text')
           span.wpcf7-not-valid-tip Wrong format
 
       p
         button(type='submit') 
-          span Send
+          span Post
+
+        button.popup-action__button.button-hollow(type='button')
+          span Cancel
