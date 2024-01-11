@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - 404
+
+    link(rel='stylesheet', href=require('@/styles/pages/not-found.scss'))
+
+  body
+    include @/layout/header.pug
+
+    section.not-found
+      ._container.not-found__container
+        .not-found__wrapper
+          .not-found__media
+            img.desktop(
+              src=require('@/assets/img/not-found-media.png'),
+              alt='not-found'
+            )
+            img.mobile(
+              src=require('@/assets/img/not-found-media-mobile.png'),
+              alt='not-found'
+            )
+
+          .not-found__content
+            p.not-found__title Whoops!
+
+            p.not-found__description Sorry we can`t find the page you are looking for
+
+            a.button-filled.not-found__button(href='#')
+              span Back Home
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 

@@ -14,7 +14,8 @@ const pageNames = [
   'article',
   'privacy',
   'vocabulary',
-  'vocabulary-article'
+  'vocabulary-article',
+  'not-found'
 ];
 
 const pages = pageNames.map((name) => {
