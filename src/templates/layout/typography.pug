@@ -8,11 +8,15 @@ article.section.typography-article(class=`${classTypography ? classTypography : 
               figure
                 if !isNaN(+item.imageCount)
                   - for(let i=0; i < +item.imageCount; i++)
-                    img(
-                      src=require(`${item.data}`),
-                      alt='typography',
-                      loading='lazy'
+                    a.typography-article__link(
+                      href=require(`${item.data}`),
+                      data-fancybox='typography'
                     )
+                      img(
+                        src=require(`${item.data}`),
+                        alt='typography',
+                        loading='lazy'
+                      )
 
             when 'text'
               != item.data
@@ -24,11 +28,15 @@ article.section.typography-article(class=`${classTypography ? classTypography : 
               .typography-article-separate
                 .typography-article-separate__media
                   figure
-                    img(
-                      src=require(`${item.image}`),
-                      alt='typography',
-                      loading='lazy'
+                    a.typography-article__link(
+                      href=require(`${item.image}`),
+                      data-fancybox='typography'
                     )
+                      img(
+                        src=require(`${item.image}`),
+                        alt='typography',
+                        loading='lazy'
+                      )
 
                 .typography-article-separate__description!= item.description
 

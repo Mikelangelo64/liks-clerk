@@ -33,7 +33,7 @@ const scrollHandler = (
     return;
   }
 
-  console.log(section, section.offsetTop - headerHeight);
+  // console.log(section, section.offsetTop - headerHeight);
 
   link.addEventListener('click', (evt) => {
     evt.preventDefault();
@@ -65,7 +65,7 @@ export const scrollTypographyHandler = (
     return;
   }
 
-  console.log(section, section.offsetTop - headerHeight);
+  // console.log(section, section.offsetTop - headerHeight);
 
   link.addEventListener('click', (evt) => {
     evt.preventDefault();

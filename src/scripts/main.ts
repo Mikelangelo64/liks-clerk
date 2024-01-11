@@ -15,6 +15,7 @@ import submenuToggle from './submenu/init';
 import initCalculateForm from './calculateForm/init';
 import ratingInit from './rating/init';
 import setStars from './rating/setStars';
+import fancyboxInit from './fancybox/init';
 
 export const init = () => {
   scrollBarInit();
@@ -30,6 +31,7 @@ export const init = () => {
   counterInit();
   initCalculateForm();
   ratingInit();
+  fancyboxInit();
   // console.log(scrollSectionState);
 
   const popups = initPopups();

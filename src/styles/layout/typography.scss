@@ -223,6 +223,13 @@
         text-decoration: underline;
       }
     } 
+
+    @at-root .typography-article .typography.typography-article__content a.typography-article__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   ul {
@@ -580,6 +587,10 @@
     padding: px-to-rem(8) px-to-rem(16);
   }
 
+  //.typography-article__link 
+  // &__link {
+  // }
+
   //.typography-article-aside 
   &-aside {
     width: 100%;
@@ -683,7 +694,10 @@
     //.typography-article-separate__media 
     &__media {
       width: 100%;
-      max-width: px-to-rem(510);
+
+      @include viewport-tablet-min {
+        max-width: px-to-rem(510);
+      }
     }
 
     //.typography-article-separate__description 
