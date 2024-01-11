@@ -79,43 +79,43 @@ textarea {
     border-color: var(--color-red);
   }
 
-  @at-root form.header-search__form input {
-    border: 0;
-    padding: 0;
+  // @at-root form.header-search__form input {
+  //   border: 0;
+  //   padding: 0;
 
-    border-bottom: 1px solid rgba(var(--color-white--rgb), 0.48);
-    padding-bottom: px-to-rem(10);
-    padding-right: px-to-rem(36);
+  //   border-bottom: 1px solid rgba(var(--color-white--rgb), 0.48);
+  //   padding-bottom: px-to-rem(10);
+  //   padding-right: px-to-rem(36);
 
-    background-color: transparent;
+  //   background-color: transparent;
 
-    &:focus-visible {
-      border-color: rgba(var(--color-white--rgb), 1);
-    }
+  //   &:focus-visible {
+  //     border-color: rgba(var(--color-white--rgb), 1);
+  //   }
 
-    &::placeholder {
-      color: rgba(var(--color-white--rgb), 0.12);
-    }
-  }
+  //   &::placeholder {
+  //     color: rgba(var(--color-white--rgb), 0.12);
+  //   }
+  // }
 
-  @at-root form.header-search__form textarea {
-    border: 0;
-    padding: 0;
+  // @at-root form.header-search__form textarea {
+  //   border: 0;
+  //   padding: 0;
 
-    border-bottom: 1px solid rgba(var(--color-white--rgb), 0.48);
-    padding-bottom: px-to-rem(10);
-    padding-right: px-to-rem(46);
+  //   border-bottom: 1px solid rgba(var(--color-white--rgb), 0.48);
+  //   padding-bottom: px-to-rem(10);
+  //   padding-right: px-to-rem(46);
 
-    background-color: transparent;
+  //   background-color: transparent;
 
-    &:focus-visible {
-      border-color: rgba(var(--color-white--rgb), 1);
-    }
+  //   &:focus-visible {
+  //     border-color: rgba(var(--color-white--rgb), 1);
+  //   }
 
-    &::placeholder {
-      color: rgba(var(--color-white--rgb), 0.12);
-    }
-  }
+  //   &::placeholder {
+  //     color: rgba(var(--color-white--rgb), 0.12);
+  //   }
+  // }
 }
 
 textarea {

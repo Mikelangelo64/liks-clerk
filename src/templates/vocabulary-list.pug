@@ -1,0 +1,44 @@
+section.vocabulary-list.section(
+  class=`${vocabulary.specialClass && vocabulary.specialClass !== '' ? vocabulary.specialClass : ''}`
+)
+  ._container
+    .vocabulary-list__wrapper
+      if vocabulary.isVocabularyPage && vocabulary.isVocabularyPage === 'true' || vocabulary.title && vocabulary.title !== ''
+        .vocabulary-list-header.section-header
+          if vocabulary.title && vocabulary.title !== ''
+            h2.section-header__title= vocabulary.title
+
+          if vocabulary.isVocabularyPage && vocabulary.isVocabularyPage === 'true'
+            form#form-search.vocabulary-list-search
+              .vocabulary-list-search__label
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.75 18.6164L14.5 13.3333C15.75 11.8239 16.375 10.0629 16.375 8.1761C16.375 3.6478 12.75 0 8.25 0C3.625 0 0 3.6478 0 8.1761C0 12.7044 3.625 16.3522 8.125 16.3522C10 16.3522 11.75 15.7233 13.25 14.4654L18.5 19.7484C18.625 19.8742 18.875 20 19.125 20C19.375 20 19.625 19.8742 19.75 19.7484C19.875 19.6226 20 19.3711 20 19.1195C20 18.9937 19.875 18.7421 19.75 18.6164ZM8.125 14.5912C4.625 14.5912 1.75 11.6981 1.75 8.1761C1.75 4.65409 4.625 1.76101 8.125 1.76101C11.625 1.76101 14.5 4.65409 14.5 8.1761C14.5 11.8239 11.75 14.5912 8.125 14.5912Z" fill="#191919"/>
+                </svg>
+
+              input#search(type='text', name='search', placeholder='Search')
+
+              button(type='submit')
+                span Search
+
+      .vocabulary-list__main
+        ul.vocabulary-list-ul
+          each item in vocabulary.list
+            li.vocabulary-list-ul__item
+              .vocabulary-list-ul__header
+                p.vocabulary-list-ul__letter= item.letter
+
+                .vocabulary-list-ul__label
+                  img(
+                    src=require('@/assets/img/vocabulary/vocabulary-label.svg'),
+                    alt='vocabulary'
+                  )
+
+              ul.vocabulary-list-ul__sublist
+                each link in item.links
+                  li
+                    a.vocabulary-list-ul__link(href=`${link.href}`)= link.title
+
+      if !vocabulary.isVocabularyPage && vocabulary.isVocabularyPage === 'false'
+        .vocabulary-list__footer
+          a.button-filled.vocabulary-list__button(href='#')
+            span More

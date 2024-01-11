@@ -12,7 +12,8 @@ const pageNames = [
   'reviews',
   'blog',
   'article',
-  'privacy'
+  'privacy',
+  'vocabulary'
 ];
 
 const pages = pageNames.map((name) => {

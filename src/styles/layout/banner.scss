@@ -12,6 +12,8 @@
   }
 
   &.main {
+    min-height: calc(var(--vh, 1vh) * 100);
+
     @include viewport-desktop {
       --padding-top: #{px-to-rem(96)};
     }
@@ -20,7 +22,7 @@
   position: relative;
   z-index: 0;
 
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 50);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,6 +165,10 @@
     @at-root .banner.service & {
       max-width: unset;
     }
+
+    @at-root .banner.vocabulary-banner & {
+      max-width: unset;
+    }
   }
 
   //.banner__button__container 
@@ -195,6 +201,10 @@
     }
 
     @at-root .banner.article-page-banner & {
+      display: none;
+    }
+
+    @at-root .banner.vocabulary-banner & {
       display: none;
     }
 
