@@ -6,8 +6,10 @@
   line-height: 150%;
   color: var(--color-grey-400);
 
-  @include viewport-phone {
-    display: none;
+  &.article-blog-breadcrumbs {
+    @include viewport-phone {
+      display: none;
+    }
   }
   
   a {

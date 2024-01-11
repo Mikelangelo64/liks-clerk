@@ -1,0 +1,29 @@
+.vocabulary-article-banner {
+  @include viewport-desktop {
+    --padding-top: #{px-to-rem(72)};
+  }
+  @include viewport-tablet {
+    --padding-top: #{px-to-rem(60)};
+  }
+  @include viewport-phone {
+    --padding-top: #{px-to-rem(80)};
+  }
+
+  
+  @include viewport-tablet-min {
+    padding-top: calc(var(--padding-top) + #{px-to-rem(46)} + #{px-to-rem(20)} + var(--started-header-height, #{px-to-rem(34)}));
+    padding-bottom: px-to-rem(24);
+  }
+  
+  @include viewport-phone {
+    padding-top: calc(2 * #{px-to-rem(30)} + var(--started-header-height, #{px-to-rem(36)}));
+    padding-bottom: px-to-rem(16);
+  }
+
+  //.vocabulary-article-banner__wrapper 
+  &__wrapper {
+    > * + * {
+      margin-top: px-to-rem(24);
+    }
+  }
+}

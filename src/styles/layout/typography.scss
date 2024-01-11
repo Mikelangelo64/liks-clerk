@@ -116,6 +116,12 @@
     color: var(--color-black)
   }
 
+  @at-root .typography-vocabulary & {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--color-black)
+  }
+
   h1 {
     @include text-heading-1;
   }
@@ -163,10 +169,24 @@
         font-size: px-to-rem(17);
       }
     }
-
+    
     @at-root .typography-privacy .typography h3 {
       @include viewport-phone {
         font-size: px-to-rem(20);
+      }
+    }
+    
+    @at-root .typography-vocabulary .typography h3 {
+      @include viewport-desktop {
+        font-size: px-to-rem(24);
+      }
+          
+      @include viewport-tablet {
+        font-size: px-to-rem(22);
+      }
+          
+      @include viewport-phone {
+        font-size: px-to-rem(18);
       }
     }
   }
@@ -199,6 +219,20 @@
         font-size: px-to-rem(24);
       }
     }
+
+    @at-root .typography-vocabulary .typography h4 {
+      @include viewport-desktop {
+        font-size: px-to-rem(20);
+      }
+      
+      @include viewport-tablet {
+        font-size: px-to-rem(18);
+      }
+      
+      @include viewport-phone {
+        font-size: px-to-rem(16);
+      }
+    }
   }
 
   h5 {
@@ -217,12 +251,40 @@
         font-size: px-to-rem(16);
       }
     }
+
+    @at-root .typography-vocabulary .typography h5 {
+      @include viewport-desktop {
+        font-size: px-to-rem(20);
+      }
+      
+      @include viewport-tablet {
+        font-size: px-to-rem(18);
+      }
+      
+      @include viewport-phone {
+        font-size: px-to-rem(16);
+      }
+    }
   }
 
   h6 {
     @include text-heading-4;
 
     @at-root .typography-article .typography h6 {
+      @include viewport-desktop {
+        font-size: px-to-rem(20);
+      }
+      
+      @include viewport-tablet {
+        font-size: px-to-rem(18);
+      }
+      
+      @include viewport-phone {
+        font-size: px-to-rem(16);
+      }
+    }
+
+    @at-root .typography-vocabulary .typography h6 {
       @include viewport-desktop {
         font-size: px-to-rem(20);
       }
@@ -306,6 +368,12 @@
         --marker-size: #{px-to-rem(6)};
         padding-left: calc(var(--marker-size) + px-to-rem(20));
       }
+      
+      @at-root .typography-vocabulary .typography.typography-vocabulary__content ul li {
+        --line-height: 1.5;
+        --marker-size: #{px-to-rem(6)};
+        padding-left: calc(var(--marker-size) + px-to-rem(20));
+      }
 
       &::before {
         content: '';
@@ -339,6 +407,12 @@
         }
 
         @at-root .typography-privacy .typography.typography-privacy__content ul li::before {
+          left: px-to-rem(10);
+          border: unset;
+          background-color: currentColor;
+        }
+
+        @at-root .typography-vocabulary .typography.typography-vocabulary__content ul li::before {
           left: px-to-rem(10);
           border: unset;
           background-color: currentColor;
@@ -556,6 +630,20 @@
     @at-root .typography-article-separate figure {
       margin: 0;
     }
+
+    @at-root .typography-vocabulary .typography.typography-vocabulary__content figure {
+      @include viewport-desktop {
+        margin: px-to-rem(120) 0;
+      }
+  
+      @include viewport-tablet {
+        margin: px-to-rem(100) 0;
+      }
+      
+      @include viewport-phone {
+        margin: px-to-rem(80) 0;
+      }
+    }
   }
 
   img {
@@ -611,6 +699,41 @@
     > * + ul,
     > * + ol {
       margin-top: px-to-rem(12);
+    }
+  }
+
+  @at-root .typography-vocabulary .typography {
+    > * + * {
+      margin-top: px-to-rem(34);
+    }
+
+    > * + h2 {
+      @include viewport-desktop {
+        margin-top: px-to-rem(40);
+      }
+      @include viewport-tablet {
+        margin-top: px-to-rem(28);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(16);
+      }
+    }
+
+    > * + h3 {
+      @include viewport-desktop {
+        margin-top: px-to-rem(34);
+      }
+      @include viewport-tablet {
+        margin-top: px-to-rem(24);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(16);
+      }
+    }
+
+    > * + ul,
+    > * + ol {
+      margin-top: px-to-rem(24);
     }
   }
 
@@ -872,5 +995,9 @@
 }
 
 .typography-privacy {
+  padding-top: 0;
+}
+
+.typography-vocabulary {
   padding-top: 0;
 }

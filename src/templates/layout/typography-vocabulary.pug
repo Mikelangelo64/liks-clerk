@@ -1,0 +1,22 @@
+article.section.typography-vocabulary(class=`${classTypography ? classTypography : ''}`)
+  ._container
+    .typography-vocabulary__wrapper
+      .typography.typography-vocabulary__content
+        each item in typography 
+          case item.type 
+            when 'image'
+              figure
+                if !isNaN(+item.imageCount)
+                  - for(let i=0; i < +item.imageCount; i++)
+                    a.typography-vocabulary__link(
+                      href=require(`${item.data}`),
+                      data-fancybox='typography-vocabulary'
+                    )
+                      img(
+                        src=require(`${item.data}`),
+                        alt='typography',
+                        loading='lazy'
+                      )
+
+            when 'text'
+              != item.data

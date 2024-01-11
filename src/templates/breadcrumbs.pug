@@ -1,4 +1,6 @@
-nav.breadcrumbs
+nav.breadcrumbs(
+  class=`${breadcrumbs && breadcrumbs.specialClass && breadcrumbs.specialClass !== '' ? breadcrumbs.specialClass : ''}`
+)
   <span>
     <span> <a href="./blog.html">Blog</a> </span> / 
     span.breadcrumb_last(aria-current='page') Quora vs Reddit: What’s better for SEO and marketing in 2022

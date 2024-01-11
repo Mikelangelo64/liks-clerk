@@ -46,8 +46,55 @@ const typographyFancyInit = () => {
   });
 };
 
+const typographyVocabularyFancyInit = () => {
+  const typographyArray = document.querySelectorAll<HTMLElement>(
+    '.typography-vocabulary .typography.typography-vocabulary__content'
+  );
+
+  if (typographyArray.length === 0) {
+    return;
+  }
+
+  typographyArray.forEach(() => {
+    Fancybox.bind(`[data-fancybox="typography-vocabulary"]`, {
+      ...Fancybox.defaults,
+      dragToClose: false,
+      backdropClick: 'close',
+      compact: false,
+
+      Images: {
+        // Disable animation from/to thumbnail on start/close
+        zoom: false
+      },
+
+      Toolbar: {
+        absolute: true,
+        display: {
+          left: [],
+          middle: [],
+          right: ['close']
+        }
+      },
+
+      Thumbs: {
+        type: 'classic'
+      },
+
+      Carousel: {
+        transition: 'crossfade',
+        breakpoints: {
+          '(max-width: 900px)': {
+            Navigation: false
+          }
+        }
+      }
+    });
+  });
+};
+
 const fancyboxInit = () => {
   typographyFancyInit();
+  typographyVocabularyFancyInit();
 };
 
 export default fancyboxInit;

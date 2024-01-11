@@ -38,7 +38,7 @@ section.vocabulary-list.section(
                   li
                     a.vocabulary-list-ul__link(href=`${link.href}`)= link.title
 
-      if !vocabulary.isVocabularyPage && vocabulary.isVocabularyPage === 'false'
+      if !vocabulary.isVocabularyPage || vocabulary.isVocabularyPage === 'false'
         .vocabulary-list__footer
           a.button-filled.vocabulary-list__button(href='#')
             span More

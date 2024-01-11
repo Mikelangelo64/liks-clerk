@@ -13,7 +13,8 @@ const pageNames = [
   'blog',
   'article',
   'privacy',
-  'vocabulary'
+  'vocabulary',
+  'vocabulary-article'
 ];
 
 const pages = pageNames.map((name) => {

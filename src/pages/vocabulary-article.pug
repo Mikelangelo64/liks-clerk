@@ -1,0 +1,209 @@
+-
+  const typography = [
+    {
+      type: 'text',
+      data: `
+        <p>
+          When it comes to SEO and marketing in 2022, two website powerhouses that can’t be ignored are Quora and Reddit. Here’s a look at what each has to offer and why they should be part of your plans for promoting your brand online. Reddit is the seventh most popular website in the United States, with an average of more than 32 million unique visitors per month. The site is made up of a vast network of communities, each with its own interests and topics.
+        </p>
+      `,
+    },
+    {
+      type: 'image',
+      imageCount: '1',
+      data: '@/assets/img/vocabulary/vocabulary-article.jpg',
+    },
+    {
+      type: 'text',
+      data: `
+        <h2>
+          How Ahrefs look like
+        </h2>
+
+        <h3>
+          Features:
+        </h3>
+        <ul>
+          <li>
+            SEO Analysing websites (structure, errors, etc.)
+          </li>
+          <li>
+            Backlinks Analysing ( own backlinks, competitors)
+          </li>
+          <li>
+            Content Explorer
+          </li>
+          <li>
+            Keyword research
+          </li>
+          <li>
+            Many other options for analyzing domains.
+          </li>
+        </ul>
+
+        <h3>
+          Value:
+        </h3>
+        <ul>
+          <li>
+            Ahrefs is a tool that helps SEO specialists or digital marketers to improve website ranking on Google.
+          </li>
+        </ul>
+      `,
+    },
+  ];
+
+  const vocabulary = {
+    specialClass: 'additional',
+    isVocabularyPage: 'false',
+    title: 'Learn SEO terminology with us',
+    list: [
+      {
+        letter: 'A',
+        links: [
+          {
+            title: 'Ahref',
+            href: '#',
+          },
+          {
+            title: 'Ahrefs Rank',
+            href: '#',
+          },
+          {
+            title: 'Algorithm Updates',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+        ],
+      },
+      {
+        letter: 'B',
+        links: [
+          {
+            title: 'Backlink',
+            href: '#',
+          },
+          {
+            title: 'Batch Analysis',
+            href: '#',
+          },
+          {
+            title: 'Algorithm Updates',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+        ],
+      },
+      {
+        letter: 'c',
+        links: [
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+        ],
+      },
+      {
+        letter: 'd',
+        links: [
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+          {
+            title: 'Anchor',
+            href: '#',
+          },
+        ],
+      },
+    ],
+  };
+
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title Links Clerk - Vocabulary article
+
+    link(
+      rel='stylesheet',
+      href=require('@/styles/pages/vocabulary-article.scss')
+    )
+
+  body
+    include @/layout/header.pug
+
+    section.vocabulary-article-banner
+      ._container
+        .vocabulary-article-banner__wrapper
+          include @/templates/breadcrumbs.pug
+
+          h1.vocabulary-article__title Ahrefs
+
+    include @/templates/layout/typography-vocabulary.pug
+
+    include @/templates/vocabulary-list.pug
+
+    include @/layout/footer.pug
+
+    script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 
