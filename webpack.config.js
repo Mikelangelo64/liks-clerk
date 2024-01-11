@@ -11,7 +11,8 @@ const pageNames = [
   'service-3',
   'reviews',
   'blog',
-  'article'
+  'article',
+  'privacy'
 ];
 
 const pages = pageNames.map((name) => {
