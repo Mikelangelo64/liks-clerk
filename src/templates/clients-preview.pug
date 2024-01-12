@@ -121,33 +121,34 @@ section.section.clients-preview(
         .clients-preview-additional.grab-desktop
           ul.clients-preview-additional__inner.review-company.grab-desktop__inner
             each item in reviewAdditionalList
-              li.review-company__item
-                .review-company__info
-                  .review-company__subtitle Reviewed on
+              li
+                a.review-company__item(href='#')
+                  .review-company__info
+                    .review-company__subtitle Reviewed on
 
-                  .review-company__label
-                    img(src=require(`${item.label}`), alt=`${item.alt}`)
+                    .review-company__label
+                      img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-                .review-company-raiting
-                  .review-company-raiting-stars
-                    - for(let i=0; i<5; i++)
-                      .review-company-raiting-stars__item(
-                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                      ) 
-                        if i + 1 <= item.raiting
-                          img(
-                            src=require('@/assets/img/review/star.svg'),
-                            alt='star'
-                          )
-                        else
-                          img(
-                            src=require('@/assets/img/review/star-empty.svg'),
-                            alt='star'
-                          )
+                  .review-company-raiting
+                    .review-company-raiting-stars
+                      - for(let i=0; i<5; i++)
+                        .review-company-raiting-stars__item(
+                          class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                        ) 
+                          if i + 1 <= item.raiting
+                            img(
+                              src=require('@/assets/img/review/star.svg'),
+                              alt='star'
+                            )
+                          else
+                            img(
+                              src=require('@/assets/img/review/star-empty.svg'),
+                              alt='star'
+                            )
 
-                  p.review-company-raiting__description
-                    strong= item.reviewCount
-                    span reviews
+                    p.review-company-raiting__description
+                      strong= item.reviewCount
+                      span reviews
 
       if !clientsPreview.isHasFadeSection || clientsPreview.isHasFadeSection === 'true'
         .clients-preview__main.desktop.fade-section

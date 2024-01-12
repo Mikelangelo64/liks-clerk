@@ -180,11 +180,11 @@
       @include viewport-desktop {
         font-size: px-to-rem(24);
       }
-          
+      
       @include viewport-tablet {
         font-size: px-to-rem(22);
       }
-          
+      
       @include viewport-phone {
         font-size: px-to-rem(18);
       }
@@ -249,6 +249,22 @@
       
       @include viewport-phone {
         font-size: px-to-rem(16);
+      }
+    }
+
+    
+    @at-root .typography-privacy .typography h5 {
+      @include viewport-desktop {
+        font-weight: 600;
+        font-size: px-to-rem(24);
+      }
+      @include viewport-tablet {
+        font-weight: 600;
+        font-size: px-to-rem(20);
+      }
+      @include viewport-phone {
+        font-weight: 400;
+        font-size: px-to-rem(18);
       }
     }
 
@@ -673,6 +689,21 @@
   > * + ul,
   > * + ol {
     margin-top: px-to-rem(24);
+  }
+  
+  
+  @at-root .typography-article .typography {
+    > * + h2 {
+      @include viewport-desktop {
+        margin-top: px-to-rem(80);
+      }
+      @include viewport-tablet {
+        margin-top: px-to-rem(60);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(40);
+      }
+    }
   }
 
   @at-root .typography-privacy .typography {

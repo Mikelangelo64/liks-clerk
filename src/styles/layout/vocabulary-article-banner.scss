@@ -26,4 +26,11 @@
       margin-top: px-to-rem(24);
     }
   }
+
+  //.vocabulary-article-banner__title 
+  &__title {
+    @include text-heading-1;
+
+    margin-top: px-to-rem(24);
+  }
 }

@@ -4,12 +4,12 @@ section.section.showcase
   ._container
     .showcase__wrapper
       .showcase__header.section-header
-        h2.section-header__title Our Work Showcase
+        h2.section-header__title= showcase.title
 
       .showcase__main
         .showcase-slider.swiper.slider
           .swiper-wrapper
-            each item in showcaseList
+            each item in showcase.list
               .swiper-slide
                 .showcase-slider__item
                   .showcase-slider-media

@@ -16,6 +16,8 @@ import initCalculateForm from './calculateForm/init';
 import ratingInit from './rating/init';
 import setStars from './rating/setStars';
 import fancyboxInit from './fancybox/init';
+import clientsPreviewHelper from './clientsPreviewHelper/init';
+import vevet from './config/vevet';
 
 export const init = () => {
   scrollBarInit();
@@ -32,6 +34,10 @@ export const init = () => {
   initCalculateForm();
   ratingInit();
   fancyboxInit();
+
+  if (!vevet.viewport.isPhone) {
+    clientsPreviewHelper();
+  }
   // console.log(scrollSectionState);
 
   const popups = initPopups();

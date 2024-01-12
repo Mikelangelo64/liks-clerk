@@ -109,6 +109,7 @@
     flex: 1 0 auto;
     width: 100%;
     height: 0;
+
     display: flex;
     flex-direction: column;
     
@@ -135,6 +136,7 @@
       flex-direction: column;
       width: max-content;
       max-width: 100%;
+      padding: 0 px-to-rem(36);
       // width: 100%;
 
       > * + * {
@@ -237,6 +239,8 @@
   &__content {
     flex: 1 0 auto;
     width: 100%;
+    padding: 0 px-to-rem(36);
+
     display: flex;
     flex-direction: column;
     

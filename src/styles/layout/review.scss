@@ -15,6 +15,9 @@
     align-items: center;
     justify-content: space-between;
 
+    text-decoration: unset;
+    color: var(--color-white);
+
     &.special {
       border: 2px solid var(--color-grey-200);
 

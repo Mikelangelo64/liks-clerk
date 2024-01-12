@@ -183,33 +183,34 @@ footer.footer
 
           ul.footer-review.review-company.desktop
             each item in reviewFooterList
-              li.review-company__item
-                .review-company__info
-                  .review-company__subtitle Reviewed on
+              li
+                a.review-company__item(href='#')
+                  .review-company__info
+                    .review-company__subtitle Reviewed on
 
-                  .review-company__label
-                    img(src=require(`${item.label}`), alt=`${item.alt}`)
+                    .review-company__label
+                      img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-                .review-company-raiting
-                  .review-company-raiting-stars
-                    - for(let i=0; i<5; i++)
-                      .review-company-raiting-stars__item(
-                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                      ) 
-                        if i + 1 <= item.raiting
-                          img(
-                            src=require('@/assets/img/review/star.svg'),
-                            alt='star'
-                          )
-                        else
-                          img(
-                            src=require('@/assets/img/review/star-empty.svg'),
-                            alt='star'
-                          )
+                  .review-company-raiting
+                    .review-company-raiting-stars
+                      - for(let i=0; i<5; i++)
+                        .review-company-raiting-stars__item(
+                          class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                        ) 
+                          if i + 1 <= item.raiting
+                            img(
+                              src=require('@/assets/img/review/star.svg'),
+                              alt='star'
+                            )
+                          else
+                            img(
+                              src=require('@/assets/img/review/star-empty.svg'),
+                              alt='star'
+                            )
 
-                  p.review-company-raiting__description
-                    strong= item.reviewCount
-                    span reviews
+                    p.review-company-raiting__description
+                      strong= item.reviewCount
+                      span reviews
 
         nav.footer-menu
           ul.footer-menu__list
@@ -241,35 +242,36 @@ footer.footer
       .footer__bottom
         ul.footer-review.review-company.phone
           each item in reviewFooterList
-            li.review-company__item
-              .review-company__info
-                .review-company__subtitle Reviewed on
+            li
+              a.review-company__item(href='#')
+                .review-company__info
+                  .review-company__subtitle Reviewed on
 
-                .review-company__label
-                  img(src=require(`${item.label}`), alt=`${item.alt}`)
+                  .review-company__label
+                    img(src=require(`${item.label}`), alt=`${item.alt}`)
 
-              .review-company-raiting
-                .review-company-raiting-stars
-                  - for(let i=0; i<5; i++)
-                    .review-company-raiting-stars__item(
-                      class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
-                    ) 
-                      if i + 1 <= item.raiting
-                        img(
-                          src=require('@/assets/img/review/star.svg'),
-                          alt='star'
-                        )
-                      else
-                        img(
-                          src=require('@/assets/img/review/star-empty.svg'),
-                          alt='star'
-                        )
+                .review-company-raiting
+                  .review-company-raiting-stars
+                    - for(let i=0; i<5; i++)
+                      .review-company-raiting-stars__item(
+                        class=`${i + 1 <= item.raiting ? 'filled' : 'empty'}`
+                      ) 
+                        if i + 1 <= item.raiting
+                          img(
+                            src=require('@/assets/img/review/star.svg'),
+                            alt='star'
+                          )
+                        else
+                          img(
+                            src=require('@/assets/img/review/star-empty.svg'),
+                            alt='star'
+                          )
 
-                p.review-company-raiting__description
-                  strong= item.reviewCount
-                  span reviews
+                  p.review-company-raiting__description
+                    strong= item.reviewCount
+                    span reviews
 
-        .review-company__item.special
+        a.review-company__item.special(href='#')
           .review-company__image
             img(
               src=require('@/assets/img/review/footerList/special.svg'),

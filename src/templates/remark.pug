@@ -46,7 +46,8 @@ section.section.remark(
             when 'link-green'
               a.remark-main__button.special.button-hollow(
                 href=`${remark.button.href}`,
-                class=`${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`
+                class=`${remark.button.goto && remark.button.goto !== '' ? 'anchor' : ''} ${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`,
+                data-goto=`${remark.button.goto && remark.button.goto !== '' ? remark.button.goto : ''}`
               )
                 span= remark.button.title
 
@@ -54,7 +55,8 @@ section.section.remark(
             default
               a.remark-main__button.button-hollow(
                 href=`${remark.button.href}`,
-                class=`${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`
+                class=`${remark.button.goto && remark.button.goto !== '' ? 'anchor' : ''} ${remark.button.hasFooter && remark.button.hasFooter === 'true' ? 'desktop' : ''}`,
+                data-goto=`${remark.button.goto && remark.button.goto !== '' ? remark.button.goto : ''}`
               )
                 span= remark.button.title
 

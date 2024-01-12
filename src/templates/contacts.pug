@@ -64,39 +64,39 @@
         </p>
       `,
     },
-    {
-      isActive: 'false',
-      data: '3',
-      name: 'Log in',
-      title: 'Log in',
-      isEmptyDescription: 'true',
-      subtitle: 'Log in to your account to get full access to the functionality',
-      label: '@/assets/img/contacts/login.svg',
+    //- {
+    //-   isActive: 'false',
+    //-   data: '3',
+    //-   name: 'Log in',
+    //-   title: 'Log in',
+    //-   isEmptyDescription: 'true',
+    //-   subtitle: 'Log in to your account to get full access to the functionality',
+    //-   label: '@/assets/img/contacts/login.svg',
 
-      typography: `
-        <p>
-          Your steps:
-        </p>
+    //-   typography: `
+    //-     <p>
+    //-       Your steps:
+    //-     </p>
 
-        <ol>
-          <li>
-            Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get to the Bot
-          </li>
+    //-     <ol>
+    //-       <li>
+    //-         Click on the link <a href="#" target="_blank">@links_clerk_bot</a> or on the button to get to the Bot
+    //-       </li>
 
-          <li>
-            After <a href="#" target="_blank">/start</a>, the bot needs you to describe the requirements, topic, or geography of the project
-          </li>
+    //-       <li>
+    //-         After <a href="#" target="_blank">/start</a>, the bot needs you to describe the requirements, topic, or geography of the project
+    //-       </li>
 
-          <li>
-            We will respond to your request within 10 minutes!
-          </li>
-        </ol>
+    //-       <li>
+    //-         We will respond to your request within 10 minutes!
+    //-       </li>
+    //-     </ol>
 
-        <p>
-          P.S. Without a response from you, we will not be able to answer!
-        </p>
-      `,
-    },
+    //-     <p>
+    //-       P.S. Without a response from you, we will not be able to answer!
+    //-     </p>
+    //-   `,
+    //- },
   ];
 
 section.section.contacts
@@ -122,6 +122,20 @@ section.section.contacts
                   span.contacts-info__name= item.name
 
                   span.contacts-info__subtitle= item.subtitle
+          li
+            button.popup-open.contacts-navigation__button.contacts-info(
+              data-popup='_popup-form'
+            )
+              span.contacts-info__label
+                img(
+                  src=require(`@/assets/img/contacts/login.svg`),
+                  alt='Log in'
+                )
+
+              span.contacts-info__content
+                span.contacts-info__name Log in
+
+                span.contacts-info__subtitle Log in to your account to get full access to the functionality
 
         .contacts-content
           .fade-section-content
@@ -173,3 +187,18 @@ section.section.contacts
                       .contacts-comment__footer
                         a.button-filled.contacts-comment__button(href='#')
                           span Contact us
+
+          li
+            button.popup-open.contacts-navigation__button.contacts-info(
+              data-popup='_popup-form'
+            )
+              span.contacts-info__label
+                img(
+                  src=require(`@/assets/img/contacts/login.svg`),
+                  alt='Log in'
+                )
+
+              span.contacts-info__content
+                span.contacts-info__name Log in
+
+                span.contacts-info__subtitle Log in to your account to get full access to the functionality
