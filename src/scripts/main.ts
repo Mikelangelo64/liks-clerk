@@ -54,72 +54,62 @@ export const init = () => {
   const hasError = false;
 
   if (formArr.length !== 0) {
-    formArr.forEach((form) => {
-      form.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-        const inputs = Array.from(
-          form.querySelectorAll('input, textarea') as NodeListOf<
-            HTMLInputElement | HTMLTextAreaElement
-          >
-        );
-
-        popups.forEach(({ timeline, isThanks, isError }) => {
-          if (isThanks && !hasError) {
-            timeline?.play();
-
-            if (inputs.length !== 0) {
-              inputs.forEach((inputProp) => {
-                const input = inputProp;
-                console.log(input, input.value);
-
-                // if (input.type === 'tel') {
-                //   return;
-                // }
-
-                if (input.name === 'rating') {
-                  input.value = '5';
-                  return;
-                }
-
-                input.value = '';
-              });
-            }
-
-            // if (inputMaskArray) {
-            //   inputMaskArray.forEach((inputMaskProp) => {
-            //     const inputMask = inputMaskProp;
-            //     inputMask.value = '';
-            //     inputMask.updateValue();
-            //   });
-            // }
-          } else if (isError && hasError) {
-            timeline?.play();
-          } else {
-            timeline?.reverse();
-
-            setTimeout(() => {
-              document.querySelector('html')?.classList.add('lock');
-              document.querySelector('body')?.classList.add('lock');
-            }, 300);
-          }
-        });
-      });
-    });
-
+    // formArr.forEach((form) => {
+    //   form.addEventListener('submit', (evt) => {
+    //     evt.preventDefault();
+    //     const inputs = Array.from(
+    //       form.querySelectorAll('input, textarea') as NodeListOf<
+    //         HTMLInputElement | HTMLTextAreaElement
+    //       >
+    //     );
+    //     popups.forEach(({ timeline, isThanks, isError }) => {
+    //       if (isThanks && !hasError) {
+    //         timeline?.play();
+    //         if (inputs.length !== 0) {
+    //           inputs.forEach((inputProp) => {
+    //             const input = inputProp;
+    //             console.log(input, input.value);
+    //             // if (input.type === 'tel') {
+    //             //   return;
+    //             // }
+    //             if (input.name === 'rating') {
+    //               input.value = '5';
+    //               return;
+    //             }
+    //             input.value = '';
+    //           });
+    //         }
+    //         // if (inputMaskArray) {
+    //         //   inputMaskArray.forEach((inputMaskProp) => {
+    //         //     const inputMask = inputMaskProp;
+    //         //     inputMask.value = '';
+    //         //     inputMask.updateValue();
+    //         //   });
+    //         // }
+    //       } else if (isError && hasError) {
+    //         timeline?.play();
+    //       } else {
+    //         timeline?.reverse();
+    //         setTimeout(() => {
+    //           document.querySelector('html')?.classList.add('lock');
+    //           document.querySelector('body')?.classList.add('lock');
+    //         }, 300);
+    //       }
+    //     });
+    //   });
+    // });
     // document.addEventListener(
     //   'wpcf7mailsent',
     //   function () {
     //     popups.forEach(({ timeline, isThanks, isError }) => {
     //       if (isThanks && !hasError) {
     //         timeline?.play();
-
     //         formArr.forEach((form) => {
     //           const inputs = Array.from(
     //             form.querySelectorAll('input, textarea') as NodeListOf<
     //               HTMLInputElement | HTMLTextAreaElement
     //             >
     //           );
-
     //           if (inputs.length !== 0) {
     //             inputs.forEach((inputProp) => {
     //               const input = inputProp;
@@ -129,7 +119,6 @@ export const init = () => {
     //               input.value = '';
     //             });
     //           }
-
     //           // if (inputMaskArray) {
     //           //   inputMaskArray.forEach((inputMaskProp) => {
     //           //     const inputMask = inputMaskProp;
@@ -142,7 +131,6 @@ export const init = () => {
     //         timeline?.play();
     //       } else {
     //         timeline?.reverse();
-
     //         setTimeout(() => {
     //           document.querySelector('html')?.classList.add('lock');
     //           document.querySelector('body')?.classList.add('lock');
